@@ -151,7 +151,7 @@ input[type=checkbox] {
     text-align: center;
 
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 15%;
 
     color: var(--clr-bdark);
