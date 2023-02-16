@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    <!-- FONT AWSOME-->
+  <script src="https://kit.fontawesome.com/2ef942ef12.js" crossorigin="anonymous">
+  </script>
+  
+  <!--  GOOGLE FONT -->    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Merienda:wght@500&display=swap" rel="stylesheet">
+
+    <!-- FAVICON & TITLE -->
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-navbar-riosmexicanos.png">
+    <title>Ríos Mexicanos | Rafting en México</title>
+</head>
+<body>
+    <header class="topnav flex bg-primary">
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="Logo Ríos Mexicanos"></a> 
+        </div>
+
+        <div class="name">Ríos Mexicanos</div>
+
+        <!-- NAVIGATION MENU -->
+        <div class="nav-links">
+
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <!-- NAVIGATION MENUS -->
+        <nav class="menu flex">
+          <a href="index.html" class="active">Inicio</a>
+          <div class="dropdown">
+            <button type="button" class="dropbtn">Actividades
+            </button>
+              <div class="dropdown-content">
+                <a href="rafting.html">Rafting</a>
+                <a href="tubing.html">Tubing</a>
+                <a href="dookies.html">Dookies</a>
+                <a href="kayak.html">Kayak</a>
+             </div>
+          </div>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Expediciones
+            </button>
+            <div class="dropdown-content">
+                <a href="rafting-amacuzac.html">Amacuzac</a>
+                <a href="rafting-papagayo.html">Papagayo</a>
+                <a href="rafting-jatate.html">Jatate</a>
+                <a href="rafting-usumacinta.html">Usumacinta</a>
+            </div>
+          </div>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <div class="bg-intro">
+        <img src="imagenes/bg-intro.jpg" alt="">
+        <h1>¡El mejor Rafting en México!</h1>
+    </div>
+
+    <!-- TEXT INTRO --> 
+    <section class="intro-rios">
+        <h2>Ríos Mexicanos</h2>
+        <p class="intro-lateralder">Bienvenidos al sitio web de Ríos Mexicanos.<br>
+        Somos una empresa especializada en descenso de río en diferentes embarcaciones, como son las balsas inflables (Rafting), en cámaras inflables (Tubing), kayak inflables (Dookies) y en kayak de río.<br>
+        Con una experiencia de 20 años en diferentes ríos y países, nos permite  brindar experiencia y profesionalismo a nuestros recorridos.<br>
+        Aquí podrás encontrar información sobre nuestras actividades en el río Amacuzac, así como paquetes que te facilitan la logística en tu aventura o de nuestras expediciones a diferentes ríos en México.<br>
+        Implementando nuestra filosofía en cada aventura:<br>
+        <i>"proveer descensos de río seguros y divertidos, siempre en ese orden." </i></p>
+    </section>
+
+    <!-- SLIDESHOW -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img class="slide-image" src="imagenes/rafting-en-morelos.png" alt="Rafting en Morelos">
+      <div class="text">Rafting en Morelos</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img class="slide-image" src="imagenes/tubing-en-Morelos.png" alt="Cañonismo en Morelos">
+      <div class="text">Dookies en Morelos</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img class="slide-image" src="imagenes/rafting-en-morelos.png" alt="Senderismo en Morelos">
+      <div class="text">Kayak en Morelos</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img class="slide-image" src="imagenes/tubing-en-Morelos.png" alt="Rafting en Morelos">
+      <div class="text">Rafting Amacuzac</div>
+    </div>
+  
+    <div class="mySlides fade">
+        <img class="slide-image" src="imagenes/tubing-en-Morelos.png" alt="Tubing en Morelos">
+      <div class="text">Tubing Morelos</div>
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+    <br>
+
+
+  <!-- CARD SECTION -->
+  <section class="content">
+    <div class="soon-act">
+      <h2>¡Próximas actividades a realizar con espacio disponible!</h2>
+    </div>
+    <div class="cards-container">
+      <article class="cards">
+        <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+        <div class="cards-texts">
+          <a class="title-cards " href="actividades/rafting-bajo-amacuzac.html">Rafting Bajo Amacuzac</a>
+          <hr class="hr-cards">
+          <p class="cards-p">Descenso de río en la sección Bajo Amacuzac, clase III, para mayores de 16 años.</p>
+          <div class="dispon">
+            <p>6 lugares</p>
+            <p>$ 750mxn</p>
+          </div>
+          <a href="booking-actividades.html" class="last-min">¡Reserva tu lugar!</a>
+        </div>
+      </article>
+
+      <article class="cards">
+        <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Familiar">
+        <div class="card-texts">
+          <a class="title-cards" href="actividades/cueva-del-diablo.html">Rafting Familiar</a>
+          <hr class="hr-cards">
+          <p class="cards-p">El viaje preferido de los niños, ya que pueden saltar al agua, observar aves exoticas.</p>
+          <div class="dispon">
+            <p>8 lugares</p>
+            <p>$ 1250mxn</p>
+          </div>
+          <a href="booking-actividades.html" class="last-min">¡Reserva tu lugar!</a>
+        </div>
+      </article>
+
+      <article class="cards">
+        <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Tubing Amacuzac">
+        <div class="cards-texts">
+          <a class="title-cards" href="actividades/tubing-morelos.html">Tubing Amacuzac</a>
+          <hr class="hr-cards">
+          <p class="cards-p">Una de las actividades de río más divertidas para disfrutar en el Estado de Morelos.</p>
+          <div class="dispon">
+            <p>4 lugares</p>
+            <p>$ 550mxn</p>
+          </div>
+          <a href="booking-actividades.html" class="last-min">¡Reserva tu lugar!</a>
+        </div>
+      </article>
+
+      <article class="cards">
+        <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting río Papagayo">
+        <div class="cards-texts">
+          <a class="title-cards" href="expediciones/expedicion-papagayo.html">Expedición Papagayo</a>
+          <hr class="hr-cards">
+          <p class="cards-p">Dos días del más secreto Rafting en México entre emocionantes rápidos de clase III - IV.</p>
+          <div class="dispon">
+            <p>6 lugares</p>
+            <p>$ 2830mxn</p>
+          </div>
+          <a href="booking-actividades.html" class="last-min">¡Reserva tu lugar!</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SUSCRIBIRSE -->
+  <section class="club">
+    <form action="#" class="suscribe">
+      <h3 class=>¡Únete al club!</h3><hr>
+      <p>Suscríbete para recibir promociones e invitaciones para expediciones especiales.</p>
+
+      <div class="suscribe-form">
+        <input type="text" name="email" placeholder="Ingresa tu e-mail" class="cb-em" aria-label="Campo para agregar su correo electronico para suscribirse para recibir promociones">
+        <input type="submit" name="suscribir" value="Suscribir" class="bt-cb ">
+      </div>
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer bg-primary">
+    <div class="foot-container">
+      <div class="info">
+        <h3>Contacto</h3><hr class="hr-footer">
+        <address class="footer-address">
+          <p>Telefóno: 777 497 55 31</p>
+          <p>E-mail:<a href="mailto:teotladventures@gmail.com">info@riosmexicanos.com</a></p>
+          <p>Cuernavaca, Morelos</p>
+          <p>62170 México</p>
+        </address>
+      </div>
+      
+      <div class="info">
+        <h3>Información</h3><hr class="hr-footer">
+        <p><a href="#">Quienes somos</a></p>
+        <p><a href="#">Términos y Condiciones</a></p>
+      </div>
+
+      <div class="info footer-media">
+        <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="logo Ríos Mexicanos"></a><hr class="hr-footer">
+        <div class="social-foot">
+          <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" aria-label="Link a la pagina de Ríos Mexicanos en Instagram"><i class="fa fa-instagram"></i></a> 
+          <a href="#" aria-label="Link al canal de YouTube de Ríos Mexicanos"><i class="fa fa-youtube"></i></a> 
+          <a href="#" aria-label="Link a la cuenta de Ríos Mexicanos en Twitter"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy;Ríos Mexicanos 2022 | <i>Diseño web por Téotl E-Design</i> </p>
+    </div>
+  </footer>
+
+  <!-- JAVA SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>

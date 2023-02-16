@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    <!-- FONT AWSOME-->
+  <script src="https://kit.fontawesome.com/2ef942ef12.js" crossorigin="anonymous">
+  </script>
+  
+  <!--  GOOGLE FONT -->    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Merienda:wght@500&display=swap" rel="stylesheet">
+
+    <!-- FAVICON & TITLE -->
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-navbar-riosmexicanos.png">
+    <title>Ríos Mexicanos | Contacto</title>
+</head>
+<body>
+    <header class="topnav flex bg-primary">
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="Logo Ríos Mexicanos"></a> 
+        </div>
+
+        <div class="name">Ríos Mexicanos</div>
+
+        <!-- NAVIGATION MENU -->
+        <div class="nav-links">
+
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <!-- NAVIGATION MENUS -->
+        <nav class="menu flex">
+          <a href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button type="button" class="dropbtn">Actividades
+            </button>
+              <div class="dropdown-content">
+                <a href="rafting.html">Rafting</a>
+                <a href="tubing.html">Tubing</a>
+                <a href="dookies.html">Dookies</a>
+                <a href="kayak.html">Kayak</a>
+             </div>
+          </div>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Expediciones
+            </button>
+            <div class="dropdown-content">
+                <a href="rafting-amacuzac.html">Amacuzac</a>
+                <a href="rafting-papagayo.html">Papagayo</a>
+                <a href="rafting-jatate.html">Jataté</a>
+                <a href="rafting-usumacinta.html">Usumacinta</a>
+            </div>
+          </div>
+          <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <div class="bg-intro">
+        <img src="imagenes/bg-intro.jpg" alt="">
+        <h1>¡Escribenos y nosotros te contactaremos!</h1><br>
+    </div>
+
+    <!-- CONTACT FORM -->
+      <div class="container">
+        <div class="form-map">
+          <form action="action_page.php">
+            <label for="fname">Nombre</label>
+            <input type="text" class="form-name" id="fname" name="firstname" placeholder="Tu nombre..">
+            <label for="lname">Apellido</label>
+            <input type="text" class="form-name" id="lname" name="lastname" placeholder="Tu apellido..">
+            <label for="actividad">Actividad</label>
+            <select id="actividad" name="actividad">
+              <option value="raftamac">Rafting Bajo Amacuzac</option>
+              <option value="raftalt">Rafting Alto Amacuzac</option>
+              <option value="raftfam">Rafting Familiar</option>
+              <option value="tubing">Tubing</option>
+              <option value="dookie">Dookie</option>
+              <option value="kayak">Kayak</option>
+              <option value="expama">Expedición Amacuzac</option>
+              <option value="exppap">Expedición Papagayo</option>
+              <option value="expjat">Expedición Jataté</option>
+              <option value="expusu">Expedición Usumacinta</option>
+              <option value="otro">Otro</option>
+            </select>
+            <label for="date">Fecha:
+              <input type="date" class="form-name"  name="date">
+            </label>
+            <br>
+            <label for="participantes">Participantes:
+              <input type="number" id="cuantos" class="form-name" name="cuantos" min="1" max="50">
+            </label>
+            <br>
+            <label for="subject">Escribe tu mensaje</label>
+            <textarea id="subject" name="subject" placeholder="Tu mensaje.." style="height:200px"></textarea>
+            <input type="submit" value="Submit" class="btn-form">
+          </form>
+        </div> 
+        <div class="map-contact">
+            <h2>Punto de Encuentro</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2891.1913637022853!2d-99.26612223368012!3d18.543218353216393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1676426437118!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+      </div>
+
+    <!-- CARD SECTION -->
+<section class="content">
+        <div class="soon-act">
+            <h2>¡Próximas actividades a realizar con espacio disponible!</h2>
+        </div>
+    <div class="form-cards-container">
+        <article class="cards-form">
+            <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+            <div class="cards-texts">
+                <a class="title-cards " href="actividades/rafting-bajo-amacuzac.html">Rafting Amacuzac</a>
+                <hr class="hr-cards">
+                
+                <div class="dispon-form">
+                    <p>6 lugares</p>
+                    <p>$750mxn</p>
+                </div>
+                <a href="booking-actividades.html" class="book-form">¡Reserva tu lugar!</a>
+            </div>
+        </article>
+
+        <article class="cards-form">
+            <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Familiar">
+            <div class="card-texts">
+                <a class="title-cards" href="actividades/cueva-del-diablo.html">Rafting Familiar</a>
+                <hr class="hr-cards">
+                <div class="dispon-form">
+                    <p>8 lugares</p>
+                    <p>$1250mxn</p>
+                </div>
+                <a href="booking-actividades.html" class="book-form">¡Reserva tu lugar!</a>
+            </div>
+        </article>
+
+        <article class="cards-form">
+            <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Tubing Amacuzac">
+            <div class="cards-texts">
+                <a class="title-cards" href="actividades/tubing-morelos.html">Tubing Amacuzac</a>
+                <hr class="hr-cards">
+                <div class="dispon-form">
+                    <p>4 lugares</p>
+                    <p>$550mxn</p>
+                </div>
+                <a href="booking-actividades.html" class="book-form">¡Reserva tu lugar!</a>
+            </div>
+        </article>
+
+        <article class="cards-form">
+            <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting río Papagayo">
+            <div class="cards-texts">
+                <a class="title-cards" href="expediciones/expedicion-papagayo.html">Expedición Papagayo</a>
+                <hr class="hr-cards">
+                <div class="dispon-form">
+                    <p>6 lugares</p>
+                    <p>$2830mxn</p>
+                </div>
+                <a href="booking-actividades.html" class="book-form">¡Reserva tu lugar!</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+  <!-- SUSCRIBIRSE -->
+  <section class="club">
+    <form action="#" class="suscribe">
+      <h3 class=>¡Únete al club!</h3><hr>
+      <p>Suscríbete para recibir promociones e invitaciones para expediciones especiales.</p>
+
+      <div class="suscribe-form">
+        <input type="text" name="email" placeholder="Ingresa tu e-mail" class="cb-em" aria-label="Campo para agregar su correo electronico para suscribirse para recibir promociones">
+        <input type="submit" name="suscribir" value="Suscribir" class="bt-cb ">
+      </div>
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer bg-primary">
+    <div class="foot-container">
+      <div class="info">
+        <h3>Contacto</h3><hr class="hr-footer">
+        <address class="footer-address">
+          <p>Telefóno: 777 497 55 31</p>
+          <p>E-mail:<a href="mailto:teotladventures@gmail.com">info@riosmexicanos.com</a></p>
+          <p>Cuernavaca, Morelos</p>
+          <p>62170 México</p>
+        </address>
+      </div>
+      
+      <div class="info">
+        <h3>Información</h3><hr class="hr-footer">
+        <p><a href="#">Quienes somos</a></p>
+        <p><a href="#">Términos y Condiciones</a></p>
+      </div>
+
+      <div class="info footer-media">
+        <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="logo Ríos Mexicanos"></a><hr class="hr-footer">
+        <div class="social-foot">
+          <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" aria-label="Link a la pagina de Ríos Mexicanos en Instagram"><i class="fa fa-instagram"></i></a> 
+          <a href="#" aria-label="Link al canal de YouTube de Ríos Mexicanos"><i class="fa fa-youtube"></i></a> 
+          <a href="#" aria-label="Link a la cuenta de Ríos Mexicanos en Twitter"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy;Ríos Mexicanos 2022 | <i>Diseño web por Téotl E-Design</i> </p>
+    </div>
+  </footer>
+
+  <!-- JAVA SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>

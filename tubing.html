@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    <!-- FONT AWSOME-->
+  <script src="https://kit.fontawesome.com/2ef942ef12.js" crossorigin="anonymous">
+  </script>
+  
+  <!--  GOOGLE FONT -->    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Merienda:wght@500&display=swap" rel="stylesheet">
+
+    <!-- FAVICON & TITLE -->
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-navbar-riosmexicanos.png">
+    <title>Ríos Mexicanos | Tubing en México</title>
+</head>
+<body>
+    <header class="topnav flex bg-primary">
+        <div class="logo">
+           <a href="index.html"> <img src="imagenes/Logo-RiosMexicanos.png" alt="Logo Ríos Mexicanos"></a>
+        </div>
+
+        <div class="name">Ríos Mexicanos</div>
+
+        <!-- NAVIGATION MENU -->
+        <div class="nav-links">
+
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <!-- NAVIGATION MENUS -->
+        <nav class="menu flex">
+          <a href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button type="button" class="dropbtn active">Actividades
+            </button>
+              <div class="dropdown-content">
+                <a href="rafting.html" >Rafting</a>
+                <a href="tubing.html">Tubing</a>
+                <a href="dookies.html">Dookies</a>
+                <a href="kayak.html">Kayak</a>
+             </div>
+          </div>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Expediciones
+            </button>
+            <div class="dropdown-content">
+                <a href="rafting-amacuzac.html">Amacuzac</a>
+                <a href="rafting-papagayo.html">Papagayo</a>
+                <a href="rafting-jatate.html">Jatate</a>
+                <a href="rafting-usumacinta.html">Usumacinta</a>
+            </div>
+          </div>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <!-- CONTENT -->
+    <section class="intro-activities">
+        <img src="imagenes/ban-tubing-amacuzac.jpg" alt="Foto de Rafting en Morelos">
+        <h1>Tubing en Morelos</h1>
+        <p>El Tubing es el descenso e río en cámaras inflables, el conocido <i>llanting</i>.<br>
+        Esta actividad es perfecta para quienes probar algo nuevo en un ambiente único para compartir entre amigos.<br>
+        Sol, agua tibia y algunos rápidos para agregarle ese toque de adrenalina convierten al Tubing Amacuzac en una de las mejores actividades para poner a prueba tu habilidad en el agua.<br>
+        Esta actividad se puede practicar toda la temporada de descenso de río (Julio a Abril).<br>
+        <i>¡Ven y disfruta de la mejor aventura de río en el Estado de Morelos!</i> </p>
+    </section>
+
+    <section class="activities-cards-container">
+        <h2>Recorridos de Tubing</h2>
+        <hr class="hr-footer">
+        <div class="activities-cards">
+            <h3>Tubing Principiantes</h3>
+            <div class="wrap-tab">
+                <picture>
+                    <source media="(max-width:600px)" srcset="imagenes/ban2-rafting-amacuzac.jpg">
+                    <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+                    <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+                </picture>
+                
+                <div class="tab-container">
+                    <!-- Tab links -->
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'descripcion')" >Descripción</button>
+                        <button class="tablinks" onclick="openCity(event, 'recomendaciones')">Recomendaciones</button>
+                        <button class="tablinks" onclick="openCity(event, 'Datos-precio')">Datos & Precio </button>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="descripcion" class="tabcontent">
+                        <h4>Tubing Amacuzac</h4>
+                        <p>Si es tu primera vez navegando un río o sobre un tubing, este es el recorrido ideal para ti.<br>
+                        Son 6 kilómetros de río con pequeños rápidos clase I y II, perfectos para disfrutar y sentirse cómodo para navegar en el río.<br>
+                        Alrededor de 4 horas de actividad, esto depende del nivel del río y de cómo nos vaya el río.</p>
+                    </div>
+                    <div id="recomendaciones" class="tabcontent">
+                        <h4>Que traer</h4>
+                        <p>La actividad se da en un ambiente de aire libre, por ello te recomendamos que te prepares con ropa cómoda y fresca para caminar en el campo, así como ropa para protegerte del sol.<br>
+                        Traer una muda de ropa y calzado para mojar en el río, recomendamos ropa sintética.<br>
+                        Traer agua y snack, así como informar si tienes alguna condición especial de salud.
+                        </p>
+                    </div>
+                    <div id="Datos-precio" class="tabcontent">
+                        <h4>Información de la actividad</h4>
+                        <p>El recorrido te incluye equipo certificado para la actividad, el cual se compone de:
+                            <ul>
+                                <li>Chaleco de flotación</li>
+                                <li>Casco para actividades de río</li>
+                            </ul>
+                        Además de seguro en caso de accidente, refrigerio, traslado del Punto de Encuentro al río y del río al Punto de Encuentro.</p><br>
+                        <p class="book-form">Precio: <b>$450</b> por persona.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="hr-footer hr-xtra">
+        <div class="activities-cards">
+            <h3>Tubing Alto Amacuzac</h3>
+            <div class="wrap-tab">
+                <picture>
+                    <source media="(max-width:600px)" srcset="imagenes/ban-rafting-familiar.jpg ">
+                    <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+                    <img src="imagenes/Rafting-familiar.jpg" alt="Rafting Bajo Amacuzac">
+                </picture>
+                
+                <!-- Tab links -->
+                <div class="tab-container">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'descripcion1')" id="defaultOpen">Descripción</button>
+                        <button class="tablinks" onclick="openCity(event, 'recomendaciones1')">Recomendaciones</button>
+                        <button class="tablinks" onclick="openCity(event, 'Datos-precio1')">Datos & Precio </button>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="descripcion1" class="tabcontent">
+                        <h4>Tubing Aventurero</h4>
+                        <p>Este recorrido de Tubing Amacuzac te pondrá tus habilidades a prueba, pero no te preocupes, siempre estaremos ahí para ayudarte y guiarte.<br>
+                        13 kilómetros de río, rápidos clase II y III y paisajes impresionantes. Esto lo convierte en una aventura única y llena de emociones, ideal para compartir entre amigos.<br>
+                        La temporada es de Julio a Octbre.</p>
+                    </div>
+                    <div id="recomendaciones1" class="tabcontent">
+                        <h4>Que traer</h4>
+                        <p>La actividad se da en un ambiente de aire libre, por ello te recomendamos que te prepares con ropa cómoda y fresca para caminar en el campo, así como ropa para protegerte del sol.<br>
+                        Traer una muda de ropa y calzado para mojar en el río, recomendamos ropa sintética.<br>
+                        Traer agua y snack, así como informar si tienes alguna condición especial de salud.
+                        </p>
+                    </div>
+                    <div id="Datos-precio1" class="tabcontent">
+                        <h4>Información de la actividad</h4>
+                        <p>El recorrido te incluye equipo certificado para la actividad, el cual se compone de:
+                            <ul>
+                                <li>Chaleco de flotación</li>
+                                <li>Casco para actividades de río</li>
+                            </ul>
+                        Además de seguro en caso de accidente, refrigerio, traslado del Punto de Encuentro al río y del río al Punto de Encuentro.</p><br>
+                        <p class="book-form">Precio: <b>$685</b> por persona.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="hr-footer hr-xtra">
+        <div class="activities-cards">
+            <h3>Club Tubing</h3>
+            <div class="wrap-tab">
+                <picture>
+                    <source media="(max-width:600px)" srcset="imagenes/ban-expedicion-papagayo.jpg">
+                    <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+                    <img src="imagenes/rafting-bajoAmacuzac.png" alt="Rafting Bajo Amacuzac">
+                </picture>
+                
+                <!-- Tab links -->
+                <div class="tab-container">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'descripcion2')" id="defaultOpen">Descripción</button>
+                        <button class="tablinks" onclick="openCity(event, 'beneficios')">Beneficios</button>
+                        <button class="tablinks" onclick="openCity(event, 'Datos-precio2')">Datos & Precio </button>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="descripcion2" class="tabcontent">
+                        <h4>Club de río</h4>
+                        <p>El <b>Club de Río</b> de Ríos Mexicanos es para ti que no tienes con quien compartir estas actividades y buscas un grupo, o que te gustaría realizar más seguido estas actividades y tenerlo como un hobbie.<br>
+                        Al ser miembro se te informará de viajes especiales a otros ríos, a expediciones no comerciales o tan solo ir al río a disfrutar junto con más personas de río o <i>River runners</i>.<br>
+                        Asimismo, aprenderás de hidrografía, lenguaje de río y autorescate.<br>
+                        ¡Únete a una comunidad internacional!</p>
+                    </div>
+                    <div id="beneficios" class="tabcontent">
+                        <h4>Sé un River runner</h4>
+                        <p>Si te gustaría el navegar ríos, explorar más secciones de río, remar, acampar y ser parte de estilo de vida, esta es tu oportunidad.<br>
+                        Al ser miembro te mandamos información de expediciones que organizamos ya sean comerciales o privadas a diferentes ríos en México, como en Veracruz, Chiapas, Oaxaca, Guerrero, Morelos, San Luis Potosí y muchos más.<br>
+                        También tendrás la oportunidad de realizar cursos de rescate en áreas naturales y primeros auxilios con certificación nacional e internacional.</p>
+                    </div>
+                    <div id="Datos-precio2" class="tabcontent">
+                        <h4>Información del Club de Río</h4>
+                        <p>Ríos Mexicanos te proporciona con el tu equipo personal, a menos que tengas el propio.</p><br>
+                            <p></p>Equipo personal:
+                            <ul>
+                                <li>Chaleco de flotación</li>
+                                <li>Casco para actividades de río</li>
+                            </ul>
+                        Pero como todas las actividades se debe cubrir seguro en caso de accidente, refrigerio, traslado del Punto de Encuentro al río y del río al Punto de Encuentro.</p><br>
+                        <p class="book-form">El precio depende de la actividad y del tipo de recorrido, pero siempre se detallará cuando se comparte la información.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="nota">
+            <h4>Nota:</h4>
+            <p>Contactanos para mayor información, con gusto te ayudaremos a satisfacer cualquier duda que tengas.</p>
+            <p>A tu recorrido le puedes agregar otros beneficios como la visita a un balneario o una <i>carnita asada</i>.</p>
+            <p>Organizamos paquetes especiales para escuelas y empresas.</p>
+        </div>
+    </section>
+    
+
+    <!-- FOOTER -->
+  <footer class="footer bg-primary">
+    <div class="foot-container">
+      <div class="info">
+        <h3>Contacto</h3><hr class="hr-footer">
+        <address class="footer-address">
+          <p>Telefóno: 777 497 55 31</p>
+          <p>E-mail:<a href="mailto:teotladventures@gmail.com">info@riosmexicanos.com</a></p>
+          <p>Cuernavaca, Morelos</p>
+          <p>62170 México</p>
+        </address>
+      </div>
+      
+      <div class="info">
+        <h3>Información</h3><hr class="hr-footer">
+        <p><a href="#">Quienes somos</a></p>
+        <p><a href="#">Términos y Condiciones</a></p>
+      </div>
+
+      <div class="info footer-media">
+        <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="logo Ríos Mexicanos"></a><hr class="hr-footer">
+        <div class="social-foot">
+          <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" aria-label="Link a la pagina de Ríos Mexicanos en Instagram"><i class="fa fa-instagram"></i></a> 
+          <a href="#" aria-label="Link al canal de YouTube de Ríos Mexicanos"><i class="fa fa-youtube"></i></a> 
+          <a href="#" aria-label="Link a la cuenta de Ríos Mexicanos en Twitter"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy;Ríos Mexicanos 2022 | <i>Diseño web por Téotl E-Design</i> </p>
+    </div>
+  </footer>
+
+  <!-- JAVA SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>

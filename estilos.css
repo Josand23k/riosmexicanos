@@ -1,0 +1,857 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --clr-turquesa-900: rgb(5, 79, 79);
+    --clr-turquesa-500: rgb(32, 148, 154);
+    --clr-turquesa-100: rgb(175, 251, 255);
+
+    --clr-dorado-500: rgb(198, 156, 109);
+    --clr-rojo-500: rgb(163, 52, 52);
+    --clr-wlight: white;
+    --clr-bdark: black;
+
+    --ff-primary: 'Georgia', cursive;
+    --ff-accented: 'Merienda', cursive;
+    
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    font-family: var(--ff-primary);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+
+.bg-primary {
+    background-color: var(--clr-turquesa-900);
+}
+
+/* -- HEADER -- */
+.topnav {
+    border-bottom: 12px solid black;
+
+    position: relative;
+}
+
+.logo img {
+    width: 70px;
+    padding: 3px;
+}
+
+.name {
+    color: var(--clr-wlight);
+    font-family: var(--ff-accented);
+    font-size: clamp(1.7em, 1vw, 2em);
+    color: var(--clr-dorado-500);
+    text-shadow: -1px -1px 1px var(--clr-bdark);
+}
+
+
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    color: var(--clr-dorado-500);
+    font-size: 1.9em;
+    padding: 10px;
+}
+.menu {
+    background-color: var(--clr-turquesa-900);
+    width: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 110%;
+    display: none;
+    text-align: center;
+    z-index: 999;
+}
+
+.menu a {
+    color: var(--clr-wlight);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: var(--clr-turquesa-500);
+}
+
+.dropbtn {
+    background-color: var(--clr-turquesa-900);
+    border: none;
+    width: 100%;
+    color: var(--clr-wlight);
+    font-size: 1.2em;
+    font-family: var(--ff-primary);
+    padding: 15px;
+}
+
+.dropdown {
+    width: 100%;
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;   
+    display: none;
+    background-color: var(--clr-turquesa-900);
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 9999;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {   
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--clr-turquesa-500);
+}
+
+
+/* -- 03-INTRO -- */
+.bg-intro {
+    position: relative;
+    background: linear-gradient(white, rgb(5, 79, 79));
+}
+
+.bg-intro img {
+    width: 100%;
+    opacity: .45;
+}
+
+.bg-intro h1 {
+    font-family: var(--ff-accented);
+    width: min(70%, 60rem);
+    font-size: clamp(1em, 4vw, 2.5em);
+    text-align: center;
+
+    position: absolute;
+    top: 15%;
+    left: 15%;
+
+    color: var(--clr-bdark);
+    text-shadow: 1px 2px 2px var(--clr-turquesa-100);
+}
+
+/* -- 04-TEXT INTRO -- */
+.intro-rios h2 {
+    text-align: center;
+    font-family: var(--font-family);
+    padding: 50px 0px 20px;
+    font-size: clamp(1.5em, 3vw, 2.5em);
+    text-shadow: 2px 1px 2px rgb(175, 251, 255);
+    background: linear-gradient(rgb(5, 79, 79), white);
+}
+.intro-lateralder {
+    margin-inline: 40px;
+    line-height: 1.6;
+    font-size: clamp(1em, 1.5vw, 1.2em);
+}
+
+/* -- 05-SLIDE -- */
+.mySlides {
+    display: none;
+}
+    
+.slideshow-container {   /* -- SLIDESHOW CONTAINER -- */
+    margin-top: 40px;
+    max-width: 100%;
+    position: relative;
+}
+.slide-image {
+    width: 100%;
+}
+    
+.prev, .next {      /* -- NEXT & PREVIOUS BUTTONS -- */
+    background-color: rgb(5, 79, 79, .5);
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: rgb(198, 156, 109);
+    font-weight: bold;
+    font-size: 20px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none; /* -- SAFARI -- */
+    -ms-user-select: none; /* -- IE 10+ --*/
+    user-select: none;
+}
+
+.next {    /* -- POSITION THE "NEXT BUTTON" TO THE RIGHT -- */
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgb(5, 79, 79);
+}
+    
+.text {
+    font-family: var(--font-family);
+    background-color: rgba(4, 4, 4, .6);
+    color: #f2f2f2;
+    font-size: clamp(1em, 2.5vw, 2.3em);
+    font-weight: bold;
+    padding: 10px 15px;
+    position: absolute;        /* -- CAPTION TEXT -- */
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.fade {
+    animation-name: fade;   /* -- FADING ANIMATION -- */
+    animation-duration: 1.5s;
+}
+
+/* -- 06-CARDS -- */
+.content {
+    background: linear-gradient(rgb(5, 79, 79), white);
+    padding: 0px 10px 30px;
+}
+
+.soon-act {
+    color: white;
+    text-align: center;
+    font-size: clamp(1em, 1.3vw, 1.3em);
+    padding: 25px;
+}
+
+.cards-container {
+    display: grid;
+    gap: 10px;
+}
+
+.cards {
+    background-color: rgb(243, 240, 240);
+    border: 3px solid rgb(198, 156, 109);
+    box-shadow: 0px 1px 7px 2px rgba(0, 0, 0, .6);
+
+}
+
+.cards img {
+    width: 100%;
+}
+.title-cards {
+    display: block;
+
+    font-family: var(--font-family);
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1em, 2vw, 1.3em);
+    padding: 5px;
+}
+.hr-cards {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(163, 52, 52);
+
+}
+.cards p {
+    font-size: 1em;
+    line-height: 1.3;
+    padding: 20px 10px;
+    color: black;
+}
+.dispon {
+    display: flex;
+    justify-content: space-evenly;
+}
+.dispon p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 0px;
+}
+.last-min {
+    display: block;
+    background-color: rgb(19, 181, 181);
+    text-shadow: 1px -1px 1px rgb(175, 251, 255);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1em, 2vw, 1.3em);
+    padding: 20px;
+}
+.last-min:hover {
+    background-color: rgb(19, 181, 181, .5);
+}
+
+/*-- SUSCRIBIRSE -- */
+.club {
+    background-color: rgb(198, 156, 109);
+    margin: 15px 10px;
+    border: 3px solid rgb(163, 52, 52);
+    padding: 10px;
+}
+.suscribe {
+    text-align: center;
+}
+.suscribe hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(163, 52, 52);
+}
+.suscribe h3 {
+    font-family: var(--font-family);
+    font-size: clamp(1em, 2vw, 1.3em);
+    padding-bottom: 5px;
+}
+.suscribe p {
+    padding: 5px;
+    font-size: clamp(1em, 1.8vw, 1.1em);
+}
+
+.suscribe-form {
+    display: flex;
+    justify-content: space-evenly;
+}
+.cb-em {
+    width: 200px;
+    padding: 6px;
+    border: 0;
+    border-radius: 5px;
+}
+.bt-cb {
+    padding: 5px;
+    width: 90px;
+    background-color: rgb(15, 120, 120);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(.8em, 1.5vw, 1.1em);
+    font-family: var(--font-family);
+    border-radius: 5px;
+}
+.bt-cb:hover {
+    background-color: rgb(175, 251, 255);
+    color: rgb(15, 120, 120);
+}
+
+/* -- FOOTER -- */
+.footer {
+    padding: 10px;
+    border-top: 20px solid rgb(0, 0, 0);
+}
+
+.foot-container {
+text-align: center;
+}
+
+.info h3 {
+    text-align: center;
+    font-family: var(--ff-accented);
+    font-size: clamp(1em, 2vw, 1.2em);
+    padding-bottom: 5px;
+    color: white;
+}
+.info p {
+    font-size: clamp(.95em, 1.5vw, 1.1em);
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.info a{
+    color: white;
+    text-decoration: none;
+    font-size: clamp(.95em, 1.5vw, 1.1em);
+}
+.hr-footer {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(175, 251, 255);
+    margin-bottom: 10px;
+}
+.footer-media {
+    text-align: center;
+}
+.footer-media img {
+    max-width: 90px;
+    min-width: 70px;
+}
+.social-foot {
+    margin: 30px 45px;
+    display: flex;
+    justify-content: space-around;
+}
+.social-foot .fa {
+    font-size: clamp(2em, 3vw, 3.5em);
+    color: rgb(163, 52, 52);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.social-foot .fa:hover {
+    color: rgb(198, 156, 109);
+}
+
+/*-- COPYRIGTH --*/
+.copy {
+    text-align: center;
+    color: white;
+    font-size: clamp(.7em, 1.5vw, .9em);
+}
+
+/* -- ACTIVITIES -- */
+.intro-activities {
+    padding-bottom: 30px;
+}
+
+.intro-activities img {
+    width: 100%;
+}
+.intro-activities h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: clamp(1.2em, 1.5vw, 1.5em);
+}
+.intro-activities p {
+    padding: 0px 10px 15px;
+    line-height: 1.3;
+}
+
+/* -- Activities cards -- */
+.activities-cards-container {
+    background: linear-gradient(rgb(5, 79, 79), rgb(32, 148, 154));
+}
+
+.activities-cards-container h2{
+    text-align: center;
+    text-shadow: -1px -1px 2.5px var(--clr-bdark);
+    color: var(--clr-dorado-500);
+    padding: 10px;
+    font-family: var(--ff-accented);
+}
+
+.activities-cards h3 {
+    text-align: center;
+    color: var(--clr-dorado-500);
+    text-shadow: -1px -1px 2.5px var(--clr-bdark);
+    padding: 5px;
+    font-size: clamp(1.3em, 1.5vw, 1.5em);
+}
+
+.activities-cards img {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+/* Style the tab */
+.tab-container {
+    min-height: 100px;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: var(--clr-dorado-500);
+}
+  
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: var(--clr-dorado-500);
+    color: var(--clr-bdark);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: .8em;
+    font-weight: bold;
+}
+  
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: var(--clr-turquesa-500);
+}
+  
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: var(--clr-turquesa-500);
+}
+  
+/* Style the tab content */
+.tabcontent {
+    background-color: var(--clr-wlight);
+    display: none;
+    padding: 15px 10px;
+    border-top: none;
+    line-height: 1.3;
+}
+
+.tabcontent h4 {
+    font-size: clamp(1em, 1.5vw, 1.5em);
+    color: var(--clr-bdark);
+    
+}
+
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+
+  .precio-style {
+    background-color: var(--clr-turquesa-100);
+    text-align: center;
+    padding: 10px;
+    margin: 0px 50px;
+    border: 1.5px solid var(--clr-bdark);
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.nota {
+    margin: 25px 20px;
+    line-height: 1.3;
+    background-color: rgb(163, 52, 52, .2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--clr-dorado-500);
+}
+.nota p {
+    padding: 5px 0px;
+}
+
+/* -- EXPEDICIONES PAGES -- */
+/* Style tab links */
+.full-tab-container {
+    min-height: 400px;
+    background-image: url(imagenes/actividades-rafting.JPG);
+    background-repeat: no-repeat;background-position: center bottom;
+    background-size: cover;
+}
+.tablinky {
+    background-color: var(--clr-bdark);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 8px;
+    font-size: clamp(.8em, 1.8vw, 1.5em);
+    width: 25%;
+  }
+.tablinky:hover {
+    background-color: rgb(67, 67, 67);
+}
+.tabcontenty {
+    display: none;
+    padding: 60px 5px 15px;
+    min-height: 400px;
+}
+.fulltab-in {
+    background-color: var(--clr-wlight);
+}
+.text-fulltab {
+    padding: 10px;
+}
+
+.tabcontenty img {
+    width: 100%;
+}
+
+.text-fulltab h3 {
+    padding: 10px 0px 20px;
+}
+.text-fulltab p {
+    line-height: 1.3;
+}
+
+#Home {background-color: var(--clr-turquesa-900);}
+#News {background-color: var(--clr-dorado-500);}
+#Contact {background-color: var(--clr-rojo-500);}
+#About {background-color: var(--clr-turquesa-500);}
+
+/* -- CONTACT PAGE -- */
+ /* Style inputs with type="text", select elements and textareas */
+ .form-name, select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  .btn-form {
+    background-color: var(--clr-turquesa-900);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  .btn-form:hover {
+    background-color: var(--clr-turquesa-500);
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  } 
+
+  /* -- MAP -- */
+  iframe {
+    width: 100%;
+    min-height: 350px;
+    border: 0;
+  }
+
+  .map-contact {
+    padding: 40px 0px;
+  }
+
+  .map-contact h2 {
+    text-align: center;
+    padding: 15px 0px;
+    font-size: clamp(1.5em, 3vw, 2.5em);
+  }
+
+  /* -- CARDS CONTACT PAGE __ */
+  .form-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cards-form {
+    background-color: var(--clr-wlight);
+    border: 2px solid var(--clr-dorado-500);
+  }
+  .cards-form img {
+    width: 100%;
+  }
+  .dispon-form {
+    display: flex;
+    justify-content: space-around;
+    font-size: clamp(.85em, 1.5vw, 1.3em);
+    padding: 15px 5px;
+    font-weight: bold;
+  }
+  .book-form {
+    display: block;
+    background-color: rgb(19, 181, 181);
+    text-shadow: 1px -1px 1px rgb(58, 231, 240);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(.9em, 2vw, 1em);
+    padding: 20px 10px;
+  }
+
+
+@Media only screen and (min-width: 600px) {
+    .topnav {
+        justify-content: space-around;
+    }
+    .bg-intro h1 {
+        top: 30%;
+    }
+
+    .prev, .next {
+        font-size: 30px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cb-em {
+        width: 350px;
+    }
+    .bt-cb {
+        width: 150px;
+    }
+    /* -- ACTIVITIES PAGE -- */
+    .intro-activities h1 {
+        padding: 20px;
+    }
+    .intro-activities p {
+        padding: 0px 30px;
+    }
+    .precio-style {
+        padding: 10px;
+        margin: 0px 200px;
+      }
+    .activities-cards h3 {
+        padding: 5px 0px 15px;
+    }
+    .activities-cards-container h2 {
+        padding: 25px 0px 5px;
+    }
+
+    .tabcontent {
+        padding: 10px 40px;
+    }
+    .tab button {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    /* -- EXPEDICIONES PAGE -- */
+    .text-fulltab {
+        padding: 10px 30px;
+    }
+
+    .full-tab-container {
+        background-position: center;
+    
+    }
+
+    /* -- CONTACT PAGE --*/
+    .form-map {
+        margin: 0px 100px;
+    }
+    
+    
+}
+
+@media only screen and (min-width: 992px) {
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+                
+    }
+
+    .menu a {
+        padding: 22px 15px;
+        display: block;
+    }
+
+    .active {
+        background-color: var(--clr-turquesa-500);
+    }
+
+    .dropbtn {
+        padding: 22px 15px;
+    }
+
+    .dropdown-content {
+        min-width: 280px;
+        width: 100%;
+    }
+
+    .intro-lateralder {
+        columns: 2;
+    }
+
+    .prev, .next {
+        font-size: 45px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .cards-p {
+        height: 132px;
+    }
+
+    .cb-em {
+        width: 450px;
+    }
+    .bt-cb {
+        width: 180px;
+    }
+
+    .foot-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .info {
+        width: 33%;
+    }
+
+    /* -- ACTIVITIES PAGE --*/
+    .intro-activities p {
+        columns: 2;
+    }
+
+    .wrap-tab {
+        display: grid;
+        grid-template-columns: 40% 60%;
+
+        background-image: linear-gradient(to bottom right, rgb(108, 93, 51), rgb(175, 251, 255));
+    }
+    .activities-cards-container {
+        padding: 20px 0px;
+    }
+
+    .activities-cards {
+        margin-top: 25px;
+    }
+    .hr-xtra {
+        display: none;
+    }
+
+
+    .nota h4 {
+        margin-left: 60px;
+    }
+    .nota p {
+        margin-left: 140px;
+        padding: 10px 0px 20px;
+    }
+
+    /* -- EXPDICION PAGE -- */
+    .fulltab-in {
+        display: flex;
+    }
+    .fulltab-in img {
+        padding: 10px;
+    }
+
+     /* -- CONTACT PAGE --*/
+     .form-map {
+        margin: 0px 200px;
+    }
+
+    .form-cards-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

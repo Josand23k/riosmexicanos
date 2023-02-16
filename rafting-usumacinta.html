@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    <!-- FONT AWSOME-->
+  <script src="https://kit.fontawesome.com/2ef942ef12.js" crossorigin="anonymous">
+  </script>
+  
+  <!--  GOOGLE FONT -->    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Merienda:wght@500&display=swap" rel="stylesheet">
+
+    <!-- FAVICON & TITLE -->
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-navbar-riosmexicanos.png">
+    <title>Ríos Mexicanos | Rafting Usumacinta</title>
+</head>
+<body>
+    <header class="topnav flex bg-primary">
+        <div class="logo">
+           <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="Logo Ríos Mexicanos"></a> 
+        </div>
+
+        <div class="name">Ríos Mexicanos</div>
+
+        <!-- NAVIGATION MENU -->
+        <div class="nav-links">
+
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <!-- NAVIGATION MENUS -->
+        <nav class="menu flex">
+          <a href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button type="button" class="dropbtn">Actividades
+            </button>
+              <div class="dropdown-content">
+                <a href="rafting.html" >Rafting</a>
+                <a href="tubing.html">Tubing</a>
+                <a href="dookies.html">Dookies</a>
+                <a href="kayak.html">Kayak</a>
+             </div>
+          </div>
+          
+          <div class="dropdown">
+            <button class="dropbtn active">Expediciones
+            </button>
+            <div class="dropdown-content">
+                <a href="rafting-amacuzac.html">Amacuzac</a>
+                <a href="rafting-papagayo.html">Papagayo</a>
+                <a href="rafting-jatate.html">Jataté</a>
+                <a href="rafting-usumacinta.html">Usumacinta</a>
+            </div>
+          </div>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <!-- CONTENT -->
+    <section class="intro-activities">
+        <img src="imagenes/ban-expedicion-usumacinta.jpg" alt="Foto de Rafting en Morelos">
+        <h1>Expedición Usumacinta</h1>
+        <p>Una expedición para toda la familia, en un río grandioso con impresionantes paredes y exuberante vegetación.<br>
+        Zonas arqueológicas, animales exóticos, selva y el río más caudaloso de México, ideal para practicar rafting México con toda la familia.<br>
+        8 días de expedición en el Estado de Chiapas, navegando el río sagrado de los Mayas.<br>
+        Es un viaje para conocer el mundo maya a través de sus ciudades, su arquitectura, naturaleza y sobre todo por su herederos.<br>
+        Ven y disfruta en familia una de las mejores aventuras en México, son pocas las aventuras de varios días en la naturaleza.
+        </p>
+    </section>
+    <div class="full-tab-container">
+        <button class="tablinky" onclick="openPage('Home', this, 'var(--clr-turquesa-900)')">Descripción</button>
+        <button class="tablinky" onclick="openPage('News', this, 'var(--clr-dorado-500)')" id="defaultOpen">Incluye</button>
+        <button class="tablinky" onclick="openPage('Contact', this, 'var(--clr-rojo-500)')">Días</button>
+        <button class="tablinky" onclick="openPage('About', this, 'var(--clr-turquesa-500)')">Precio</button>
+    
+        <div id="Home" class="tabcontenty">
+            <div class="fulltab-in">
+                <picture>
+                    <source media="(max-width:600px)" srcset="imagenes/ban2-rafting-amacuzac.jpg">
+                    <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+                    <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+                </picture>
+                <div class="text-fulltab">
+                    <h3>Expedición Usumacinta</h3>
+                    <p>7 días de recorrido, con visita a zonas arqueologicas y cascadas.<br>
+                    Solo organizamos este viaje en Diciembre, en las vacaiones de Diciembre, aunque su temporada es de Noviembre a Abril, ideal para viajes escolares o para Team Buildings.<br>
+                    Es ideal para mayores de 12 años, ya que en este tipo de aventuras es importante la participación de todos los miembros de la expedición en las tareas, como son:</p>
+                    <ul>
+                      <li>Armado del campamento</li>
+                      <li>Preparación de alimentos</li>
+                      <li>Carga y descarga del equipo y materiales</li>
+                    </ul>
+                    <p>Una aventura para admirar la naturaleza y vivir una aventura.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="News" class="tabcontenty">
+          <div class="fulltab-in">
+            <picture>
+              <source media="(max-width:600px)" srcset="imagenes/ban2-rafting-amacuzac.jpg">
+              <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+              <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+            </picture>
+              <div class="text-fulltab">
+                <h3>Rafting & Camping</h3>
+                <p>Ríos Mexicanos te proporciona tod el equipo para la realizar la actividada de Rafting, tanto equipo personal como las las balsas, remos, kit de rescate, kit de primeros auxilios y equipo para cargar el material para el campamento y de cocina.<br>
+                Como todos los recorridos de Ríos Mexicanos se proporciona con seguro en caso de accidente, así como todas las instrucciones necesarias de seguridad para realizar un descenso seguro y divertido.<br>
+                Incluye:</p>
+                <ul>
+                  <li>Equipo personal</li>
+                  <li>Tienda de campaña para máximo cuatro personas</li>
+                  <li>Colchoneta inflable</li>
+                  <li>Utencilios de cocina</li>
+                  <li>Hieleras y bolsas secas</li>
+                </ul>
+                <p>Lo que no incluye:<br>
+                <ul>
+                  <li>Bolsa de dormir ligero</li>
+                  <li>Golosinas y bebidas alcoholicas</li>
+                  <li>Lámpara de cabeza</li>
+                  <li>Comida y</li>
+                </ul></p>
+              </div>
+          </div>
+        </div>
+    
+        <div id="Contact" class="tabcontenty">
+          <div class="fulltab-in">
+            <picture>
+              <source media="(max-width:600px)" srcset="imagenes/ban2-rafting-amacuzac.jpg">
+              <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+              <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+            </picture>
+              <div class="text-fulltab">
+                <h3>Itinerario</h3>
+                <p>Día 1:<br>
+                NUestro <b>Punto de Encuentro</b> es Palenque, Chiapas, donde se pasa la noche en lo que todos los participantes arriban y descansan antes de empreder la aventura.</p><br>
+                <p>Día 2:<br>
+                Salida hacia el río.<br>
+                Visita a la zona arqueologica de Bonampak.<br>
+                Llegada al campamento 
+                </p><br>
+                <p>Día 3:<br>
+                Inicio del descenso de río, llegada a la zona arqueologica de Yaxchilan.
+                </p><br>
+                <p>Día 4.
+                Rafting todo el día con rápidos clase II y III.
+                </p><br>
+                <p>Día: 5.<br>
+                Rafting todo el día, cascada Busiljá, rápidos clase III.
+                </p><br>
+                <p>Día: 6<br>
+                Ultimo día de Rafting, rápidos clase III y regreso a Palenque.</p><br>
+                <p>Día: 7<br>
+                Desayuno y visita a la Zona arqueologica de Palenque.<br>
+                Comida y fin de la expedición.</p>
+              </div>
+          </div>
+        </div>
+    
+        <div id="About" class="tabcontenty">
+          <div class="fulltab-in">
+            <picture>
+              <source media="(max-width:600px)" srcset="imagenes/ban2-rafting-amacuzac.jpg">
+              <source media="(max-width:992px)" srcset="imagenes/RaftingMorelos.png">
+              <img src="imagenes/Rafting-Bajo-Amacuzac.jpg" alt="Rafting Bajo Amacuzac">
+            </picture>
+              <div class="text-fulltab">
+                <h3>Datos & Precio</h3>
+                <p>Los precios cubren los gastos necesarios para realizar esta expedición.<br>
+                Incluye 6 desayunos, 6 comidas y 6 cenas. Asi como bebidas hidratantes y frutas.<br>
+                </p>
+                <p>El precio normal: <b>$12300</b> por persona.</p>
+                <p>Precio Club de Río: <b>$9700</b> por persona.</p>
+              </div>
+          </div>
+        </div>
+    </div>
+    
+    <section>
+        <div class="nota">
+            <h4>Nota:</h4>
+            <p>Contáctanos para más información, con gusto te ayudaremos a satisfacer cualquier duda que tengas.</p>
+            <p>A tu recorrido le puedes agregar otros beneficios como la visita a un balneario o una <i>carnita asada</i>.</p>
+            <p>Organizamos paquetes especiales para escuelas y empresas.</p>
+        </div>
+    </section>
+    
+
+    <!-- FOOTER -->
+  <footer class="footer bg-primary">
+    <div class="foot-container">
+      <div class="info">
+        <h3>Contacto</h3><hr class="hr-footer">
+        <address class="footer-address">
+          <p>Telefóno: 777 497 55 31</p>
+          <p>E-mail:<a href="mailto:teotladventures@gmail.com">info@riosmexicanos.com</a></p>
+          <p>Cuernavaca, Morelos</p>
+          <p>62170 México</p>
+        </address>
+      </div>
+      
+      <div class="info">
+        <h3>Información</h3><hr class="hr-footer">
+        <p><a href="#">Quienes somos</a></p>
+        <p><a href="#">Términos y Condiciones</a></p>
+      </div>
+
+      <div class="info footer-media">
+        <a href="index.html"><img src="imagenes/Logo-RiosMexicanos.png" alt="logo Ríos Mexicanos"></a><hr class="hr-footer">
+        <div class="social-foot">
+          <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" aria-label="Link a la pagina de Ríos Mexicanos en Instagram"><i class="fa fa-instagram"></i></a> 
+          <a href="#" aria-label="Link al canal de YouTube de Ríos Mexicanos"><i class="fa fa-youtube"></i></a> 
+          <a href="#" aria-label="Link a la cuenta de Ríos Mexicanos en Twitter"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy;Ríos Mexicanos 2022 | <i>Diseño web por Téotl E-Design</i> </p>
+    </div>
+  </footer>
+
+  <!-- JAVA SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
