@@ -550,7 +550,7 @@ text-align: center;
 /* Style tab links */
 .full-tab-container {
     min-height: 400px;
-    background-image: url(imagenes/actividades-rafting.JPG);
+    background-image: url(imagenes/fondo-expedicionesbox.png);
     background-repeat: no-repeat;background-position: center bottom;
     background-size: cover;
 }
@@ -572,6 +572,7 @@ text-align: center;
     display: none;
     padding: 60px 5px 15px;
     min-height: 400px;
+
 }
 .fulltab-in {
     background-color: var(--clr-wlight);
@@ -857,7 +858,8 @@ text-align: center;
 
     /* -- EXPDICION PAGE -- */
     .fulltab-in {
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
     }
     .fulltab-in img {
         padding: 10px;
