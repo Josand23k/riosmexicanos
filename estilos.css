@@ -464,7 +464,7 @@ text-align: center;
 
 .activities-cards img {
     width: 100%;
-    padding: 0px 10px;
+
 }
 
 /* Style the tab */
@@ -816,14 +816,27 @@ text-align: center;
         display: grid;
         grid-template-columns: 40% 60%;
 
-        background-image: linear-gradient(to bottom right, rgb(108, 93, 51), rgb(175, 251, 255));
+        background-image: linear-gradient(to bottom right, rgb(108, 93, 51, .5), rgb(175, 251, 255, .5));
     }
     .activities-cards-container {
         padding: 20px 0px;
+        background-image: url(imagenes/fondo-raftingopacity.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+
+        position: relative;
+    }
+    .blur-jump {
+        
     }
 
     .activities-cards {
         margin-top: 25px;
+    }
+
+    .activities-cards img {
+        padding-left: 15px;
     }
     .hr-xtra {
         display: none;
