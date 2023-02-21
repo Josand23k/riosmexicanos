@@ -728,6 +728,7 @@ text-align: center;
 
   .staff h3 {
     text-align: center;
+    font-size: clamp(1.1em, 1.9vw, 2em);
   }
 
   .staff img {
