@@ -681,7 +681,73 @@ text-align: center;
     padding: 20px 10px;
   }
 
+  /* -- NOSOTROS PAGE --*/
+  .intro-nosotros {
+    padding: 10px;
+  }
 
+  .intro-nosotros h2 {
+    text-align: center;
+    font-family: var(--ff-accented);
+  }
+
+  .intro-nosotros p {
+    line-height: 1.4;
+  }
+
+  .nosotros-ban img {
+    width: 100%;
+  }
+
+  .mision {
+    padding: 30px;
+    background-color: var(--clr-dorado-500);
+  }
+  .mision div {
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .mision h3 {
+    padding-bottom: 5px;
+  }
+  
+  .mision li {
+    padding-bottom: 5px;
+  }
+
+  .staff {
+    padding: 40px 10px;
+
+    content: "";
+    clear: both;
+    display: table;
+
+    line-height: 1.4;
+  }
+
+  .staff h3 {
+    text-align: center;
+  }
+
+  .staff img {
+    width: 55%;
+    float: right;
+    border-radius: 50%;
+    margin: 45px 15px 5px;
+    border: 2px solid var(--clr-turquesa-500);
+  }
+
+  .josand {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    
+  }
+  .josand img {
+    border-radius: 0;
+    margin: 5px;
+  }
 @Media only screen and (min-width: 600px) {
     .topnav {
         justify-content: space-around;
@@ -745,6 +811,20 @@ text-align: center;
         margin: 0px 100px;
     }
     
+    /* -- NOSOTROS PAGE -- */
+    .intro-nosotros {
+        padding: 10px 30px;
+    }
+    .staff {
+        padding: 40px 30px;
+    }
+    .staff img {
+        width: 38%;
+    }
+
+    .mision {
+        padding: 30px 60px; 
+    }
     
 }
 
@@ -871,6 +951,14 @@ text-align: center;
     }
 
     .form-cards-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr
     }
+
+    /* -- NOSOTROS PAGE -- */
+    .intro-nosotros {
+        padding: 20px 40px 50px;    }
+    .nosotros-text {
+        columns: 3;
+    }
+
 }
