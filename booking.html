@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Operadora de recorridos de rafting en México">
-    <meta name="keywords" content="Rafting, Kayak, Tubing, Aventura, Morelos, Cuernavaca, México, descenso de río, kayak de río, Rafting trips, Amacuzac, Papagayo, jataté, Usumacinta, Tehuixtla, contacto, mapa">
+    <meta name="keywords" content="Rafting, Kayak, Tubing, Aventura, Morelos, Cuernavaca, México, descenso de río, kayak de río, Rafting trips, Amacuzac, Papagayo, jataté, Usumacinta, Tehuixtla, Contacto, Mapa, Booking, Reserva, Rafting Amacuzac, Rafting Acapulco">
     <meta name="author" content="José Sandoval - Téotl Web Design">
 
     <link rel="stylesheet" type="text/css" href="estilos.css">
@@ -22,7 +22,7 @@
 
     <!-- FAVICON & TITLE -->
     <link rel="icon" type="image/x-icon" href="imagenes/logo-navbar-riosmexicanos.png">
-    <title>Ríos Mexicanos | Contacto</title>
+    <title>Ríos Mexicanos | Reserva</title>
 </head>
 <body>
     <header class="topnav flex bg-primary">
@@ -63,7 +63,7 @@
                 <a href="rafting-usumacinta.html">Usumacinta</a>
             </div>
           </div>
-          <a href="contacto.html" class="active">Contacto</a>
+          <a href="contacto.html">Contacto</a>
         </nav>
       </div>
     </header>
@@ -71,24 +71,34 @@
     <!-- INTRO -->
     <div class="bg-intro">
         <img src="imagenes/bg-intro.jpg" alt="">
-        <h1>¡Escribenos y nosotros te contactamos!</h1><br>
+        <h1>¡Reserva ahora!</h1><br>
     </div>
 
     <!-- CONTACT FORM -->
       <div class="container">
+        <h2>¡Reserva tu viaje aquí!</h2>
+        <br>
         <div class="form-map">
           <form action="action_page.php">
             <label for="fname">Nombre</label>
             <input type="text" class="form-name" id="fname" name="firstname" placeholder="Tu nombre..">
             <label for="lname">Apellido</label>
             <input type="text" class="form-name" id="lname" name="lastname" placeholder="Tu apellido..">
+
+            <label for="email">Correo electronico:</label>
+            <input type="email" class="form-name" id="email" name="email" placeholder="tu-correo@ejemplo.com">
+            <label for="tel">Telefóno:</label>
+            <input type="number" class="form-name" id="tel" name="tel" placeholder="123 456 78 90">
+
             <label for="actividad">Actividad</label>
             <select id="actividad" name="actividad">
               <option value="raftamac">Rafting Bajo Amacuzac</option>
               <option value="raftalt">Rafting Alto Amacuzac</option>
               <option value="raftfam">Rafting Familiar</option>
-              <option value="tubing">Tubing</option>
-              <option value="dookie">Dookie</option>
+              <option value="tubing">Tubing Amacuzac</option>
+              <option value="tubing">Tubing Alto Amacuzac</option>
+              <option value="dookie">Dookie Amacuzac</option>
+              <option value="dookie">Dookie Alto Amacuzac</option>
               <option value="kayak">Kayak</option>
               <option value="expama">Expedición Amacuzac</option>
               <option value="exppap">Expedición Papagayo</option>
@@ -104,16 +114,12 @@
               <input type="number" id="cuantos" class="form-name" name="cuantos" min="1" max="50">
             </label>
             <br>
-            <label for="subject">Escribe tu mensaje</label>
+            <label for="subject">Agrega un mensaje:</label>
             <textarea id="subject" name="subject" placeholder="Tu mensaje.." style="height:200px"></textarea>
-            <input type="submit" value="Submit" class="btn-form">
+            <input type="submit" value="Reservar" class="btn-form">
           </form>
         </div> 
-        <div class="map-contact">
-            <h2>Punto de Encuentro</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2891.1913637022853!2d-99.26612223368012!3d18.543218353216393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1676426437118!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+
       </div>
 
     <!-- CARD SECTION -->
