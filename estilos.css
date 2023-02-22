@@ -764,6 +764,11 @@ text-align: center;
     line-height: 1.4;
   }
 
+  /* -- BOOKING PAGE --*/
+  .container h2 {
+    text-align: center;
+  }
+
 @Media only screen and (min-width: 600px) {
     .topnav {
         justify-content: space-around;
