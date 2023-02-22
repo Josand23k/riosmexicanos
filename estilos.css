@@ -749,6 +749,21 @@ text-align: center;
     border-radius: 0;
     margin: 5px;
   }
+
+  /* -- TERMINOS Y CONDICIONES PAGE -- */
+  .term-cond {
+    padding: 20px;
+  }
+
+  .term-cond h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .term-cond p {
+    line-height: 1.4;
+  }
+
 @Media only screen and (min-width: 600px) {
     .topnav {
         justify-content: space-around;
@@ -827,6 +842,10 @@ text-align: center;
         padding: 30px 60px; 
     }
     
+    /* -- TERMINOS Y CONDICIONES -- */
+    .term-cond {
+        padding: 70px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -909,9 +928,6 @@ text-align: center;
 
         position: relative;
     }
-    .blur-jump {
-        
-    }
 
     .activities-cards {
         margin-top: 25px;
@@ -960,6 +976,11 @@ text-align: center;
         padding: 20px 40px 50px;    }
     .nosotros-text {
         columns: 3;
+    }
+
+    /* -- TERMINOS Y CONDICIONES -- */
+    .term-cond {
+        padding: 40px 90px;
     }
 
 }
