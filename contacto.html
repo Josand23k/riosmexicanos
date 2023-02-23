@@ -77,13 +77,11 @@
     <!-- CONTACT FORM -->
       <div class="container">
         <div class="form-map">
-          <form action="action_page.php">
-            <label for="fname">Nombre</label>
-            <input type="text" class="form-name" id="fname" name="firstname" placeholder="Tu nombre..">
-            <label for="lname">Apellido</label>
-            <input type="text" class="form-name" id="lname" name="lastname" placeholder="Tu apellido..">
+          <form onsubmit="sendEmail(); reset; return false">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-name" id="name" name="name" placeholder="Tu nombre.." required>
             <label for="email">Correo electrónico</label>
-            <input type="email" class="form-name" id="email" name="email" placeholder="tucorreoelectronico@ejemplo.com">
+            <input type="email" class="form-name" id="email" name="email" placeholder="tucorreoelectronico@ejemplo.com" required>
 
             <label for="actividad">Actividad</label>
             <select id="actividad" name="actividad">
@@ -100,11 +98,11 @@
               <option value="otro">Otro</option>
             </select>
             <label for="date">Fecha:
-              <input type="date" class="form-name"  name="date">
+              <input type="date" class="form-name"  name="date" id="date" required>
             </label>
             <br>
             <label for="participantes">Participantes:
-              <input type="number" id="cuantos" class="form-name" name="cuantos" min="1" max="50">
+              <input type="number" id="cuantos" class="form-name" name="cuantos" min="1" max="50" >
             </label>
             <br>
             <label for="subject">Escribe tu mensaje</label>
@@ -202,7 +200,7 @@
        <hr class="hr-footer">
         <address class="footer-address">
           <p>Telefóno: 777 497 55 31</p>
-          <p>E-mail:<a href="mailto:teotladventures@gmail.com">info@riosmexicanos.com</a></p>
+          <p>E-mail:<a href="mailto:info@riosmexicanos.com">info@riosmexicanos.com</a></p>
           <p>Cuernavaca, Morelos</p>
           <p>62170 México</p>
         </address>
@@ -230,6 +228,26 @@
   </footer>
 
   <!-- JAVA SCRIPT -->
-  <script src="script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script>
+    function sendEmail() {
+      Email.send({
+    SecureToken: "ff1d2997-08d8-4968-8ff4-c041420b0f4a",    
+    
+    To : 'info@riosmexicanos.com',
+    From : document.getElementById("email").value,
+    Subject : "Solicitud de un nuevo contacto",
+    Body : "Nombre: " + document.getElementById("name").value 
+    + "<br> Email: " +document.getElementById("email").value
+    + "<br> Actividad: " +document.getElementById("actividad").value
+    + "<br> Fecha: " +document.getElementById("date").value
+    + "<br> Participantes: " +document.getElementById("cuantos").value
+    + "<br> Mensaje: " +document.getElementById("subject").value
+}).then(
+  message => alert("¡Su mensaje ha sido enviado!")
+);
+    }
+  </script>
 </body>
 </html>
