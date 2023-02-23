@@ -77,7 +77,7 @@
     <!-- CONTACT FORM -->
       <div class="container">
         <div class="form-map">
-          <form onsubmit="sendEmail(); reset; return false">
+          <form name="form" action="mensaje.php" method="post">
             <label for="name">Nombre</label>
             <input type="text" class="form-name" id="name" name="name" placeholder="Tu nombre.." required>
             <label for="email">Correo electrónico</label>
@@ -228,26 +228,6 @@
   </footer>
 
   <!-- JAVA SCRIPT -->
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
-  <script>
-    function sendEmail() {
-      Email.send({
-    SecureToken: "ff1d2997-08d8-4968-8ff4-c041420b0f4a",    
-    
-    To : 'info@riosmexicanos.com',
-    From : document.getElementById("email").value,
-    Subject : "Solicitud de un nuevo contacto",
-    Body : "Nombre: " + document.getElementById("name").value 
-    + "<br> Email: " +document.getElementById("email").value
-    + "<br> Actividad: " +document.getElementById("actividad").value
-    + "<br> Fecha: " +document.getElementById("date").value
-    + "<br> Participantes: " +document.getElementById("cuantos").value
-    + "<br> Mensaje: " +document.getElementById("subject").value
-}).then(
-  message => alert("¡Su mensaje ha sido enviado!")
-);
-    }
-  </script>
+
 </body>
 </html>
