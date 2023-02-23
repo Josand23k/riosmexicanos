@@ -599,6 +599,7 @@ text-align: center;
 }
 .text-fulltab {
     padding: 10px;
+
 }
 
 .tabcontenty img {
@@ -616,6 +617,19 @@ text-align: center;
 #News {background-color: var(--clr-dorado-500);}
 #Contact {background-color: var(--clr-rojo-500);}
 #About {background-color: var(--clr-turquesa-500);}
+
+.exp-btn {
+    margin: 10px 0px;
+    width: 100%;
+
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.exp-btn button {
+    float: right;
+}
 
 /* -- CONTACT PAGE -- */
  /* Style inputs with type="text", select elements and textareas */
@@ -969,7 +983,7 @@ text-align: center;
         padding: 10px 0px 20px;
     }
 
-    /* -- EXPDICION PAGE -- */
+    /* -- EXPEDICION PAGE -- */
     .fulltab-in {
         display: grid;
         grid-template-columns: 2fr 3fr;
@@ -999,4 +1013,3 @@ text-align: center;
         padding: 40px 90px;
     }
 
-}
