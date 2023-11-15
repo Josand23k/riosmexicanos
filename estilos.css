@@ -223,7 +223,149 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     background-color: var(--azul-brillante);
 }
 
+/*-- Sección Beneficios | Página Index --*/
+.container-bene {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+}
 
+/*-- Slider --*/
+#slider {
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+}
+
+#slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 1s;
+}
+
+.bene-textbox h2 { /*-- Texto de la sección de beneficos | página index --*/
+    color: var(--azul-primario);
+    text-align: center;
+    font-family: var(--ff-Secundary);
+    font-size: 1.5em;
+    padding-bottom: 30px;
+}
+
+.bene-textbox ul {
+    list-style-type: none;
+    width: 85%;
+    padding-left: 100px;
+}
+
+.bene-textbox li {
+    font-family: var(--ff-primario);
+    color: var(--clr-claro);
+    padding: 5px 0px;
+    font-size: 1.1em;
+    letter-spacing: 1.3px;
+    line-height: 1.3;
+}
+
+/*-- Sección Paquetes Large Devices | Página Index --*/
+.container-pkts { /*-- Fondo y disposición de la sección paquetes --*/
+    background-color: rgb(215, 215, 215, .3);
+    backdrop-filter: blur(10px);
+    padding: 2em;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+}
+
+/*-- Contenedor de las tres cards de la sección paquetes --*/
+.pkts-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 30%;
+}
+
+.pkts-cards { /*-- Diseño y disposición de las cards de la sección paquetes --*/
+    background-color: rgba(143, 216, 204, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+}
+
+/* -- Texto del centro de la sección Paquetes | págin Index --*/
+.pkts-textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3em;
+}
+.pkts-textbox h2 {
+    font-family: var(--ff-Secundary);
+    font-size: 2em;
+    color: var(--azul-brillante);
+    text-align: center;
+}
+
+.pkts-textbox p {
+    font-family: var(--ff-primario);
+    font-size: 1.3em;
+    color: var(--clr-claro);
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+}
+
+.pkts-textbox a {
+    background-color: var(--azul-primario);
+    padding: 12px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--clr-oscuro);
+    font-family: var(--ff-titles);
+    letter-spacing: 1.5px;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.pkts-textbox a:hover {
+    background-color: var(--azul-brillante);
+}
+
+.pkts-cards h3 { /*-- Titulos de las cards de los paquetes --*/
+    font-family: var(--ff-Secundary);
+    font-size: 1.3em;
+    color: var(--clr-oscuro);
+    text-align: center;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.pkts-cards img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.pkts-cards p { /*-- Texto al pie de las Cards --*/
+    font-family: var(--ff-primario);
+    font-size: 1.1em;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    height: 110px;
+    color: var(--clr-oscuro);
+}
 
 /*-- MEDIA QUERIES --*/
   
@@ -251,6 +393,63 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
         z-index: 1;
         padding: 20px;
     }
+
+    /*-- Sección Actividades | página Index --*/
+    .cards-box {
+        flex-direction: column;
+    }
+
+    .cards-sv {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .cards-sv img {
+        height: 250px;
+        width: 500px;
+        object-fit: cover;
+    }
+
+    .cards-textbox {
+        width: 100%;
+    }
+
+    /*-- Sección Beneficios | página Index--*/
+    .bene-textbox {
+        width: 60%;
+    }
+
+    .bene-textbox ul {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /*-- Sección Paquetes Medium Devices | página index --*/
+    .container-pkts {
+        justify-content: space-between;
+        padding: 45px 15px;
+    }
+        /*-- Texto central de la sección --*/
+    .pkts-textbox h2 {
+        font-size: 1.7em;
+    }
+
+    .pkts-textbox p {
+        font-size: 1.2em;
+    }
+
+    /*-- Contenedores laterales de la sección paquetes --*/
+    .pkts-cards h3 {
+        font-size: 1.2em;
+        height: 60px;
+    }
+
+    .pkts-cards p {
+        font-size: 1.1em;
+        height: 170px;
+    }
   }
 /*-- Media Queries para dispositivos S/M --*/
 @media screen and (max-width: 768px) {
@@ -261,6 +460,62 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 
     .container-intro img {
         width: 100%;
+    }
+
+    /*-- Sección Actividades S/M devices | página Index --*/
+    .cards-sv img {
+        width: 100%;
+    }
+
+    .cards-textbox a {
+        font-size: 1.2em;
+    }
+    
+    /*-- Sección Beneficios | página Index --*/
+    #slider {
+        width: 50%
+    }
+
+    .bene-textbox {
+        width: 50%;
+    }
+
+    .bene-textbox h2 {
+        font-size: 1.2em;
+    }
+
+    .bene-textbox li {
+        font-size: 1em;
+    }
+
+    /*-- Sección Paquetes S/M Devices | Página Index --*/
+    .container-pkts {
+        flex-direction: column;
+    }
+
+    .pkts-box {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        gap: 2em;
+    }
+
+    .pkts-textbox {
+        width: 80%;
+        padding: 30px 0px;
+        gap: 2em;
+    }
+
+    .pkts-cards {
+        width: 100%;
+    }
+
+    .pkts-cards h3 {
+        height: 40px;
+    }
+
+    .pkts-cards p {
+        height: 130px;
     }
 }
 
@@ -298,5 +553,33 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 
     .container-intro img {
         height: 200px;
+    }
+
+    /*-- Sección Actividades S/M devices | página Index --*/
+    .container-cards {
+        padding: 15px;
+    }   .cards-sv {
+        flex-direction: column;
+    }
+
+    /*-- Sección Beneficios | página Index --*/
+
+    .container-bene {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #slider {
+        width: 100%;
+        height: 200px;
+    }
+
+    .bene-textbox {
+        width: 100%;
+    }
+
+    /*-- Sección paquetes XS/S Devices | página Index --*/
+    .pkts-box {
+        flex-direction: column;
     }
 }
