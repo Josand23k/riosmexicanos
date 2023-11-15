@@ -367,6 +367,90 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     color: var(--clr-oscuro);
 }
 
+/*-- Footer Large Devices --*/
+footer { /*-- Fondo de la sección footer --*/
+    background-color: rgba(36, 36, 36, 0.5);
+    backdrop-filter: blur(10px); 
+    padding: 40px 40px 10px;
+}
+
+.container-footer { /*-- Disposición de los contenedores del footer --*/
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+.footer-box { /*-- Disposición de los contenedores --*/
+    width: 30%;
+}
+
+.footer-box h4 { /*-- Titulos de los contenedores --*/
+    font-family: var(--ff-Secundary);
+    font-size: 1.3em;
+    color: var(--azul-brillante);
+    text-align: center;
+}
+
+.footer-box ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer-box li,a {
+    color: var(--clr-claro);
+    font-family: var(--ff-primario);
+    font-size: 1.1em;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+}
+
+.box-media { /*-- Diseño y disposición del Contenedor de logo e iconos del footer --*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.box-media img { /*-- Logo footer --*/
+    width: 150px;
+}
+
+.footer-media { /*-- Diseño disposición de los iconos --*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 2em;
+}
+
+.footer-media a {
+    color: var(--azul-primario);
+}
+
+.footer-media a:hover {
+    color: var(--azul-brillante);
+}
+
+/*-- Contenedor Copyrigth --*/
+.copy {
+    text-align: center;
+    color: var(--clr-claro);
+    margin-top: 30px;
+    font-family: var(--ff-primario);
+    font-size: 14px;
+}
+
+.copy a {
+    font-family: var(--ff-primario);
+    font-size: 14px;
+}
+
+.copy a:hover {
+    color: var(--azul-primario);
+}
+
 /*-- MEDIA QUERIES --*/
   
 @media screen and (max-width: 992px) {  /*-- Medium devices --*/
