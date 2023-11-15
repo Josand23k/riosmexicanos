@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-- Link de Google fonts --*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500&display=swap');
+
+:root {
+    /*-- Colores azul turquesa --*/
+    --azul-primario: rgb(57, 194, 201);
+    --azul-Secundario: rgb(5, 79, 79);
+    --azul-brillante: rgb(175, 251, 255);
+
+    /*-- Colores alternativos --*/
+    --clr-dorado: rgb(198, 156, 109);
+    --clr-rojo: rgb(163, 52, 52);
+    --clr-claro: rgb(215, 215, 215);
+    --clr-oscuro: rgb(46, 46, 46);
+    
+    /*-- Fonts --*/
+    --ff-primario: 'Georgia', cursive;
+    --ff-titles: 'Bebas Neue', sans-serif;
+    --ff-Secundary: 'Playfair Display', serif; 
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: #000000;
+    background-image: url(imagenes/fondo-M-device.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*-- Diseño de la barra de navegación para Large Devices --*/
+
+nav {   /*-- Efecto y color en el backgroud de la barra de navegación --*/
+    background: radial-gradient(circle, rgb(5, 79, 79, .4)30%, rgb(175, 251, 255, .4)98%);
+    backdrop-filter: blur(10px);  
+
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav img {
+    width: 100px; /*-- Logo en la barra de navegación --*/
+}
+
+nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra de navegacióm --*/
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+
+    font-family: var(--ff-Secundary);
+    font-size: 1.8em;
+    color: var(--azul-primario);
+}
+
+.menu { /*-- Disposición del menu de la barra de navegación --*/
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+}
+
+.menu a {
+    font-size: 1.5em;
+    transition: transform 0.2s;
+}
+
+.menu a:hover {
+    color: var(--azul-brillante);
+    transform: scale(1.1);
+}
+
+/*-- Diseño y disposición del icon toggle para Responsive design --*/
+.icon {
+    display: none;
+    color: var(--azul-primario);
+    font-size: 1.7em;
+}
+
+.icon:hover {
+    color: var(--clr-dorado);
+}
+
+/*-- Sección Intro de la página index --*/
+.container-intro {  /*-- Fondo y disposición de la sección intro --*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3em;
+    gap: 2em;
+}
+
+.intro-box {  /*-- Contenedor del texto de la sección intro --*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+}
+
+.intro-box h1 {
+    color: var(--azul-primario);
+    text-align: center;
+    font-family: var(--ff-Secundary);
+    font-size: 2em;
+}
+
+.intro-box p {
+    color: var(--clr-claro);
+    font-family: var(--ff-primario);
+    letter-spacing: 1.3px;
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+
+.intro-box a {
+    font-family: var(--ff-titles);
+    font-size: 1.8em;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: var(--clr-claro);
+    background-color: var(--azul-Secundario);
+    padding: 15px 50px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+}
+
+.intro-box a:hover {
+    background-color: var(--azul-primario);
+    color: var(--clr-oscuro);
+}
+
+/*-- Imagen en la sección intro de la página index --*/
+.container-intro img {
+    width: 90%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+}
+
+/*-- MEDIA QUERIES --*/
+  
+@media screen and (max-width: 992px) {  /*-- Medium devices --*/
+    /*-- Barra de Navegación para medium devices --*/
+    .menu {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu.active {  /*-- disposición del menu desplegable cuando se hace click en el icono toggle --*/
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(5, 79, 79, .3);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        padding: 20px;
+    }
+  }
+/*-- Media Queries para dispositivos S/M --*/
+@media screen and (max-width: 768px) {
+    /*-- Disposición para la sección intro de la página index para S/M devices --*/ 
+    .container-intro {
+        flex-direction: column;
+    }
+
+    .container-intro img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {  /*-- Small devcies --*/
+    /*-- Barra de navegación para small devices --*/
+    nav img {
+        width: 60px;
+    }
+    nav a {
+        font-size: 1.6em;
+    }
+
+    .menu a {
+        font-size: 1.4em;
+    }
+
+    /*-- Sección intro para XS/S devices --*/
+    .container-intro {
+        padding: 2em 1.5em;
+    }
+
+    .intro-box h1 {
+        font-size: 1.7em;
+    }
+
+    .intro-box p {
+        font-size: 1.2em;
+    }
+
+    .intro-box a {
+        font-size: 1.4em;
+        padding: 10px 50px;
+    }
+
+    .container-intro img {
+        height: 200px;
+    }
+}
