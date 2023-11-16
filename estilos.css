@@ -95,9 +95,11 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     align-items: center;
     padding: 3em;
     gap: 2em;
+    min-height: 30vw;
 }
 
 .intro-box {  /*-- Contenedor del texto de la sección intro --*/
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +142,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 /*-- Imagen en la sección intro de la página index --*/
 .container-intro img {
     width: 90%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 15px;
     border: 2px solid var(--azul-brillante);
@@ -197,6 +199,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     font-family: var(--ff-Secundary);
     font-size: 1.5em;
     color: var(--azul-primario);
+    height: 60px;
 }
 
 .cards-textbox p {
@@ -354,8 +357,10 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 
 .pkts-cards img {
     width: 100%;
+    height: 160px;
     border-radius: 15px;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .pkts-cards p { /*-- Texto al pie de las Cards --*/
@@ -493,7 +498,7 @@ footer { /*-- Fondo de la sección footer --*/
     box-shadow: 0px 0px 8px var(--azul-brillante);
     padding: 15px;
     width: 100%;
-    height: 400px;
+    height: 450px;
 }
 
 .datos-cards h3 {
@@ -509,6 +514,88 @@ footer { /*-- Fondo de la sección footer --*/
     letter-spacing: 1.1px;
     line-height: 1.3;
     color: var(--clr-claro);
+}
+
+/*-- Sección Form Contacto Large Devices | página contacto --*/
+.container-contacto { /*-- Disposición de la sección --*/
+    background-color: rgb(215, 215, 215, .3);
+    padding: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.map-contact h2 {
+    font-family: var(--ff-Secundary);
+    font-size: 2em;
+    color: var(--azul-primario);
+}
+
+/*-- Diseño contenedor del mapa del Punto de Encuentro --*/
+    .map-contact {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .map-contact iframe {
+        height: 570px;
+        border-radius: 15px;
+        border: 2px solid var(--azul-brillante);
+        box-shadow: 0px 0px 8px var(--azul-brillante);
+    }
+/*-- Diseño de formulario contacto --*/
+.form-map {
+    width: 100%;
+}
+
+form {
+    padding-left: 70px;
+}
+
+.form-map label {
+    font-family: var(--ff-primario);
+    font-size: 1.2em;
+    color: var(--azul-brillante);
+}
+
+.form-map input, select {
+    padding: 5px;
+    margin: 10px 0px;
+    width: 80%;
+    border-radius: 7px;
+    border: 2px solid var(--azul-primario);
+}
+
+.form-name select, textarea {
+    width: 80%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+}
+  
+/* Style the submit button with a specific background color etc */
+.btn-form {
+    background-color: var(--azul-primario);
+
+    color: var(--clr-oscuro);
+    font-size: 1.1em;
+    font-family: var(--ff-p
+    );
+
+    border: none;
+    cursor: pointer;
+}
+
+.btn-form:hover {
+    background-color: var(--azul-brillante);
 }
 
 /*-- MEDIA QUERIES --*/
@@ -538,6 +625,11 @@ footer { /*-- Fondo de la sección footer --*/
         padding: 20px;
     }
 
+    /*-- Sección Intro Medium Devices | todas las páginas --*/
+    .container-intro {
+        height: auto;
+    }
+
     /*-- Sección Actividades | página Index --*/
     .cards-box {
         flex-direction: column;
@@ -552,7 +644,7 @@ footer { /*-- Fondo de la sección footer --*/
 
     .cards-sv img {
         height: 250px;
-        width: 500px;
+        width: 100%;
         object-fit: cover;
     }
 
@@ -606,6 +698,27 @@ footer { /*-- Fondo de la sección footer --*/
 
     .box-media img { /*-- Logo footer Medium devices --*/
         width: 110px;
+    }
+
+    .datos-box {
+        flex-direction: column;
+    }
+
+    .datos-cards {
+        height: 400px;
+    }
+
+    /*-- Sección Formulario contacto large devices | página Contacto --*/
+    form {
+        padding: 0;
+    }
+
+    .form-map input, select {
+        width: 100%;
+    }
+
+    .form-name select, textarea {
+        width: 100%;
     }
 
   }
@@ -689,6 +802,15 @@ footer { /*-- Fondo de la sección footer --*/
 
     .footer-media {
         font-size: 1.9em;
+    }
+
+    /*-- Sección Formulario contacto S/M Devices | página Contacto --*/
+    .container-contacto {
+        flex-direction: column;
+    }
+
+    .map-contact iframe {
+        height: 300px;
     }
 }
 
@@ -777,5 +899,31 @@ footer { /*-- Fondo de la sección footer --*/
 
     .footer-media {
         font-size: 2em;
+    }
+
+    /*-- Sección Datos XS/S Devices | Rafting Morelos page --*/
+    .container-datos {
+        padding: 1em;
+    }
+    .datos-cards {
+        height: 520px;        
+    }
+
+    .datos-cards p {
+        font-size: 1em;
+    }
+
+    /*-- Sección Formulario Contacto XS/S Devices | página Contacto --*/
+    .container-contacto {
+        padding: 1em;
+    }
+
+    .map-contact h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    .map-contact iframe {
+        height: 250px;
     }
 }
