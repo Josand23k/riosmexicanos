@@ -580,6 +580,10 @@ form {
     margin-bottom: 16px; 
     resize: vertical 
 }
+
+textarea {
+    height: 100px;
+}
   
 /* Style the submit button with a specific background color etc */
 .btn-form {
@@ -848,6 +852,73 @@ form {
     color: var(--clr-oscuro);
 }
 
+/*-- Sección Suscribir de la página Club de Río | Cursos --*/
+.container-sus {  /*-- Disposición y diseño de la sección --*/
+    background-color: rgb(175, 251, 255, .4);
+    padding: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    min-height: 200px;
+}
+
+.suscribe { /*-- Diseño y disposición del contenedor del texto --*/
+    width: 40%;
+    text-align: center;
+}
+
+.suscribe h3 {
+    font-family: var(--ff-Secundary);
+    font-size: 1.4em;
+    color: var(--azul-brillante);
+    margin-bottom: 12px;
+}
+
+.suscribe hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1.4px solid var(--azul-brillante);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.suscribe p {
+    font-family: var(--ff-primario);
+    color: var(--clr-claro);
+    font-size: 1.2em;
+}
+
+/*-- Casilla de ingreso del email en la sección --*/
+.container-sus form {
+    width: 40%;
+    text-align: center;
+}
+
+.cb-em {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+    margin-bottom: 20px;
+}
+
+.bt-cb {
+    background-color: var(--azul-primario);
+    padding: 12px 50px;
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+    font-family: var(--ff-titles);
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.bt-cb:hover {
+    background-color: var(--azul-brillante);
+}
 
 /*-- MEDIA QUERIES --*/
   
@@ -1126,6 +1197,25 @@ form {
 
     .precio-cards p {
         height: 60px;
+    }
+
+    /*-- Sección suscribirse de la página Club de Río | Cursos Small Devices --*/
+    .container-sus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suscribe {
+        width: 100%;
+    }
+
+    .container-sus form {
+        width: 100%;
+    }
+
+    .cb-em {
+        width: 80%;
+        
     }
 }
 

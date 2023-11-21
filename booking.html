@@ -50,14 +50,14 @@
             <h1>¡Reserva aquí!</h1> <!-- Titulo de la página -->
             <p>¡Aquí comienza la aventura en el río Amacuzac!<br>Aqui podrás dejarnos un mensaje eligiendo la actividad que te interesa, así nos podremos enviarte la información que buscas. O si lo prefieres, puedes contactarnos vía teléfono o correro electronico.</p>
         </div>
-        <img src="imagenes/ban-expedicion-usumacinta.webp" alt="Recorriendo un rápido en Rafting con Ríos Mexicanos">
+        <img src="imagenes/ban-nosotros(1).webp" alt="Recorriendo un rápido en Rafting con Ríos Mexicanos">
     </section>
 
     <!-- Sección Form Contacto Large Devices | página Contacto -->
     <section class="container-contacto"> 
         <div class="map-contact"> <!-- Mapa -->
             <h2>Reserva aquí</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2891.1913637022853!2d-99.26612223368012!3d18.543218353216393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1676426437118!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+            <iframe id="inlinePuntodeEncuentro" title="Punto de Encuentro" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2891.1913637022853!2d-99.26612223368012!3d18.543218353216393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1676426437118!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
             </iframe> 
         </div> 
 
@@ -86,11 +86,11 @@
                         <option value="otro">Otro</option> 
                     </select> <br>
                 <label for="date">Fecha: </label> <br>
-                    <input type="date" class="form-name" name="fecha" required> <br> 
+                    <input type="date" class="form-name" id="date" name="fecha" required> <br> 
                 <label for="participantes">Participantes: 
                     <input type="number" id="cuantos" class="form-name" name="cuantos" min="1" max="50" required> </label> <br> 
                 <label for="subject">Agrega un mensaje:</label> 
-                <textarea id="subject" name="mensaje" placeholder="Tu mensaje.." style="height:200px"></textarea> 
+                <textarea id="subject" name="mensaje" placeholder="Tu mensaje.."></textarea> 
                 <input type="submit" value="Reservar" class="g-recaptcha btn-form" data-sitekey="6LfbDLglAAAAALjj9nMnLgGfEdg-ZGL0MI8JCUIY" data-callback='onSubmit' data-action='submit'> 
             </form> 
         </div>
@@ -118,7 +118,9 @@
                 </ul>
             </div>
             <div class="footer-box box-media">
-                <img src="imagenes/Logo-RiosMexicanos.png" alt="Logo de Ríos Mexicanos">
+                <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
+                    <img src="imagenes/Logo-RiosMexicanos.png" alt="Logo de Ríos Mexicanos">
+                </a>
 
                 <div class="footer-media">
                     <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
