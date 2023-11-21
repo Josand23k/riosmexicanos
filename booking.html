@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ríos Mexicanos | Reservar test</title> <!-- Page Title -->
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    <!-- reCAPTCHA --> 
+    <script src="https://www.google.com/recaptcha/api.js"></script> 
+    <script> function onSubmit(token) { document.getElementById("demo-form").submit(); } </script> 
+
+    <!-- link to Google font | Fonts source -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <!-- link to Awsome Font | Icons source -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+    <script src="https://kit.fontawesome.com/2ef942ef12.js" crossorigin="anonymous"> </script>
+
+
+</head>
+<body>
+    <nav>  <!-- Contenedor del Menu de Navegación -->
+        <a href="index.html" aria-label="Link a la página de inicio de Ríos Mexicanos"> <!-- Enlace del logo & nombre a la página de inicio -->
+            <img src="imagenes/logoriosmexicanos.png" alt="Logo Ríos Mexicanos - Una ola en azul tuquesa"> <!-- Logo de la barra de navegación -->
+            <span>Ríos Mexicanos</span> <!-- Nombre del sitio en la barra de navegación-->
+        </a>
+
+        <div class="menu" id="menu"> <!--Menu de Navegación -->
+            <a href="index.html" aria-label="Enlace a la página de inicio">Inicio</a>
+            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
+            <a href="rafting-morelos.html" aria-label="Enlace a la página de Rafting Morelos">Rafting</a>
+            <a href="contacto.html" aria-label="Enlace a la página de Contacto">Contacto</a>
+        </div>
+
+        <div class="icon" id="menu-icon"> <!-- Icono de hamburger (tres barras) -->
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Sección Intro-Rafting -->
+    <section class="container-intro">
+        <div class="intro-box">
+            <h1>¡Reserva aquí!</h1> <!-- Titulo de la página -->
+            <p>¡Aquí comienza la aventura en el río Amacuzac!<br>Aqui podrás dejarnos un mensaje eligiendo la actividad que te interesa, así nos podremos enviarte la información que buscas. O si lo prefieres, puedes contactarnos vía teléfono o correro electronico.</p>
+        </div>
+        <img src="imagenes/ban-expedicion-usumacinta.webp" alt="Recorriendo un rápido en Rafting con Ríos Mexicanos">
+    </section>
+
+    <!-- Sección Form Contacto Large Devices | página Contacto -->
+    <section class="container-contacto"> 
+        <div class="map-contact"> <!-- Mapa -->
+            <h2>Reserva aquí</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2891.1913637022853!2d-99.26612223368012!3d18.543218353216393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1676426437118!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+            </iframe> 
+        </div> 
+
+         <!-- CONTACT FORM --> 
+        <div class="form-map"> 
+            <form action="reservaciones.php" method="post"> 
+                <label for="fname">Nombre</label><br>
+                    <input type="text" class="form-name" id="fname" name="nombre" placeholder="Tu nombre.." required> <br>
+                <label for="lname">Apellido</label> <br>
+                    <input type="text" class="form-name" id="lname" name="apellido" placeholder="Tu apellido.." required> <br>
+                <label for="email">Correo electrónico</label> <br>
+                    <input type="email" class="form-name" id="email" name="email" placeholder="tu-correo@ejemplo.com" required> <br>
+                <label for="tel">Telefóno</label> <br>
+                    <input type="tel" class="form-name" id="tel" name="tel" placeholder="123-456-78-90" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required> <br>
+                <label for="actividad">Actividad</label> <br>
+                    <select id="actividad" name="actividad" required> <br>
+                        <option value="rafting-amacuzac">Rafting Amacuzac</option> 
+                        <option value="amacuzac-fullday">Rafting Amacuzac Fullday</option> 
+                        <option value="amacuzac-findesemana">Rafting Amacuzac Fin de Semana</option> <option value="alto-amacuzac">Rafting Alto Amacuzac</option> 
+                        <option value="rafting-familiar">Rafting Familiar</option> 
+                        <option value="familiar-fullday">Rafting Familiar Fullday</option> 
+                        <option value="familiar-findesemana">Rafting Familiar Fin de Semana</option> <option value="tubing-amacuzac">Tubing Amacuzac</option> 
+                        <option value="tubing-alto">Tubing Alto Amacuzac</option> 
+                        <option value="dookie-amacuzac">Dookie Amacuzac</option> 
+                        <option value="dookie-alto">Dookie Alto Amacuzac</option> 
+                        <option value="otro">Otro</option> 
+                    </select> <br>
+                <label for="date">Fecha: </label> <br>
+                    <input type="date" class="form-name" name="fecha" required> <br> 
+                <label for="participantes">Participantes: 
+                    <input type="number" id="cuantos" class="form-name" name="cuantos" min="1" max="50" required> </label> <br> 
+                <label for="subject">Agrega un mensaje:</label> 
+                <textarea id="subject" name="mensaje" placeholder="Tu mensaje.." style="height:200px"></textarea> 
+                <input type="submit" value="Reservar" class="g-recaptcha btn-form" data-sitekey="6LfbDLglAAAAALjj9nMnLgGfEdg-ZGL0MI8JCUIY" data-callback='onSubmit' data-action='submit'> 
+            </form> 
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-footer">
+            <div class="footer-box">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>+52 777 497 55 31</li>
+                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                    <li>Cuernavaca, Morelos</li>
+                    <li>México</li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Información</h4>
+                <ul>
+                    <li><a href="#">Quienes Somos</a></li>
+                    <li><a href="#">Terminos y Condiciones</a></li>
+                    <li><a href="#">Club de Río</a></li>
+                    <li><a href="#">Cursos</a></li>
+                </ul>
+            </div>
+            <div class="footer-box box-media">
+                <img src="imagenes/Logo-RiosMexicanos.png" alt="Logo de Ríos Mexicanos">
+
+                <div class="footer-media">
+                    <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" aria-label="Link a la pagina de Ríos Mexicanos en Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCbXoxytzZFo4caZSBv2BHxw" aria-label="Link al canal de YouTube de Ríos Mexicanos"><i class="fa fa-youtube"></i></a>
+                    <a href="https://twitter.com/riosmexicanos" aria-label="Link a la cuenta de Ríos Mexicanos en Twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
