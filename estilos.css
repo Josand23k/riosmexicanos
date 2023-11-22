@@ -920,6 +920,89 @@ textarea {
     background-color: var(--azul-brillante);
 }
 
+/*-- Sección Valores de la página Nosotros | Large Devices --*/
+.container-sms {
+    padding: 3em;
+    background-color: rgb(175, 251, 255, .4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.box-sms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textbox-sms {
+    width: 45%;
+    background-color: rgba(20, 20, 20, 0.5);
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+    padding: 15px;
+}
+
+.textbox-sms p {
+    font-family: var(--ff-primario);
+    line-height: 1.3;
+    font-size: 1.1em;
+    color: var(--clr-claro);
+    height: 150px;
+}
+
+.textbox-sms h3 {
+    font-family: var(--ff-Secundary);
+    font-size: 1.5em;
+    color: var(--azul-primario);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.textbox-sms img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.textbox-smv {
+    background-color: rgba(20, 20, 20, 0.5);
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+    padding: 15px; 
+}
+
+.textbox-smv h3 {
+    font-family: var(--ff-Secundary);
+    font-size: 1.5em;
+    color: var(--azul-primario);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.textbox-smv ul {
+    list-style-type: none;
+}
+
+.textbox-smv li {
+    font-family: var(--ff-primario);
+    font-size: 1.1em;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    color: var(--clr-claro);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.box-smv img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
 /*-- MEDIA QUERIES --*/
   
 @media screen and (max-width: 992px) {  /*-- Medium devices --*/
