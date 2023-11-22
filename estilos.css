@@ -1003,6 +1003,71 @@ textarea {
     object-fit: cover;
 }
 
+/*-- Sección termino y condiciones de la página Terminos&Condiciones | Large Devices --*/
+.container-tc {
+    padding: 2em 8em;
+    background-color: rgba(86, 86, 86, 0.3);
+}
+
+.container-tc h3 {
+    font-family: var(--ff-Secundary);
+    font-size: 1.5em;
+    color: var(--azul-primario);
+    margin-bottom: 15px;
+}
+
+.container-tc h4 {
+    font-family: var(--ff-Secundary);
+    font-size: 1.3em;
+    color: var(--clr-claro);
+    margin-bottom: 10px;
+}
+
+.container-tc p {
+    font-family: var(--ff-primario);
+    font-size: 1.1em;
+    color: var(--clr-claro);
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+
+.container-tc div {
+    margin-bottom: 2em;
+}
+
+/*-- Página de suscribir --*/
+.suscribir-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+
+.suscribir-box {
+    background-color: rgb(215, 215, 215, .3);
+    padding: 2em;
+    border-radius: 15px;
+    border: 2px solid var(--azul-brillante);
+    box-shadow: 0px 0px 8px var(--azul-brillante);
+}
+
+.suscribir-box h2 {
+    font-family: var(--ff-Secundary);
+    font-size: 2em;
+    color: var(--azul-primario);
+    padding: 20px;
+    text-align: center;
+}
+
+.suscribir-box p {
+    font-family: var(--ff-primario);
+    font-size: 1.5em;
+    color: var(--clr-claro);
+    text-align: center;
+    padding: 10px;
+}
+
 /*-- MEDIA QUERIES --*/
   
 @media screen and (max-width: 992px) {  /*-- Medium devices --*/
@@ -1157,6 +1222,19 @@ textarea {
     .precio-cards p {
         font-size: 1.2em;
         height: 60px;
+    }
+
+    /*-- Textbox de la página Terminos&Condiciones | Medium Devices --*/
+    .textbox-sms {
+        width: 47%;
+    }
+
+    .textbox-sms p {
+        height: 200px;
+    }
+
+    .textbox-smv li {
+        width: 100%;
     }
 
   }
@@ -1450,5 +1528,41 @@ textarea {
 
     .container-precios a {
         padding: 10px 70px;
+    }
+
+    /*-- Textbox de la página Terminos y Condiciones | S/XS Devices --*/
+    .container-tc {
+        padding: 1em;
+    }
+
+    /*-- Textbox del textbox de la página Quienes Somos | S/XS Devices --*/
+    .container-sms {
+        padding: 50px 10px;
+    }
+
+    .box-sms {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .textbox-sms {
+        width: 100%;
+    }
+
+    /*-- Página suscribir --*/
+    .suscribir-bg {
+        padding: 20px;
+        height: 400px;
+    }
+    .suscribir-box {
+        padding: 10px;
+    }
+
+    .suscribir-box h2 {
+        font-size: 1.3em;
+    }
+
+    .suscribir-box p {
+        font-size: 1em;
     }
 }
