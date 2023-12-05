@@ -625,7 +625,6 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 70%;
     gap: 1em;
 }
@@ -730,11 +729,11 @@ textarea {
 .desc-cards {
     width: 100%;
     background-color: rgba(19, 27, 27, 0.589);
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
     border: 2px solid var(--azul-brillante);
     box-shadow: 0px 0px 8px var(--azul-brillante);
-    max-height: 670px;
+    max-height: 800px;
 }
 
 .desc-cards h4 {
