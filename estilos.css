@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/*-- Fonts Gabriola --*/
+@font-face {
+    font-family: 'Gabriola';
+    src: url('Fonts/Gabriola.ttf') format('truetype');
+    /* Agrega otros formatos de fuente según sea necesario (woff, woff2, etc.) */
+}
+
 /*-- Link de Google fonts --*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500&display=swap');
 
@@ -22,11 +29,11 @@
     /*-- Fonts --*/
     --ff-primario: 'Georgia', cursive;
     --ff-titles: 'Bebas Neue', sans-serif;
-    --ff-Secundary: 'Playfair Display', serif; 
+    --ff-Secundary: 'Gabriola', serif; 
 }
 
 body {
-    font-family: var(--ff-primary);
+    font-family: var(--ff-primario);
     background-color: #000000;
     background-image: url(imagenes/fondo-M-device.webp);
     background-repeat: no-repeat;
@@ -46,7 +53,8 @@ nav {   /*-- Efecto y color en el backgroud de la barra de navegación --*/
 }
 
 nav img {
-    width: 100px; /*-- Logo en la barra de navegación --*/
+    width: 58px; /*-- Logo en la barra de navegación --*/
+    
 }
 
 nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra de navegacióm --*/
@@ -57,8 +65,8 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     gap: 1em;
 
     font-family: var(--ff-Secundary);
-    font-size: 1.8em;
-    color: var(--azul-primario);
+    font-size: 3em;
+    color: var(--azul-brillante);
 }
 
 .menu { /*-- Disposición del menu de la barra de navegación --*/
@@ -68,7 +76,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 }
 
 .menu a {
-    font-size: 1.5em;
+    font-size: 2em;
     transition: transform 0.2s;
 }
 
@@ -111,7 +119,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     color: var(--azul-primario);
     text-align: center;
     font-family: var(--ff-Secundary);
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .intro-box p {
@@ -161,7 +169,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     padding-bottom: 30px;
     color: var(--azul-primario);
     font-family: var(--ff-Secundary);
-    font-size: 2.3em;
+    font-size: 3em;
 }
 
 .cards-box {
@@ -197,7 +205,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 .cards-textbox h3 {
     text-align: center;
     font-family: var(--ff-Secundary);
-    font-size: 1.5em;
+    font-size: 2em;
     color: var(--azul-primario);
     height: 60px;
 }
@@ -258,7 +266,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     color: var(--azul-primario);
     text-align: center;
     font-family: var(--ff-Secundary);
-    font-size: 1.5em;
+    font-size: 2.1em;
     padding-bottom: 30px;
 }
 
@@ -348,7 +356,7 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 
 .pkts-cards h3 { /*-- Titulos de las cards de los paquetes --*/
     font-family: var(--ff-Secundary);
-    font-size: 1.3em;
+    font-size: 2em;
     color: var(--clr-oscuro);
     text-align: center;
     margin-bottom: 10px;
@@ -391,7 +399,7 @@ footer { /*-- Fondo de la sección footer --*/
 
 .footer-box h4 { /*-- Titulos de los contenedores --*/
     font-family: var(--ff-Secundary);
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: var(--azul-brillante);
     text-align: center;
 }
@@ -415,11 +423,11 @@ footer { /*-- Fondo de la sección footer --*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 .box-media img { /*-- Logo footer --*/
-    width: 150px;
+    width: 120px;
 }
 
 .footer-media { /*-- Diseño disposición de los iconos --*/
@@ -504,7 +512,7 @@ footer { /*-- Fondo de la sección footer --*/
 
 .datos-cards h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.5em;
+    font-size: 2em;
     color: var(--azul-primario);
     margin-bottom: 15px;
 }
@@ -669,7 +677,7 @@ textarea {
 
 .desc-box h2 {
     font-family: var(--ff-Secundary);
-    font-size: 1.7em;
+    font-size: 2em;
     color: var(--azul-brillante);
 }
 
@@ -739,7 +747,7 @@ textarea {
 
 .desc-cards h4 {
     font-family: var(--ff-Secundary);
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: var(--azul-primario);
     margin-bottom: 15px;
 }
@@ -767,7 +775,7 @@ textarea {
 
 .box-reco h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
@@ -800,7 +808,7 @@ textarea {
 
 .container-precios h2 {
     font-family: var(--ff-Secundary);
-    font-size: 2.1em;
+    font-size: 3em;
     color: var(--azul-brillante);
 }
 
@@ -822,7 +830,7 @@ textarea {
 
 .precio-cards h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.4em;
+    font-size: 2em;
     color: var(--clr-oscuro);
     padding-bottom: 1em;
 }
@@ -871,7 +879,7 @@ textarea {
 
 .suscribe h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.4em;
+    font-size: 2em;
     color: var(--azul-brillante);
     margin-bottom: 12px;
 }
@@ -955,7 +963,7 @@ textarea {
 
 .textbox-sms h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.5em;
+    font-size: 2em;
     color: var(--azul-primario);
     margin-bottom: 10px;
     text-align: center;
@@ -977,7 +985,7 @@ textarea {
 
 .textbox-smv h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.5em;
+    font-size: 2em;
     color: var(--azul-primario);
     text-align: center;
     margin-bottom: 15px;
@@ -1012,14 +1020,14 @@ textarea {
 
 .container-tc h3 {
     font-family: var(--ff-Secundary);
-    font-size: 1.5em;
+    font-size: 2.2em;
     color: var(--azul-primario);
     margin-bottom: 15px;
 }
 
 .container-tc h4 {
     font-family: var(--ff-Secundary);
-    font-size: 1.3em;
+    font-size: 2em;
     color: var(--clr-claro);
     margin-bottom: 10px;
 }
