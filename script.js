@@ -8,16 +8,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/* Slider | página Index */
-const images = document.querySelectorAll("#slider img");
-        let currentImage = 0;
+let slideIndex = 0;
+showSlides();
 
-        function nextImage() {
-            images[currentImage].style.opacity = 0;
-            currentImage = (currentImage + 1) % images.length;
-            images[currentImage].style.opacity = 1;
-        }
-
-        // Mostrar la primera imagen y configurar el intervalo
-        images[currentImage].style.opacity = 1;
-        setInterval(nextImage, 3000);
+function showSlides() {
+    let slides = document.getElementsByClassName("slide-card");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Cambia la imagen cada 2 segundos
+}

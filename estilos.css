@@ -43,18 +43,19 @@ body {
 /*-- Diseño de la barra de navegación para Large Devices --*/
 
 nav {   /*-- Efecto y color en el backgroud de la barra de navegación --*/
+    width: 100%;
     background: radial-gradient(circle, rgb(5, 79, 79, .4)30%, rgb(175, 251, 255, .4)98%);
     backdrop-filter: blur(10px);  
-
     height: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 nav img {
     width: 58px; /*-- Logo en la barra de navegación --*/
-    
 }
 
 nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra de navegacióm --*/
@@ -63,21 +64,25 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     align-items: center;
     justify-content: space-between;
     gap: 1em;
-
     font-family: var(--ff-Secundary);
     font-size: 3em;
     color: var(--azul-brillante);
+    text-shadow: 0 6px 4px #0004;
 }
 
 .menu { /*-- Disposición del menu de la barra de navegación --*/
     display: flex;
     justify-content: space-between;
-    gap: 1.5em;
+    gap: 2em;
 }
 
 .menu a {
-    font-size: 2em;
-    transition: transform 0.2s;
+    font-size: 1.6em;
+    font-weight: bold;
+    transition: transform .4s ease-in-out;
+    text-transform: uppercase;
+    color: var(--azul-brillante);
+    text-shadow: 0 6px 4px #0004;
 }
 
 .menu a:hover {
@@ -88,85 +93,120 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 /*-- Diseño y disposición del icon toggle para Responsive design --*/
 .icon {
     display: none;
-    color: var(--azul-primario);
-    font-size: 1.7em;
+    color: var(--azul-brillante);
+    font-size: 2em;
 }
 
 .icon:hover {
-    color: var(--clr-dorado);
+    color: var(--azul-Secundario);
 }
 
 /*-- Sección Intro de la página index --*/
 .container-intro {  /*-- Fondo y disposición de la sección intro --*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3em;
-    gap: 2em;
-    min-height: 30vw;
-}
-
-.intro-box {  /*-- Contenedor del texto de la sección intro --*/
+    background-color: #ffffff;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5em;
-}
-
-.intro-box h1 {
-    color: var(--azul-primario);
-    text-align: center;
-    font-family: var(--ff-Secundary);
-    font-size: 2.5em;
-}
-
-.intro-box p {
-    color: var(--clr-claro);
-    font-family: var(--ff-primario);
-    letter-spacing: 1.3px;
-    font-size: 1.3em;
-    line-height: 1.4;
-}
-
-.intro-box a {
-    font-family: var(--ff-titles);
-    font-size: 1.8em;
-    letter-spacing: 2.5px;
-    text-decoration: none;
-    color: var(--clr-claro);
-    background-color: var(--azul-Secundario);
-    padding: 15px 50px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-}
-
-.intro-box a:hover {
-    background-color: var(--azul-primario);
-    color: var(--clr-oscuro);
+    margin-top: -70px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
 /*-- Imagen en la sección intro de la página index --*/
 .container-intro img {
-    width: 90%;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
 }
+
+.intro-box {  /*-- Contenedor del texto de la sección intro --*/
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    text-shadow: 0 6px 4px #0004;
+}
+
+.intro-box h1 {
+    font-family: var(--ff-titles);
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+    color: var(--azul-Secundario);
+}
+
+.intro-box p {
+    color: var(--clr-oscuro);
+    margin-bottom: 20px;
+    font-family: var(--ff-titles);
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.boton-intro {
+    background-color: rgb(5, 79, 79, .15);
+    border: 2px solid var(--azul-brillante);
+    color: var(--clr-oscuro);
+    letter-spacing: 3px;
+    font-size: 1.3em;
+    padding: 15px 40px;
+    font-weight: 600;
+    border-radius: 15px;
+    /*-- animation button --*/
+    transition: all .6s ease-in-out;
+
+}
+
+.intro-box a:hover {
+    background-color: var(--azul-Secundario);
+    color: var(--clr-claro);
+}
+
+/*-- Animation intro page --*/
+.container-intro .intro-box .title-1,
+.container-intro .intro-box .topic,
+.container-intro .intro-box .boton-intro {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.container-intro .intro-box .title-1 {
+    animation-delay: 1.2s!important;
+}
+.container-intro .intro-box .topic {
+    animation-delay: 1.4s!important;
+}
+.container-intro .intro-box .boton-intro {
+    animation-delay: 1.6s!important;
+}
+
 
 /*-- Sección Actividades de la página Index --*/
 .container-cards {  /*-- diseño del background Sección Actividades de la página Index --*/
-    background-color: rgb(215, 215, 215, .3);
+    background-color: rgb(175, 251, 255, .2);
     backdrop-filter: blur(10px);
-    padding: 30px 50px;
+    padding: 30px 50px 50px;
 }
 
 .container-cards h2 {
     text-align: center;
-    padding-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 6px 4px #0004;
+    padding: 0px 0px 30px;
     color: var(--azul-primario);
     font-family: var(--ff-Secundary);
     font-size: 3em;
@@ -174,60 +214,99 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 
 .cards-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 1em;
 }
 
-.cards-sv {
-    background-color: var(--azul-Secundario);
+figcaption {
     width: 30%;
-    padding: 15px;
+    height: 500px;
     border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
+    border: 1px solid var(--azul-primario);
+}
+
+.cards-sv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(180deg, rgb(0,0,0,.5)50%, rgb(51,51,51,.5)100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .cards-sv img {
+    position: absolute;
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 .cards-textbox {
-    margin-top: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8)45%, rgba(255, 254, 254, .2)95%);
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    text-align: center; 
+    opacity: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    transition: all .8s ease-in-out;
+}
+
+.cards-textbox:hover {
+    opacity: 1;
 }
 
 .cards-textbox h3 {
-    text-align: center;
     font-family: var(--ff-Secundary);
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--azul-primario);
     height: 60px;
 }
 
-.cards-textbox p {
+.texto-fig {
+    width: 70%;
     font-family: var(--ff-primario);
-    font-size: 1.1em;
     padding-top: 10px;
     line-height: 1.3;
     color: var(--clr-claro);
-    height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.texto-fig h4 {
+    text-align: start;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+}
+
+.texto-fig p {
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+}
+
+.texto-fig span {
+    font-size: 1.5em;
+    letter-spacing: 1.2px;
+    color: var(--azul-brillante);
 }
 
 .cards-textbox a {
     background-color: var(--azul-primario);
-    padding: 15px 40px;
+    padding: 10px 30px;
     border-radius: 15px;
     text-decoration: none;
     color: var(--clr-oscuro);
     font-family: var(--ff-titles);
-    font-size: 1.3em;
-    letter-spacing: 1.5px;   
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+    transition: all .5s ease-in-out;  
 }
 
 .cards-textbox a:hover {
@@ -237,60 +316,66 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
 /*-- Sección Beneficios | Página Index --*/
 .container-bene {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2em;
-    padding: 2em;
+    gap: 1em;
 }
 
 /*-- Slider --*/
+.bene-textbox h2 { /*-- Texto de la sección de beneficos | página index --*/
+    color: var(--azul-primario);
+    text-align: center;
+    font-family: var(--ff-Secundary);
+    font-size: 2.3em;
+    text-transform: uppercase;
+    padding: 30px;
+    text-shadow: 0 6px 4px #0004;
+}
+/*-- Slide & Text --*/
+.active {
+    display: block;
+}
+
 #slider {
-    width: 70%;
-    height: 500px;
+    width: 100%;
+    height: 550px;
     overflow: hidden;
     position: relative;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
 }
 
 #slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     position: absolute;
-    transition: opacity 1s;
+    object-fit: cover;
 }
 
-.bene-textbox h2 { /*-- Texto de la sección de beneficos | página index --*/
-    color: var(--azul-primario);
-    text-align: center;
-    font-family: var(--ff-Secundary);
-    font-size: 2.1em;
-    padding-bottom: 30px;
+.slide-card {
+    display: hidden;
 }
 
-.bene-textbox ul {
-    list-style-type: none;
-    width: 85%;
-    padding-left: 100px;
+.slide-textbox {
+    position: absolute;
+    width: 45%;
+    top: 60%;
+    left: 0;
+    background-color: rgb(46, 46, 46, .7);
+    padding: 20px 20px 20px 100px;
+    border-radius: 0px 15px 15px 0px;
 }
 
-.bene-textbox li {
-    font-family: var(--ff-primario);
-    color: var(--clr-claro);
-    padding: 5px 0px;
-    font-size: 1.1em;
-    letter-spacing: 1.3px;
-    line-height: 1.3;
+.slide-textbox span {
+    color: var(--azul-brillante);
+    font-family: var(--ff-titles);
+    font-size: 2.5em;
 }
 
 /*-- Sección Paquetes Large Devices | Página Index --*/
 .container-pkts { /*-- Fondo y disposición de la sección paquetes --*/
-    background-color: rgb(215, 215, 215, .3);
+    background-color: rgba(83, 83, 83, 0.34);
     backdrop-filter: blur(10px);
     padding: 2em;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -307,32 +392,25 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     width: 30%;
 }
 
-.pkts-cards { /*-- Diseño y disposición de las cards de la sección paquetes --*/
-    background-color: rgba(143, 216, 204, 0.5);
-    padding: 15px;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-}
-
 /* -- Texto del centro de la sección Paquetes | págin Index --*/
 .pkts-textbox {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 3em;
+    gap: 1em;
 }
 .pkts-textbox h2 {
     font-family: var(--ff-Secundary);
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--azul-brillante);
     text-align: center;
+    text-transform: uppercase;
 }
 
 .pkts-textbox p {
     font-family: var(--ff-primario);
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: var(--clr-claro);
     line-height: 1.4;
     letter-spacing: 1.2px;
@@ -350,34 +428,61 @@ nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra d
     margin-top: 20px;
 }
 
-.pkts-textbox a:hover {
-    background-color: var(--azul-brillante);
-}
-
-.pkts-cards h3 { /*-- Titulos de las cards de los paquetes --*/
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--clr-oscuro);
-    text-align: center;
-    margin-bottom: 10px;
-    height: 50px;
-}
-
-.pkts-cards img {
-    width: 100%;
-    height: 160px;
+.pkts-cards { /*-- Diseño y disposición de las cards de la sección paquetes --*/
+    background-color: var(--clr-claro);
     border-radius: 15px;
-    margin-bottom: 15px;
+    border: 1px solid var(--azul-primario);
+    position: relative;
+    height: 275px;
+}
+
+.pkts-cards img { /*-- Imagen de la Card de paquetes --*/
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
     object-fit: cover;
 }
 
-.pkts-cards p { /*-- Texto al pie de las Cards --*/
+.pkts-text {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 1em;
+    border-radius: 15px;
+    background-color: #0000009f;
+    opacity: 0;
+    transition: all .8s ease-in-out;
+}
+
+.pkts-text:hover {
+    opacity: 1;
+}
+
+.pkts-text h3 { /*-- Titulos de las cards de los paquetes --*/
+    font-family: var(--ff-Secundary);
+    font-size: 2em;
+    color: var(--azul-primario);
+    text-align: center;
+    height: 50px;
+    letter-spacing: 1.5px;
+}
+
+.pkts-text p { /*-- Texto al pie de las Cards --*/
     font-family: var(--ff-primario);
-    font-size: 1.1em;
-    line-height: 1.3;
-    letter-spacing: 1.2px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
     height: 110px;
-    color: var(--clr-oscuro);
+    color: var(--clr-claro);
+    text-align: center;
+    width: 80%;
 }
 
 /*-- Footer Large Devices --*/
@@ -393,8 +498,13 @@ footer { /*-- Fondo de la sección footer --*/
     gap: 2em;
 }
 
+.box-container-footer {
+    display: flex;
+    width: 60%;
+}
+
 .footer-box { /*-- Disposición de los contenedores --*/
-    width: 30%;
+    width: 50%;
 }
 
 .footer-box h4 { /*-- Titulos de los contenedores --*/
@@ -419,6 +529,7 @@ footer { /*-- Fondo de la sección footer --*/
 }
 
 .box-media { /*-- Diseño y disposición del Contenedor de logo e iconos del footer --*/
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1106,31 +1217,26 @@ textarea {
 
     /*-- Sección Intro Medium Devices | todas las páginas --*/
     .container-intro {
-        height: auto;
+        height: 600px;
+    }
+
+    .intro-box {
+        top: 30%;
+        width: 100%;
+    }
+
+    .intro-box .topic {
+        font-size: 3em;
+        width: 600px;
     }
 
     /*-- Sección Actividades | página Index --*/
-    .cards-box {
-        flex-direction: column;
+    .cards-box h3 {
+        width: 80%;
+        line-height: 35px;
     }
 
-    .cards-sv {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 2em;
-    }
-
-    .cards-sv img {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .cards-textbox {
-        width: 100%;
-    }
-
+   
     /*-- Sección Beneficios | página Index--*/
     .bene-textbox {
         width: 60%;
@@ -1139,6 +1245,10 @@ textarea {
     .bene-textbox ul {
         width: 100%;
         padding-left: 0;
+    }
+     /*-- Sección Slider --*/
+     .slide-textbox {   
+        width: 70%;    
     }
 
     /*-- Sección Paquetes Medium Devices | página index --*/
@@ -1156,9 +1266,14 @@ textarea {
     }
 
     /*-- Contenedores laterales de la sección paquetes --*/
+    .pkts-cards {
+        height: 350px;
+    }
     .pkts-cards h3 {
-        font-size: 1.2em;
-        height: 60px;
+        font-size: 1.8em;
+        height: 85px;
+        width: 80%;
+        line-height: 35px;
     }
 
     .pkts-cards p {
@@ -1168,7 +1283,7 @@ textarea {
 
     /*-- Footer Medium Devices --*/
     .footer-box h4 { /*-- Titulos de los contenedores --*/
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
 
     .footer-box li,a {  /*-- Texto de los contenedores --*/
@@ -1253,36 +1368,45 @@ textarea {
     /*-- Disposición para la sección intro de la página index para S/M devices --*/ 
     .container-intro {
         flex-direction: column;
+        height: 500px;
     }
 
-    .container-intro img {
-        width: 100%;
+    .intro-box h1 {
+        font-size: 4em;
+    }
+    .intro-box p {
+        font-size: 2.5em;
     }
 
     /*-- Sección Actividades S/M devices | página Index --*/
-    .cards-sv img {
+    .cards-box {
+        flex-direction: column;
+    }
+
+    figcaption {
         width: 100%;
     }
 
+
     .cards-textbox a {
-        font-size: 1.2em;
+        width: 40%;
+        font-size: 1em;
     }
     
     /*-- Sección Beneficios | página Index --*/
-    #slider {
-        width: 50%
-    }
 
     .bene-textbox {
-        width: 50%;
+        width: 90%;
     }
 
     .bene-textbox h2 {
-        font-size: 1.2em;
+        font-size: 2em;
     }
 
-    .bene-textbox li {
-        font-size: 1em;
+    /*-- SLIDER --*/
+    .slide-textbox {
+        top: 50%;
+        width: 80%;
     }
 
     /*-- Sección Paquetes S/M Devices | Página Index --*/
@@ -1295,6 +1419,10 @@ textarea {
         justify-content: space-around;
         width: 100%;
         gap: 2em;
+    }
+
+    .pkts-text h3 {
+        margin: 40px 0px;
     }
 
     .pkts-textbox {
@@ -1316,17 +1444,28 @@ textarea {
     }
 
     /*-- Footer S/M Devices --*/
+    .container-footer {
+        flex-direction: column;
+    }
+    .box-container-footer {
+        width: 100%;
+        justify-content: space-around;
+    }
+
     .footer-box li,a {
-        font-size: .95em;
+        font-size: 1em;
+        text-align: center;
+        line-height: 35px;
     }
-
+    .box-media {
+        width: 100%;
+    }
     .box-media img {
-        width: 95px;
+        width: 120px;
     }
-
-
     .footer-media {
-        font-size: 1.9em;
+        width: 50%;
+        font-size: 2em;
     }
 
     /*-- Sección Formulario contacto S/M Devices | página Contacto --*/
@@ -1395,57 +1534,80 @@ textarea {
         width: 60px;
     }
     nav a {
-        font-size: 1.6em;
+        font-size: 2em;
         color: rgb(185, 250, 255);
     }
 
     .menu a {
-        font-size: 1.4em;
+        font-size: 1.8em;
     }
 
     /*-- Sección intro para XS/S devices --*/
     .container-intro {
-        padding: 2em 1.5em;
+        height: 450px;
+    }
+
+    .intro-box {
+        width: 90%;
     }
 
     .intro-box h1 {
-        font-size: 1.7em;
+        font-size: 3em;
+        width: 100%;
     }
 
-    .intro-box p {
-        font-size: 1.2em;
+    .intro-box .topic {
+        width: 300px;
+        font-size: 2em;
     }
 
     .intro-box a {
-        font-size: 1.4em;
+        font-size: 1em;
         padding: 10px 50px;
-    }
-
-    .container-intro img {
-        height: 200px;
     }
 
     /*-- Sección Actividades S/M devices | página Index --*/
     .container-cards {
         padding: 15px;
-    }   .cards-sv {
+    }   
+
+    .container-cards h2 {
+        font-size: 2em;
+    }
+    
+    .cards-sv {
         flex-direction: column;
+    }
+
+    .cards-textbox a {
+        width: 70%;
     }
 
     /*-- Sección Beneficios | página Index --*/
 
     .container-bene {
         flex-direction: column;
-        padding: 15px;
     }
 
     #slider {
         width: 100%;
-        height: 200px;
+        height: 400px;
+    }
+    .slide-textbox {
+        top: 45%;
+        padding: 15px;
+        width: 90%;
+    }
+    .slide-textbox span {
+        font-size: 2em;
     }
 
     .bene-textbox {
         width: 100%;
+    }
+
+    .bene-textbox h2 {
+        font-size: 1.8em;
     }
 
     /*-- Sección paquetes XS/S Devices | página Index --*/
@@ -1459,13 +1621,17 @@ textarea {
         align-items: center;
         padding: 0;
     }
-
+    .box-container-footer {
+        flex-direction: column;
+        align-items: center;
+    }
     .footer-box {
         width: 100%;
     }
 
     .footer-box li,a {
         font-size: 1em;
+        text-align: start;
     }
 
     .box-media img {
@@ -1474,6 +1640,7 @@ textarea {
 
     .footer-media {
         font-size: 2em;
+        gap: 1.5em;
     }
 
     /*-- Sección Datos XS/S Devices | Rafting Morelos page --*/
@@ -1481,7 +1648,7 @@ textarea {
         padding: 1em;
     }
     .datos-cards {
-        height: 520px;        
+        height: 600px;        
     }
 
     .datos-cards p {
@@ -1494,7 +1661,7 @@ textarea {
     }
 
     .map-contact h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
         text-align: center;
     }
     
@@ -1531,7 +1698,8 @@ textarea {
         width: 80%;
     }
 
-    .precio-cards h3, p {
+    .precio-cards h3 {
+        font-size: 1.8em;
         height: auto;
     }
 
@@ -1556,6 +1724,10 @@ textarea {
 
     .textbox-sms {
         width: 100%;
+    }
+
+    .textbox-sms p {
+        height: 280px;
     }
 
     /*-- Página suscribir --*/

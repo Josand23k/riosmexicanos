@@ -41,9 +41,8 @@
         </a>
 
         <div class="menu" id="menu"> <!--Menu de Navegación -->
-            <a href="index.html" aria-label="Enlace a la página de inicio">Inicio</a>
-            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="rafting-morelos.html" aria-label="Enlace a la página de Rafting Morelos">Rafting</a>
+            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="contacto.html" aria-label="Enlace a la página de Contacto">Contacto</a>
         </div>
 
@@ -54,68 +53,108 @@
 
     <!-- Sección Intro -->
     <section class="container-intro">
+        <!-- Imagen de la sección Intro -->
+        <img src="imagenes/ban-raftingfamiliar.webp" alt="Dos jovenes felices en el río practicando Tubing Amacuzac">
+
         <div class="intro-box"> <!-- Contenedor del texto y enlace -->
-            <h1>¡Aquí inicia la aventura en el río Amacuzac!</h1>
-            <p>En Ríos Mexicanos nos especializamos en recorridos de Rafting y Tubing en el río Amacuzac</p>
-            <a href="contacto.html" aria-label="Enlace a la página de contacto">Informes</a>
+            <h1 class="title-1">Rafting & Tubing</h1>
+            <p class="topic">¡Descenso de río en Morelos!</p>
+            <a class="boton-intro" href="contacto.html" aria-label="Enlace a la página de contacto">Informes</a>
         </div>
-        <img src="imagenes/slide-raftingamacuzac-elhoyo.webp" alt="Dos jovenes felices en el río practicando Tubing Amacuzac"> <!-- Imagen de la sección Intro -->
+         
     </section>
 
     <!-- Sección Actividades -->
     <section class="container-cards">
         <h2>Actividades</h2>
-        <div class="cards-box"> <!-- Contenedor de las cards -->
-            <div class="cards-sv"> <!-- Card -->
-                <img src="imagenes/rafting-amacuzac1200.webp" alt="Un grupo de personas remando un rápido en Rafting Amacuzac">
-                <div class="cards-textbox">
-                    <h3>Rafting Amacuzac</h3>
-                    <p>La aventura de navegar los rápidos del río Amacuzac</p>
-                    <a href="rafting-amacuzac.html" aria-label="Enlace a la página web de Rafting Amacuzac">Más información</a>
+        <figure class="cards-box"> <!-- Contenedor de las cards -->
+            <figcaption> <!-- Card -->
+                <div class="cards-sv">
+                    <img src="imagenes/rafting-amacuzac1200.webp" alt="Un grupo de personas remando un rápido en Rafting Amacuzac">
+                    <div class="cards-textbox">
+                        <h3>Rafting Amacuzac</h3>
+                        <div class="texto-fig">
+                            <h4>Medio día</h4>
+                            <p>La aventura de navegar los rápidos del río Amacuzac</p>
+                            <span>Desde $ 586</span>
+                        </div>
+                        <a href="rafting-amacuzac.html" aria-label="Enlace a la página web de Rafting Amacuzac">Más información</a>
+                    </div>
                 </div>
-            </div>
+            </figcaption>
 
-            <div class="cards-sv"> <!-- Card -->
-                <img src="imagenes/tubing-rio.webp" alt="Un grupo de personas disfruntando del Tubing Amacuzac">
-                <div class="cards-textbox">
-                    <h3>Tubing Amacuzac</h3>
-                    <p>La mejor manera de disfrutar un día en el río con amigos</p>
-                    <a href="tubing-amacuzac.html" aria-label="Enlace a la página web de Tubing Amacuzac">Más información</a>
+            <figcaption>
+                <div class="cards-sv"> <!-- Card -->
+                    <img src="imagenes/tubing-rio.webp" alt="Un grupo de personas disfruntando del Tubing Amacuzac">
+                    <div class="cards-textbox">
+                        <h3>Tubing Amacuzac</h3>
+                        <div class="texto-fig">
+                            <h4>Medio día</h4>
+                            <p>La aventura que lo tiene todo, ¡aventura y naturleza!</p>
+                            <span>Desde $ 232</span>
+                        </div>
+                        <a href="tubing-amacuzac.html" aria-label="Enlace a la página web de Tubing Amacuzac">Más información</a>
+                    </div>
                 </div>
-            </div>
+            </figcaption>
 
-            <div class="cards-sv"> <!-- Card -->
-                <img src="imagenes/nadando-raftingfamiliar.webp" alt="Niña nadando en el río Amacuzac en el Rafting Familiar">
-                <div class="cards-textbox">
-                    <h3>Rafting Familiar</h3>
-                    <p>Una experiencia para toda la familia navegando el río Amacuzac</p>
-                    <a href="rafting-familiar.html" aria-label="Enlace a la página web de Rafting Familiar">Más información</a>
+            <figcaption>
+                <div class="cards-sv"> <!-- Card -->
+                    <img src="imagenes/nadando-raftingfamiliar.webp" alt="Niña nadando en el río Amacuzac en el Rafting Familiar">
+                    <div class="cards-textbox">
+                        <h3>Rafting Familiar</h3>
+                        <div class="texto-fig">
+                            <h4>Medio día</h4>
+                            <p>¡El recorrido ideal para toda la familia!</p>
+                            <span>Desde $ 464</span>
+                        </div>
+                        <a href="rafting-familiar.html" aria-label="Enlace a la página web de Rafting Familiar">Más información</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </figcaption>
+        </figure>
     </section>
 
     <!-- Sección Beneficios -->
     <section class="container-bene">
-        <div id="slider"> <!-- Slider con 5 imagenes -->
-            <img src="imagenes/slide-kayak-morelos.webp" alt="Una persona kayakeando un rápido en el río Amacuzac">
-            <img src="imagenes/slide-raftingfamiliar-guia.webp" alt="Guía sonriendo a la cámara sobre la balsa roja de Ríos Mexicanos en el río Amacuzac">
-            <img src="imagenes/slide-tubing-morelos.webp" alt="Dos personas disfrutando del Tubing con Ríos Mexicanos">
-            <img src="imagenes/slide-raftingamacuzac-elhoyo.webp" alt="Explosión de agua en el rápido El hoyo del río Amacuzac con Ríos Mexicanos">
-            <img src="imagenes/slide-raftingamacuzac-tumbaburros.webp" alt="Balsa roja de Ríos Mexicanos en el rápido tumbaburros del río Amacuzac">
-        </div>
-
         <div class="bene-textbox"> <!-- Textbox -->
             <h2>¿Por qué elegir a Ríos Mexicanos como tu guía en el río Amacuzac?</h2>
-            <ul>
-                <li><b>Más</b> de 20 años de experiencia guiando recorridos en México y otras partes del mundo</li>
-                <li><b>Equipo</b> profesional y certificado</li>
-                <li><b>Operamos</b> viajes seguros y divertidos</li>
-                <li><b>Responsabilidad</b> social y ambiental</li>
-                <li><b>Buen</b> trato y respeto para todos nuestros participantes</li>
-                <li><b>Realizamos</b> recorridos como ningún otro en México</li>
-                <li><b>Y</b> por las tres b (buenos, bonitos y baratos)</li>
-            </ul>
+        </div>
+        <div id="slider"> <!-- Slider con 5 imagenes -->
+            <div class="slide-card">
+                <img src="imagenes/slide-kayak-morelos.webp" alt="Una persona kayakeando un rápido en el río Amacuzac">
+                <div class="slide-textbox">
+                    <span><b>Más</b> de 20 años de experiencia guiando recorridos en México y otras partes del mundo</span>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <img src="imagenes/slide-raftingfamiliar-guia.webp" alt="Guía sonriendo a la cámara sobre la balsa roja de Ríos Mexicanos en el río Amacuzac">
+                <div class="slide-textbox">
+                    <span><b>Equipo</b> profesional y certificado</span>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <img src="imagenes/slide-tubing-morelos.webp" alt="Dos personas disfrutando del Tubing con Ríos Mexicanos">
+                <div class="slide-textbox">
+                    <span><b>Operamos</b> viajes seguros y divertidos</span>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <img src="imagenes/slide-raftingamacuzac-elhoyo.webp" alt="Explosión de agua en el rápido El hoyo del río Amacuzac con Ríos Mexicanos">
+                <div class="slide-textbox">
+                    <span><b>Responsabilidad</b> social y ambiental</span>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <img src="imagenes/slide-raftingamacuzac-tumbaburros.webp" alt="Balsa roja de Ríos Mexicanos en el rápido tumbaburros del río Amacuzac">
+                <div class="slide-textbox">
+                    <span><b>Buen</b> trato y respeto para todos nuestros participantes</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -123,35 +162,42 @@
     <section class="container-pkts">
         <div class="pkts-box">
             <div class="pkts-cards">
-                <h3>Expedición Papagayo</h3>
                 <img src="imagenes/expedicion-rafting-papagayo.webp" alt="Balsa practicando rafting con Ríos Mexicanos">
-                <p>Dos días de aventura explorando los rápidos del río Papagayo.</p>
+                <div class="pkts-text">
+                    <h3>Expedición Papagayo</h3>
+                    <p>Dos días de aventura explorando los rápidos del río Papagayo.</p>
+                </div>
             </div>
             <div class="pkts-cards">
-                <h3>Fullday Amacuzac</h3>
                 <img src="imagenes/expedición-rafting-amacuzac.webp" alt="Aventura practicando Rafting en el río Amacuzac">
-                <p>Un día completo de aventura en el río Amacuzac practicando Rafting y Tubing en Morelos.</p>
+                <div class="pkts-text">
+                    <h3>Rafting & Tubing</h3>
+                    <p>Un día completo de aventura en el río Amacuzac practicando Rafting y Tubing en Morelos.</p>
+                </div>
             </div>
         </div>
 
         <div class="pkts-box">
             <div class="pkts-textbox">
                 <h2>Paquetes de Aventura</h2>
-                <p>En Ríos Mexicanos nos gusta disfrutar al máximo del río, por ello te invitamos a disfrutarlo con nosotros con organizando paquetes de un día o un fin de semana.</p>
-                <a href="contacto.html" aria-label="Enlace a la página de contacto de Ríos Mexicanos">Informes</a>
+                <p>En Ríos Mexicanos, nos apasiona aprovechar al máximo la belleza natural de nuestros ríos. Por eso, te extendemos una cordial invitación para que te unas a nosotros en la experiencia de disfrutar de estas maravillas naturales. Ofrecemos paquetes diseñados para un día completo o un fin de semana entero, perfectos para que puedas sumergirte en la aventura y la serenidad que solo un río puede ofrecer. ¡Ven y descubre la emoción junto a nosotros!</p>
             </div>
         </div>
 
         <div class="pkts-box">
             <div class="pkts-cards">
-                <h3>Tubing Alto Amacuzac</h3>
                 <img src="imagenes/cards-tubing-amacuzac(1).webp" alt="Flotando en el río en tubing con Ríos Mexicanos">
-                <p>Un día visitando el Parque Nacional Grutas de Cacahuamilpa, practicando Tubing y con visita a las grutas.</p>
+                <div class="pkts-text">
+                    <h3>Tubing Alto Amacuzac</h3>
+                    <p>Un día visitando el Parque Nacional Grutas de Cacahuamilpa, practicando Tubing y con visita a las grutas.</p>
+                </div>
             </div>
             <div class="pkts-cards">
-                <h3>Familia Aventurera</h3>
                 <img src="imagenes/sonriendo-balsaroja.webp" alt="Un grupo sonriendo a la cámara sobre una balsa roja en el río Amacuzac">
-                <p>Un día de aventura en familia, disfrutando del río Amacuzac en Rafting y balneario.</p>
+                <div class="pkts-text">
+                    <h3>Rafting Familiar</h3>
+                    <p>Un día de aventura en familia, disfrutando del río Amacuzac en Rafting y balneario.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -159,25 +205,27 @@
     <!-- Footer -->
     <footer>
         <div class="container-footer">
-            <div class="footer-box">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>+52 777 497 55 31</li>
-                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
-                    <li>Cuernavaca, Morelos</li>
-                    <li>México</li>
-                </ul>
+            <div class="box-container-footer">
+                <div class="footer-box">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+52 777 497 55 31</li>
+                        <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                        <li>Cuernavaca, Morelos</li>
+                        <li>México</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Quienes Somos</a></li>
+                        <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
+                        <li><a href="club-de-rio.html">Club de Río</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-box">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
-                    <li><a href="club-de-rio.html">Club de Río</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box box-media">
+            <div class="box-media">
                 <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
                     <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
                 </a>
@@ -191,7 +239,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="https://www.teotlwebdesign.com/">Téotl Web Design</a></i></p>
         </div>
     </footer>
 
