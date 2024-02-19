@@ -23,3 +23,23 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 4000); // Cambia la imagen cada 2 segundos
 }
+
+// Contendor de datos, en las páginas de actividades
+
+    function mostrarContenido(numero) {
+        // Oculta todos los contenidos
+        var contenidos = document.getElementsByClassName("datos-cards");
+        for (var i = 0; i < contenidos.length; i++) {
+            contenidos[i].style.display = "none";
+         }
+        // Muestra el contenido seleccionado
+        document.getElementById("contenido" + numero).style.display = "block";
+    }
+    // Mostrar el primer contenido por defecto al cargar la página
+    mostrarContenido(0);
+
+
+
+  
+
+    

@@ -1,1749 +1,2164 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*-- Fonts Gabriola --*/
 @font-face {
-    font-family: 'Gabriola';
-    src: url('Fonts/Gabriola.ttf') format('truetype');
-    /* Agrega otros formatos de fuente según sea necesario (woff, woff2, etc.) */
+  font-family: "Gabriola";
+  src: url("Fonts/Gabriola.ttf") format("truetype");
+  /* Agrega otros formatos de fuente según sea necesario (woff, woff2, etc.) */
 }
 
 /*-- Link de Google fonts --*/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500&display=swap");
 
 :root {
-    /*-- Colores azul turquesa --*/
-    --azul-primario: rgb(57, 194, 201);
-    --azul-Secundario: rgb(5, 79, 79);
-    --azul-brillante: rgb(175, 251, 255);
+  /*-- Colores azul turquesa --*/
+  --azul-primario: rgb(57, 194, 201);
+  --azul-Secundario: rgb(5, 79, 79);
+  --azul-brillante: rgb(175, 251, 255);
 
-    /*-- Colores alternativos --*/
-    --clr-dorado: rgb(198, 156, 109);
-    --clr-rojo: rgb(163, 52, 52);
-    --clr-claro: rgb(215, 215, 215);
-    --clr-oscuro: rgb(46, 46, 46);
-    
-    /*-- Fonts --*/
-    --ff-primario: 'Georgia', cursive;
-    --ff-titles: 'Bebas Neue', sans-serif;
-    --ff-Secundary: 'Gabriola', serif; 
+  /*-- Colores alternativos --*/
+  --clr-dorado: rgb(198, 156, 109);
+  --clr-rojo: rgb(163, 52, 52);
+  --clr-claro: rgb(215, 215, 215);
+  --clr-oscuro: rgb(46, 46, 46);
+
+  /*-- Fonts --*/
+  --ff-primario: "Georgia", cursive;
+  --ff-titles: "Bebas Neue", sans-serif;
+  --ff-Secundary: "Gabriola", serif;
 }
 
 body {
-    font-family: var(--ff-primario);
-    background-color: #000000;
-    background-image: url(imagenes/fondo-M-device.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: var(--ff-primario);
+  background-color: #000000;
+  background-image: url(imagenes/fondo-M-device.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*-- Diseño de la barra de navegación para Large Devices --*/
 
-nav {   /*-- Efecto y color en el backgroud de la barra de navegación --*/
-    width: 100%;
-    background: radial-gradient(circle, rgb(5, 79, 79, .4)30%, rgb(175, 251, 255, .4)98%);
-    backdrop-filter: blur(10px);  
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    z-index: 100;
+nav {
+  /*-- Efecto y color en el backgroud de la barra de navegación --*/
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgb(5, 79, 79, 0.4) 30%,
+    rgb(175, 251, 255, 0.4) 98%
+  );
+  backdrop-filter: blur(10px);
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 nav img {
-    width: 58px; /*-- Logo en la barra de navegación --*/
+  width: 58px; /*-- Logo en la barra de navegación --*/
 }
 
-nav a { /*-- Disposición y diseño de contenido del logo y nombre en la barra de navegacióm --*/
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1em;
-    font-family: var(--ff-Secundary);
-    font-size: 3em;
-    color: var(--azul-brillante);
-    text-shadow: 0 6px 4px #0004;
+nav a {
+  /*-- Disposición y diseño de contenido del logo y nombre en la barra de navegacióm --*/
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  font-family: var(--ff-Secundary);
+  font-size: 3em;
+  color: var(--azul-brillante);
+  text-shadow: 0 6px 4px #0004;
 }
 
-.menu { /*-- Disposición del menu de la barra de navegación --*/
-    display: flex;
-    justify-content: space-between;
-    gap: 2em;
+.menu {
+  /*-- Disposición del menu de la barra de navegación --*/
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
 }
 
 .menu a {
-    font-size: 1.6em;
-    font-weight: bold;
-    transition: transform .4s ease-in-out;
-    text-transform: uppercase;
-    color: var(--azul-brillante);
-    text-shadow: 0 6px 4px #0004;
+  font-size: 1.6em;
+  font-weight: bold;
+  transition: transform 0.4s ease-in-out;
+  text-transform: uppercase;
+  color: var(--azul-brillante);
+  text-shadow: 0 6px 4px #0004;
 }
 
 .menu a:hover {
-    color: var(--azul-brillante);
-    transform: scale(1.1);
+  color: var(--azul-brillante);
+  transform: scale(1.1);
 }
 
 /*-- Diseño y disposición del icon toggle para Responsive design --*/
 .icon {
-    display: none;
-    color: var(--azul-brillante);
-    font-size: 2em;
+  display: none;
+  color: var(--azul-brillante);
+  font-size: 2em;
 }
 
 .icon:hover {
-    color: var(--azul-Secundario);
+  color: var(--azul-Secundario);
 }
 
 /*-- Sección Intro de la página index --*/
-.container-intro {  /*-- Fondo y disposición de la sección intro --*/
-    background-color: #ffffff;
-    width: 100%;
-    margin-top: -70px;
-    height: 500px;
-    overflow: hidden;
-    position: relative;
+.container-intro {
+  /*-- Fondo y disposición de la sección intro --*/
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: -70px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
 
 /*-- Imagen en la sección intro de la página index --*/
 .container-intro img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.intro-box {  /*-- Contenedor del texto de la sección intro --*/
-    position: absolute;
-    top: 30%;
-    width: 80%;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 30%;
-    text-shadow: 0 6px 4px #0004;
+.intro-box {
+  /*-- Contenedor del texto de la sección intro --*/
+  position: absolute;
+  top: 30%;
+  width: 80%;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  text-shadow: 0 6px 4px rgba(0, 0, 0, 0.568);
 }
 
 .intro-box h1 {
-    font-family: var(--ff-titles);
-    font-size: 5em;
-    font-weight: bold;
-    line-height: 1.3em;
-    color: var(--azul-Secundario);
+  font-family: var(--ff-titles);
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+  color: var(--azul-Secundario);
 }
 
 .intro-box p {
-    color: var(--clr-oscuro);
-    margin-bottom: 20px;
-    font-family: var(--ff-titles);
-    font-size: 3.5em;
-    font-weight: bold;
-    line-height: 1.3em;
+  color: var(--clr-oscuro);
+  margin-bottom: 20px;
+  font-family: var(--ff-titles);
+  font-size: 3.5em;
+  font-weight: bold;
+  line-height: 1.3em;
 }
 
 .boton-intro {
-    background-color: rgb(5, 79, 79, .15);
-    border: 2px solid var(--azul-brillante);
-    color: var(--clr-oscuro);
-    letter-spacing: 3px;
-    font-size: 1.3em;
-    padding: 15px 40px;
-    font-weight: 600;
-    border-radius: 15px;
-    /*-- animation button --*/
-    transition: all .6s ease-in-out;
-
+  background-color: rgb(5, 79, 79, 0.15);
+  border: 2px solid var(--azul-brillante);
+  color: var(--clr-oscuro);
+  letter-spacing: 3px;
+  font-size: 1.3em;
+  padding: 15px 40px;
+  font-weight: 600;
+  border-radius: 15px;
+  /*-- animation button --*/
+  transition: all 0.6s ease-in-out;
 }
 
 .intro-box a:hover {
-    background-color: var(--azul-Secundario);
-    color: var(--clr-claro);
+  background-color: var(--azul-Secundario);
+  color: var(--clr-claro);
 }
 
 /*-- Animation intro page --*/
 .container-intro .intro-box .title-1,
 .container-intro .intro-box .topic,
 .container-intro .intro-box .boton-intro {
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: showContent .5s 1s linear 1 forwards;
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
 }
 
 @keyframes showContent {
-    to {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
 .container-intro .intro-box .title-1 {
-    animation-delay: 1.2s!important;
+  animation-delay: 1.2s !important;
 }
 .container-intro .intro-box .topic {
-    animation-delay: 1.4s!important;
+  animation-delay: 1.4s !important;
 }
 .container-intro .intro-box .boton-intro {
-    animation-delay: 1.6s!important;
+  animation-delay: 1.6s !important;
 }
 
-
 /*-- Sección Actividades de la página Index --*/
-.container-cards {  /*-- diseño del background Sección Actividades de la página Index --*/
-    background-color: rgb(175, 251, 255, .2);
-    backdrop-filter: blur(10px);
-    padding: 30px 50px 50px;
+.container-cards {
+  /*-- diseño del background Sección Actividades de la página Index --*/
+  background-color: rgb(175, 251, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px 50px 50px;
 }
 
 .container-cards h2 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-shadow: 0 6px 4px #0004;
-    padding: 0px 0px 30px;
-    color: var(--azul-primario);
-    font-family: var(--ff-Secundary);
-    font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 6px 4px #0004;
+  padding: 0px 0px 30px;
+  color: var(--azul-primario);
+  font-family: var(--ff-Secundary);
+  font-size: 3em;
 }
 
 .cards-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
 }
 
 figcaption {
-    width: 30%;
-    height: 500px;
-    border-radius: 15px;
-    border: 1px solid var(--azul-primario);
+  width: 30%;
+  height: 500px;
+  border-radius: 15px;
+  border: 1px solid var(--azul-primario);
 }
 
 .cards-sv {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: linear-gradient(180deg, rgb(0,0,0,.5)50%, rgb(51,51,51,.5)100%);
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0, 0.5) 50%,
+    rgb(51, 51, 51, 0.5) 100%
+  );
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .cards-sv img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 .cards-textbox {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8)45%, rgba(255, 254, 254, .2)95%);
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    text-align: center; 
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: all .8s ease-in-out;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 45%,
+    rgba(255, 254, 254, 0.2) 95%
+  );
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  text-align: center;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.8s ease-in-out;
 }
 
 .cards-textbox:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .cards-textbox h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2.5em;
-    color: var(--azul-primario);
-    height: 60px;
+  font-family: var(--ff-Secundary);
+  font-size: 2.5em;
+  color: var(--azul-primario);
+  height: 60px;
 }
 
 .texto-fig {
-    width: 70%;
-    font-family: var(--ff-primario);
-    padding-top: 10px;
-    line-height: 1.3;
-    color: var(--clr-claro);
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  width: 70%;
+  font-family: var(--ff-primario);
+  padding-top: 10px;
+  line-height: 1.3;
+  color: var(--clr-claro);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .texto-fig h4 {
-    text-align: start;
-    font-size: 1.1em;
-    letter-spacing: 3px;
+  text-align: start;
+  font-size: 1.1em;
+  letter-spacing: 3px;
 }
 
 .texto-fig p {
-    line-height: 1.7;
-    letter-spacing: 1.2px;
+  line-height: 1.7;
+  letter-spacing: 1.2px;
 }
 
 .texto-fig span {
-    font-size: 1.5em;
-    letter-spacing: 1.2px;
-    color: var(--azul-brillante);
+  font-size: 1.5em;
+  letter-spacing: 1.2px;
+  color: var(--azul-brillante);
 }
 
 .cards-textbox a {
-    background-color: var(--azul-primario);
-    padding: 10px 30px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: var(--clr-oscuro);
-    font-family: var(--ff-titles);
-    font-size: 1.1em;
-    letter-spacing: 1.5px;
-    transition: all .5s ease-in-out;  
+  background-color: var(--azul-primario);
+  padding: 10px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--clr-oscuro);
+  font-family: var(--ff-titles);
+  font-size: 1.1em;
+  letter-spacing: 1.5px;
+  transition: all 0.5s ease-in-out;
 }
 
 .cards-textbox a:hover {
-    background-color: var(--azul-brillante);
+  background-color: var(--azul-brillante);
 }
 
 /*-- Sección Beneficios | Página Index --*/
 .container-bene {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
 }
 
 /*-- Slider --*/
-.bene-textbox h2 { /*-- Texto de la sección de beneficos | página index --*/
-    color: var(--azul-primario);
-    text-align: center;
-    font-family: var(--ff-Secundary);
-    font-size: 2.3em;
-    text-transform: uppercase;
-    padding: 30px;
-    text-shadow: 0 6px 4px #0004;
+.bene-textbox h2 {
+  /*-- Texto de la sección de beneficos | página index --*/
+  color: var(--azul-primario);
+  text-align: center;
+  font-family: var(--ff-Secundary);
+  font-size: 2.3em;
+  text-transform: uppercase;
+  padding: 30px;
+  text-shadow: 0 6px 4px #0004;
 }
 /*-- Slide & Text --*/
 .active {
-    display: block;
+  display: block;
 }
 
 #slider {
-    width: 100%;
-    height: 550px;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  position: relative;
 }
 
 #slider img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
 }
 
 .slide-card {
-    display: hidden;
+  display: hidden;
 }
 
 .slide-textbox {
-    position: absolute;
-    width: 45%;
-    top: 60%;
-    left: 0;
-    background-color: rgb(46, 46, 46, .7);
-    padding: 20px 20px 20px 100px;
-    border-radius: 0px 15px 15px 0px;
+  position: absolute;
+  width: 45%;
+  top: 60%;
+  left: 0;
+  background-color: rgb(46, 46, 46, 0.7);
+  padding: 20px 20px 20px 100px;
+  border-radius: 0px 15px 15px 0px;
 }
 
 .slide-textbox span {
-    color: var(--azul-brillante);
-    font-family: var(--ff-titles);
-    font-size: 2.5em;
+  color: var(--azul-brillante);
+  font-family: var(--ff-titles);
+  font-size: 2.5em;
 }
 
 /*-- Sección Paquetes Large Devices | Página Index --*/
-.container-pkts { /*-- Fondo y disposición de la sección paquetes --*/
-    background-color: rgba(83, 83, 83, 0.34);
-    backdrop-filter: blur(10px);
-    padding: 2em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1em;
+.container-pkts {
+  /*-- Fondo y disposición de la sección paquetes --*/
+  background-color: rgba(83, 83, 83, 0.34);
+  backdrop-filter: blur(10px);
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
 }
 
 /*-- Contenedor de las tres cards de la sección paquetes --*/
 .pkts-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 30%;
 }
 
 /* -- Texto del centro de la sección Paquetes | págin Index --*/
 .pkts-textbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
 }
 .pkts-textbox h2 {
-    font-family: var(--ff-Secundary);
-    font-size: 2.5em;
-    color: var(--azul-brillante);
-    text-align: center;
-    text-transform: uppercase;
+  font-family: var(--ff-Secundary);
+  font-size: 2.5em;
+  color: var(--azul-brillante);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .pkts-textbox p {
-    font-family: var(--ff-primario);
-    font-size: 1.2em;
-    color: var(--clr-claro);
-    line-height: 1.4;
-    letter-spacing: 1.2px;
+  font-family: var(--ff-primario);
+  font-size: 1.2em;
+  color: var(--clr-claro);
+  line-height: 1.4;
+  letter-spacing: 1.2px;
 }
 
 .pkts-textbox a {
-    background-color: var(--azul-primario);
-    padding: 12px 50px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: var(--clr-oscuro);
-    font-family: var(--ff-titles);
-    letter-spacing: 1.5px;
-    font-size: 1.5em;
-    margin-top: 20px;
+  background-color: var(--azul-primario);
+  padding: 12px 50px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--clr-oscuro);
+  font-family: var(--ff-titles);
+  letter-spacing: 1.5px;
+  font-size: 1.5em;
+  margin-top: 20px;
 }
 
-.pkts-cards { /*-- Diseño y disposición de las cards de la sección paquetes --*/
-    background-color: var(--clr-claro);
-    border-radius: 15px;
-    border: 1px solid var(--azul-primario);
-    position: relative;
-    height: 275px;
+.pkts-cards {
+  /*-- Diseño y disposición de las cards de la sección paquetes --*/
+  background-color: var(--clr-claro);
+  border-radius: 15px;
+  border: 1px solid var(--azul-primario);
+  position: relative;
+  height: 275px;
 }
 
-.pkts-cards img { /*-- Imagen de la Card de paquetes --*/
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    object-fit: cover;
+.pkts-cards img {
+  /*-- Imagen de la Card de paquetes --*/
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 .pkts-text {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    gap: 1em;
-    border-radius: 15px;
-    background-color: #0000009f;
-    opacity: 0;
-    transition: all .8s ease-in-out;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 1em;
+  border-radius: 15px;
+  background-color: #0000009f;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
 }
 
 .pkts-text:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-.pkts-text h3 { /*-- Titulos de las cards de los paquetes --*/
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
-    text-align: center;
-    height: 50px;
-    letter-spacing: 1.5px;
+.pkts-text h3 {
+  /*-- Titulos de las cards de los paquetes --*/
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-primario);
+  text-align: center;
+  height: 50px;
+  letter-spacing: 1.5px;
 }
 
-.pkts-text p { /*-- Texto al pie de las Cards --*/
-    font-family: var(--ff-primario);
-    font-size: 1.2em;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
-    height: 110px;
-    color: var(--clr-claro);
-    text-align: center;
-    width: 80%;
+.pkts-text p {
+  /*-- Texto al pie de las Cards --*/
+  font-family: var(--ff-primario);
+  font-size: 1.2em;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  height: 110px;
+  color: var(--clr-claro);
+  text-align: center;
+  width: 80%;
 }
 
 /*-- Footer Large Devices --*/
-footer { /*-- Fondo de la sección footer --*/
-    background-color: rgba(36, 36, 36, 0.5);
-    backdrop-filter: blur(10px); 
-    padding: 40px 40px 10px;
+footer {
+  /*-- Fondo de la sección footer --*/
+  background-color: rgba(36, 36, 36, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 40px 40px 10px;
 }
 
-.container-footer { /*-- Disposición de los contenedores del footer --*/
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2em;
+.container-footer {
+  /*-- Disposición de los contenedores del footer --*/
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
 }
 
 .box-container-footer {
-    display: flex;
-    width: 60%;
+  display: flex;
+  width: 60%;
 }
 
-.footer-box { /*-- Disposición de los contenedores --*/
-    width: 50%;
+.footer-box {
+  /*-- Disposición de los contenedores --*/
+  width: 50%;
 }
 
-.footer-box h4 { /*-- Titulos de los contenedores --*/
-    font-family: var(--ff-Secundary);
-    font-size: 1.8em;
-    color: var(--azul-brillante);
-    text-align: center;
+.footer-box h4 {
+  /*-- Titulos de los contenedores --*/
+  font-family: var(--ff-Secundary);
+  font-size: 1.8em;
+  color: var(--azul-brillante);
+  text-align: center;
 }
 
 .footer-box ul {
-    list-style-type: none;
-    margin-top: 20px;
+  list-style-type: none;
+  margin-top: 20px;
 }
 
-.footer-box li,a {
-    color: var(--clr-claro);
-    font-family: var(--ff-primario);
-    font-size: 1.1em;
-    line-height: 1.7;
-    letter-spacing: 1.2px;
-    text-decoration: none;
+.footer-box li,
+a {
+  color: var(--clr-claro);
+  font-family: var(--ff-primario);
+  font-size: 1.1em;
+  line-height: 1.7;
+  letter-spacing: 1.2px;
+  text-decoration: none;
 }
 
-.box-media { /*-- Diseño y disposición del Contenedor de logo e iconos del footer --*/
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+.box-media {
+  /*-- Diseño y disposición del Contenedor de logo e iconos del footer --*/
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
-.box-media img { /*-- Logo footer --*/
-    width: 120px;
+.box-media img {
+  /*-- Logo footer --*/
+  width: 120px;
 }
 
-.footer-media { /*-- Diseño disposición de los iconos --*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    font-size: 2em;
+.footer-media {
+  /*-- Diseño disposición de los iconos --*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 2em;
 }
 
 .footer-media a {
-    color: var(--azul-primario);
+  color: var(--azul-primario);
 }
 
 .footer-media a:hover {
-    color: var(--azul-brillante);
+  color: var(--azul-brillante);
 }
 
 /*-- Contenedor Copyrigth --*/
 .copy {
-    text-align: center;
-    color: var(--clr-claro);
-    margin-top: 30px;
-    font-family: var(--ff-primario);
-    font-size: 14px;
+  text-align: center;
+  color: var(--clr-claro);
+  margin-top: 30px;
+  font-family: var(--ff-primario);
+  font-size: 14px;
 }
 
 .copy a {
-    font-family: var(--ff-primario);
-    font-size: 14px;
+  font-family: var(--ff-primario);
+  font-size: 14px;
 }
 
 .copy a:hover {
-    color: var(--azul-primario);
+  color: var(--azul-primario);
+}
+/*-- 2.0 Rafting Morelos Page --*/
+/*-- 2.1 Sección Intro Rafting Morelos --*/
+.container-activities {
+  width: 100%;
+  height: 500px;
+  margin-top: -70px;
+  position: relative;
+}
+.container-activities img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+}
+.intro-box-act {
+  /*-- contenedor de texto e imagenes --*/
+  position: absolute;
+  top: 30%;
+  left: 10%;
+
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.intro-box-act-textbox {
+  /*-- Contenedor del texto --*/
+  width: 50%;
+}
+.intro-box-act-textbox h1 {
+  color: var(--azul-primario);
+  font-size: 5em;
+  font-family: var(--ff-titles);
+  text-shadow: 0 6px 4px rgba(0, 0, 0, 0.845);
+}
+.intro-box-act-textbox span {
+  color: var(--clr-claro);
+  font-size: 3.5em;
+  font-family: var(--ff-titles);
+  text-shadow: 0 6px 4px rgba(0, 0, 0, 0.756);
+}
+.intro-box-act-cards {
+  /*-- Conteneder de Cards --*/
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  background-color: rgba(057, 194, 201, 0.7);
+  padding: 10px;
+  border-radius: 15px 0px 0px 15px;
+}
+.ibac {
+  width: 200px;
+  height: 250px;
+  border-radius: 15px;
+  text-shadow: 0px 16px 4px #0004;
 }
 
-/*-- Sección Datos Large Devices | Rafting Morelos page --*/
+.ibac img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/*-- 2.2 Sección Actividades Rafting Page | large Devices --*/
+.container-cards-activities {
+  /*-- Contenedor de la sección --*/
+  padding: 2em;
+  background-color: rgba(255, 254, 254, 0.2);
+}
+.container-cards-activities h2 {
+  /*-- Titulo de la sección --*/
+  text-align: center;
+  font-family: var(--ff-Secundary);
+  font-size: 3em;
+  color: var(--azul-primario);
+  border-radius: 15px;
+  text-shadow: 0px 6px 4px #0004;
+}
+
+/*-- Contenedor de cards --*/
+.cards-box-act {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.cards-act {
+  /*-- Contenedor del texto & img --*/
+  width: 30%;
+  height: 350px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--azul-primario);
+}
+.cards-act img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+.cards-textbox-act {
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(212, 208, 208, 0.3) 90%
+  );
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.cards-textbox-act:hover {
+  opacity: 1;
+}
+.cards-textbox-act h3 {
+  color: var(--azul-primario);
+  text-align: center;
+  font-size: 2.3em;
+  font-family: var(--ff-Secundary);
+  text-shadow: 0px 6px 4px var(--clr-oscuro);
+}
+.cards-textbox-act p {
+  width: 80%;
+  font-size: 1.3em;
+  color: white;
+}
+.cards-textbox-act a {
+  /*-- Boton cards --*/
+  background-color: var(--azul-primario);
+  padding: 10px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--clr-oscuro);
+  font-family: var(--ff-titles);
+  font-size: 1.1em;
+  letter-spacing: 1.5px;
+  transition: all 0.5s ease-in-out;
+}
+.cards-textbox-act a:hover {
+  background-color: var(--azul-brillante);
+}
+
+/*-- 2.3 Sección Datos Large Devices | Rafting Morelos page --*/
 .container-datos {
-    padding: 3em;
+  /*-- Contenedor de la sección --*/
+  padding: 2em;
+  background-color: var(--clr-claro);
 }
 
-.container-datos img {  /*-- Imagen de la sección --*/
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-} 
-
-.datos-textbox {  /*-- Contenedor del textbox de la sección --*/
-    margin-top: 50px;
+/*-- Titulo de la sección --*/
+.container-datos h2 {
+  text-align: center;
+  padding: 10px;
+  font-family: var(--ff-Secundary);
+  font-size: 3em;
+  color: var(--clr-oscuro);
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
-.datos-textbox h2 {  /*-- Titulo de la sección --*/
-    text-align: center;
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
-    margin-bottom: 1.5em;
+/*-- Contenedor de la sección de Menu & Textbox --*/
+.datos-boxer {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 500px;
 }
 
-/*-- Contenedor y cards --*/
-.datos-box { /*-- Contenedores --*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1em;
-    gap: 1em;
+/*-- Menú lateral  | Large Devices --*/
+.menu-lateral-act {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--clr-dorado);
+  width: 5%;
+  height: 500px;
+}
+.icon-menu-lateral {
+  width: 100%;
+  height: 50px;
+  font-size: 2.3em;
+  text-align: center;
+  padding: 5px;
+}
+.icon-menu-lateral:hover {
+  background-color: var(--azul-primario);
+  cursor: pointer;
 }
 
-.datos-cards { /*-- Disposición y diseño de las cards de Datos --*/
-    background-color: rgba(61, 74, 74, 0.58);
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    padding: 15px;
-    width: 100%;
-    height: 450px;
+.icon-menu-lateral img {
+  width: 30px;
+  max-height: 40px;
 }
 
-.datos-cards h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
-    margin-bottom: 15px;
+/*-- 2.4 Sección Otras actividades  | Contenedor y cards --*/
+.datos-textbox {
+  width: 90%;
+}
+.datos-cards {
+  /*-- Disposición y diseño de las cards de Datos --*/
+  padding: 25px;
+  display: flex;
+  gap: 1em;
+  height: 100%;
+}
+.datos-cards-tbox {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+.datos-cards-tbox h3 {
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-Secundario);
+  padding-left: 15px;
 }
 
-.datos-cards p {
-    font-family: var(--ff-primario);
-    font-size: 1.1em;
-    letter-spacing: 1.1px;
-    line-height: 1.3;
-    color: var(--clr-claro);
+.datos-cards-tbox p,
+li {
+  font-family: var(--ff-primario);
+  font-size: 1.1em;
+  letter-spacing: 1.1px;
+  line-height: 25px;
+  color: var(--clr-oscuro);
+  padding: 15px;
+}
+.datos-cards-tbox ul {
+  list-style-type: none;
 }
 
-/*-- Sección Form Contacto Large Devices | página contacto --*/
-.container-contacto { /*-- Disposición de la sección --*/
-    background-color: rgb(215, 215, 215, .3);
-    padding: 3em;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 2em;
+/*-- 3.0 Página Tubing Morelos | large devices --*/
+
+/*-- 3.1 Sección intro imagen de fondo & h1 --*/
+.container-intro-tub {
+  /*-- Contenedor --*/
+  background-color: black;
+  width: 100%;
+  margin-top: -70px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.container-intro-tub img {
+  /*-- Imagen de fondo --*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.intro-box-tub {
+  /*-- Textbox --*/
+  position: absolute;
+  top: 30%;
+  width: 80%;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  text-shadow: 0 6px 4px rgba(7, 7, 7);
+  z-index: 5;
+}
+.intro-box-tub h1 {
+  font-family: var(--ff-titles);
+  font-size: 5em;
+  color: var(--azul-brillante);
+  letter-spacing: 6px;
+}
+.intro-box-tub p {
+  font-family: var(--ff-titles);
+  font-size: 3.5em;
+  color: var(--clr-claro);
+  letter-spacing: 3px;
 }
 
-.map-contact h2 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
+/*-- 3.1 sección 
+
+/*-- 4.0 Sección Form Contacto Large Devices | página contacto --*/
+/*-- Sección intro Página de Contacto | Large Devices --*/
+.container-intro-contact {
+  width: 100%;
+  height: 500px;
+  margin-top: -70px;
+  position: relative;
+  overflow: hidden;
+}
+.container-intro-contact img {
+  /*-- Imagen de fondo --*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*-- Textbox--*/
+.intro-box-contacto {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.intro-box-contacto h1 {
+  font-size: 5em;
+  font-family: var(--ff-titles);
+  color: var(--azul-primario);
+  z-index: 1;
+  text-shadow: 0px 6px 4px rgb(20, 20, 20);
+  letter-spacing: 4px;
+}
+.intro-box-contacto p {
+  font-family: var(--ff-titles);
+  font-size: 3.5em;
+  color: var(--azul-brillante);
+  text-shadow: 0px 6px 4px rgb(20, 20, 20);
+  letter-spacing: 4px;
+}
+
+/*-- 4.1 Sección map & form --*/
+.container-contacto {
+  /*-- Disposición de la sección --*/
+  background-color: rgb(215, 215, 215, 0.3);
+  padding: 3em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
 }
 
 /*-- Diseño contenedor del mapa del Punto de Encuentro --*/
-    .map-contact {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    }
+.map-contact {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.map-contact h2 {
+  font-family: var(--ff-Secundary);
+  font-size: 2.5em;
+  color: var(--azul-primario);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0px 6px 4px rgb(20, 20, 20);
+}
 
-    .map-contact iframe {
-        height: 570px;
-        border-radius: 15px;
-        border: 2px solid var(--azul-brillante);
-        box-shadow: 0px 0px 8px var(--azul-brillante);
-    }
+.map-contact iframe {
+  height: 400px;
+  border: 1px solid var(--azul-primario);
+  border-radius: 15px;
+}
 /*-- Diseño de formulario contacto --*/
 .form-map {
-    width: 100%;
+  width: 100%;
 }
 
 form {
-    padding-left: 70px;
+  padding-left: 70px;
 }
 
 .form-map label {
-    font-family: var(--ff-primario);
-    font-size: 1.2em;
-    color: var(--azul-brillante);
+  font-family: var(--ff-primario);
+  font-size: 1.2em;
+  color: var(--azul-brillante);
 }
 
-.form-map input, select {
-    padding: 5px;
-    margin: 10px 0px;
-    width: 80%;
-    border-radius: 7px;
-    border: 2px solid var(--azul-primario);
+.form-map input,
+select {
+  padding: 5px;
+  margin: 10px 0px;
+  width: 80%;
+  border-radius: 7px;
+  border: 2px solid var(--azul-primario);
 }
 
-.form-name select, textarea {
-    width: 80%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical 
+.form-name select,
+textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
 textarea {
-    height: 100px;
+  height: 100px;
 }
-  
+
 /* Style the submit button with a specific background color etc */
 .btn-form {
-    background-color: var(--azul-primario);
+  background-color: var(--azul-primario);
 
-    color: var(--clr-oscuro);
-    font-size: 1.1em;
-    font-family: var(--ff-p
-    );
+  color: var(--clr-oscuro);
+  font-size: 1.1em;
+  font-family: var(--ff-p);
 
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-form:hover {
-    background-color: var(--azul-brillante);
+  background-color: var(--azul-brillante);
 }
 
-/*-- Sección Intro de las páginas de Actividades Large Devices --*/
-.actividades-intro {
-    padding: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2em;
+/*-- 5.0 Rafting pages | Large Devices --*/
+.actividades-intro-raft {
+  /*-- Sección intro --*/
+  background-color: #000000;
+  position: relative;
+  height: 500px;
+  margin-top: -70px;
+  overflow: hidden;
 }
 
-.actividades-intro img { /*-- Imagen de la sección intro de las páginas de actividades --*/
-    width: 60%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
+.actividades-intro-raft img {
+  /*-- Imagen de la sección intro de las páginas de actividades --*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .act-textbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    gap: 1em;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  letter-spacing: 4px;
+  text-shadow: 0px 6px 4px rgb(20, 20, 20);
+  width: 50%;
 }
 
 .act-textbox h1 {
-    font-family: var(--ff-Secundary);
-    font-size: 2.3em;
-    color: var(--azul-primario);
+  font-family: var(--ff-titles);
+  font-size: 5em;
+  color: var(--azul-primario);
 }
 
 .act-textbox p {
-    font-family: var(--ff-primario);
-    font-size: 1.2em;
-    color: var(--clr-claro);
+  font-family: var(--ff-titles);
+  font-size: 3.5em;
+  color: var(--clr-claro);
 }
 
-/*-- Sección Descripción de las páginas de actividades Large Devices --*/
-.container-desc { /*-- DIseño y disposición de la sección --*/
-    padding: 3em;
-    display: flex;
-    gap: 2em;
-    justify-content: space-around;
-    align-items: center;
+/*-- 5.1 Sección Descripción de las páginas de Rafting & Tubing Amacuzac | Large Devices --*/
+.container-desc {
+  /*-- Diseño del conenedor d ela sección --*/
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/*-- Diseño de los contenedores --*/
-.desc-box {
-    width: 100%;
-    background-color: rgb(215, 215, 215, .3);
-    padding: 10px;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+.tab {
+  /*-- Diseño de los botones --*/
+  /*background-color: var(--clr-oscuro);*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--clr-oscuro);
 }
 
-.desc-box h2 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-brillante);
+.container-desc .tab label {
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 12;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.container-desc .tab label span {
+  color: var(--clr-claro);
+  font-size: 1.5em;
+  transform: scale(.9);
 }
 
-.desc-box p {
-    font-family: var(--ff-primario);
-    font-size: 1.1em;
-    color: var(--clr-claro);
-    letter-spacing: 1.2px;
-    line-height: 1.3;
+#descripcion:checked ~ .list label.descripcion,
+#recomedaciones:checked ~ .list label.recomendaciones,
+#quetraer:checked ~ .list label.quetraer,
+#datos:checked ~ .list label.datos {
+  transform: scale(1);
 }
 
-.desc-box img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
+.tab .indicator {
+  position: absolute;
+  height: 100%;
+  width: 320px;
+  left: 0;
+  background-color: var(--azul-Secundario);
+  transition: all 0.4s ease;
 }
+
+#descripcion:checked ~ .tab .indicator {
+  left: 0;
+}
+#recomendaciones:checked ~ .tab .indicator {
+  left: 25%;
+}
+#quetraer:checked ~ .tab .indicator {
+  left: 50%;
+}
+#datos:checked ~ .tab .indicator {
+  left: 75%;
+}
+
+/*-- Contenedor del texto de las sección de pestañas --*/
+.tab-textbox {
+  width: 100%;
+  height: 540px;
+  background-color: var(--clr-claro);
+  padding: 2em;
+}
+
+.tabcontent {
+  display: none;
+  width: 100%;
+  height: 450px;
+  overflow: scroll;
+}
+
+.tab-textbox .descripcion {
+  display: block;
+}
+#descripcion:checked ~ .tab-textbox .descripcion,
+#recomendaciones:checked ~ .tab-textbox .recomendaciones,
+#quetraer:checked ~ .tab-textbox .quetraer,
+#datos:checked ~ .tab-textbox .datos {
+  display: block;
+}
+#recomendaciones:checked ~ .tab-textbox .descripcion,
+#quetraer:checked ~ .tab-textbox .descripcion,
+#datos:checked ~ .tab-textbox .descripcion {
+  display: none;
+}
+
+.container-desc input[type="radio"] {
+  display: none;
+}
+
+/*-- Contenedor de texto de la caja de pestañas --*/
+.tabcontent h2 {
+  font-size: 2em;
+  color: var(--clr-oscuro);
+  letter-spacing: 1.4px;
+  margin-bottom: 15px;
+}
+.tabcontent p {
+  font-size: 1.1em;
+  letter-spacing: 1.1px;
+  line-height: 23px;
+  width: 95%;
+}
+
+/*-- 5.2 Pagina Rafting Alto Amacuzac | sección pestañas --*/
+#descripcion:checked ~ .list label.descripcion1,
+#recomedaciones:checked ~ .list label.recomendaciones1,
+#quetraer:checked ~ .list label.quetraer1,
+#datos:checked ~ .list label.datos1 {
+  transform: scale(1);
+}
+#descripcion1:checked ~ .tab .indicator {
+  left: 0;
+}
+#recomendaciones1:checked ~ .tab .indicator {
+  left: 25%;
+}
+#quetraer1:checked ~ .tab .indicator {
+  left: 50%;
+}
+#datos1:checked ~ .tab .indicator {
+  left: 75%;
+}
+.tab-textbox .descripcion1 {
+  display: block;
+}
+#descripcion1:checked ~ .tab-textbox .descripcion1,
+#recomendaciones1:checked ~ .tab-textbox .recomendaciones1,
+#quetraer1:checked ~ .tab-textbox .quetraer1,
+#datos1:checked ~ .tab-textbox .datos1 {
+  display: block;
+}
+#recomendaciones1:checked ~ .tab-textbox .descripcion1,
+#quetraer1:checked ~ .tab-textbox .descripcion1,
+#datos1:checked ~ .tab-textbox .descripcion1 {
+  display: none;
+}
+
 
 /*-- Diseño y disposición de las cards de la sección descripción de la página Rafting Amacuzac --*/
 .desc-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
 }
 
 .box-top {
-    width: 100%;
+  width: 100%;
 }
 
 .box-top h3 {
-    text-align: center;
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-brillante);
-    margin-bottom: 30px;
+  text-align: center;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-brillante);
+  margin-bottom: 30px;
 }
 
 .box-top img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
 }
 
 /*-- Cards sección descripción de las páginas actividades --*/
 .boxes-bottom {
-    display: flex;
-    justify-content: space-between;
-    
-    gap: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1em;
 }
 
 .desc-cards {
-    width: 100%;
-    background-color: rgba(19, 27, 27, 0.589);
-    padding: 15px;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    max-height: 800px;
+  width: 100%;
+  background-color: rgba(19, 27, 27, 0.589);
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
+  max-height: 800px;
 }
 
 .desc-cards h4 {
-    font-family: var(--ff-Secundary);
-    font-size: 1.8em;
-    color: var(--azul-primario);
-    margin-bottom: 15px;
+  font-family: var(--ff-Secundary);
+  font-size: 1.8em;
+  color: var(--azul-primario);
+  margin-bottom: 15px;
 }
 
 .desc-cards p {
-    font-family: var(--ff-primario);
-    font-size: 1.1em;
-    letter-spacing: 1.1px;
-    line-height: 1.2;
-    color: var(--clr-claro);
+  font-family: var(--ff-primario);
+  font-size: 1.1em;
+  letter-spacing: 1.1px;
+  line-height: 1.2;
+  color: var(--clr-claro);
 }
 
 /*-- Sección Recomendaciones Large Devices | Paginas de actividades --*/
-.container-reco { /*-- Contenedro del textbox de la sección --*/
-    display: flex;
-    justify-content: space-around;
-    gap: 2em;
-    padding: 3em;
+.container-reco {
+  /*-- Contenedro del textbox de la sección --*/
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  padding: 3em;
 }
 
 .box-reco {
-    color: var(--clr-claro);
-    width: 100%;
+  color: var(--clr-claro);
+  width: 100%;
 }
 
 .box-reco h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    margin-bottom: 10px;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .box-reco p {
-    font-family: var(--ff-primario);
-    font-size: 1.2em;
-    line-height: 1.3;
-    letter-spacing: 1.1px;
+  font-family: var(--ff-primario);
+  font-size: 1.2em;
+  line-height: 1.3;
+  letter-spacing: 1.1px;
 }
 
 .container-reco img {
-    width: 75%;
-    
-    object-fit: cover;
-    object-position: center bottom;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
+  width: 75%;
+
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
 }
 
 /*-- Sección Precios de las páginas de actividades | Large Devices --*/
-.container-precios { /*-- Contenedor de la sección --*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    background-color: rgb(175, 251, 255, .4);
-    padding: 3em;
+.container-precios {
+  /*-- Contenedor de la sección --*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  background-color: rgb(175, 251, 255, 0.4);
+  padding: 3em;
 }
 
 .container-precios h2 {
-    font-family: var(--ff-Secundary);
-    font-size: 3em;
-    color: var(--azul-brillante);
+  font-family: var(--ff-Secundary);
+  font-size: 3em;
+  color: var(--azul-brillante);
 }
 
-.precio-box { /* Contenedor de los contenedores de las cards de precios --*/
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+.precio-box {
+  /* Contenedor de los contenedores de las cards de precios --*/
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.precio-cards { /*-- Disposición y diseño de las cards de precios --*/
-    background-color: rgb(175, 251, 255, .4);
-    padding: 15px;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    text-align: center;
-    width: 30%;
+.precio-cards {
+  /*-- Disposición y diseño de las cards de precios --*/
+  background-color: rgb(175, 251, 255, 0.4);
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
+  text-align: center;
+  width: 30%;
 }
 
 .precio-cards h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--clr-oscuro);
-    padding-bottom: 1em;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--clr-oscuro);
+  padding-bottom: 1em;
 }
 
 .precio-cards p {
-    font-family: var(--ff-primario);
-    font-size: 1.2em;
-    color: var(--clr-oscuro);
-    padding-bottom: 1em;
+  font-family: var(--ff-primario);
+  font-size: 1.2em;
+  color: var(--clr-oscuro);
+  padding-bottom: 1em;
 }
 
-.precio { /*-- Diseño del precio en la card de precios --*/
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--azul-brillante);
+.precio {
+  /*-- Diseño del precio en la card de precios --*/
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--azul-brillante);
 }
 
 .container-precios a {
-    font-family: var(--ff-titles);
-    font-size: 1.8em;
-    background-color: var(--azul-Secundario);
-    padding: 15px 70px;
-    border-radius: 15px;
+  font-family: var(--ff-titles);
+  font-size: 1.8em;
+  background-color: var(--azul-Secundario);
+  padding: 15px 70px;
+  border-radius: 15px;
 }
 
 .container-precios a:hover {
-    background-color: var(--azul-brillante);
-    color: var(--clr-oscuro);
+  background-color: var(--azul-brillante);
+  color: var(--clr-oscuro);
 }
 
 /*-- Sección Suscribir de la página Club de Río | Cursos --*/
-.container-sus {  /*-- Disposición y diseño de la sección --*/
-    background-color: rgb(175, 251, 255, .4);
-    padding: 3em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2em;
-    min-height: 200px;
+.container-sus {
+  /*-- Disposición y diseño de la sección --*/
+  background-color: rgb(175, 251, 255, 0.4);
+  padding: 3em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  min-height: 200px;
 }
 
-.suscribe { /*-- Diseño y disposición del contenedor del texto --*/
-    width: 40%;
-    text-align: center;
+.suscribe {
+  /*-- Diseño y disposición del contenedor del texto --*/
+  width: 40%;
+  text-align: center;
 }
 
 .suscribe h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-brillante);
-    margin-bottom: 12px;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-brillante);
+  margin-bottom: 12px;
 }
 
 .suscribe hr {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1.4px solid var(--azul-brillante);
-    border-radius: 10px;
-    margin-bottom: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1.4px solid var(--azul-brillante);
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .suscribe p {
-    font-family: var(--ff-primario);
-    color: var(--clr-claro);
-    font-size: 1.2em;
+  font-family: var(--ff-primario);
+  color: var(--clr-claro);
+  font-size: 1.2em;
 }
 
 /*-- Casilla de ingreso del email en la sección --*/
 .container-sus form {
-    width: 40%;
-    text-align: center;
+  width: 40%;
+  text-align: center;
 }
 
 .cb-em {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    margin-bottom: 20px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
+  margin-bottom: 20px;
 }
 
 .bt-cb {
-    background-color: var(--azul-primario);
-    padding: 12px 50px;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    font-family: var(--ff-titles);
-    font-size: 1.3em;
-    letter-spacing: 2px;
+  background-color: var(--azul-primario);
+  padding: 12px 50px;
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
+  font-family: var(--ff-titles);
+  font-size: 1.3em;
+  letter-spacing: 2px;
 }
 
 .bt-cb:hover {
-    background-color: var(--azul-brillante);
+  background-color: var(--azul-brillante);
 }
 
 /*-- Sección Valores de la página Nosotros | Large Devices --*/
 .container-sms {
-    padding: 3em;
-    background-color: rgb(175, 251, 255, .4);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1em;
+  padding: 3em;
+  background-color: rgb(175, 251, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
 }
 
 .box-sms {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .textbox-sms {
-    width: 45%;
-    background-color: rgba(20, 20, 20, 0.5);
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    padding: 15px;
+  width: 45%;
+  background-color: rgba(20, 20, 20, 0.5);
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
+  padding: 15px;
 }
 
 .textbox-sms p {
-    font-family: var(--ff-primario);
-    line-height: 1.3;
-    font-size: 1.1em;
-    color: var(--clr-claro);
-    height: 150px;
+  font-family: var(--ff-primario);
+  line-height: 1.3;
+  font-size: 1.1em;
+  color: var(--clr-claro);
+  height: 150px;
 }
 
 .textbox-sms h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
-    margin-bottom: 10px;
-    text-align: center;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-primario);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .textbox-sms img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .textbox-smv {
-    background-color: rgba(20, 20, 20, 0.5);
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
-    padding: 15px; 
+  background-color: rgba(20, 20, 20, 0.5);
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
+  padding: 15px;
 }
 
 .textbox-smv h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
-    text-align: center;
-    margin-bottom: 15px;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-primario);
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .textbox-smv ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .textbox-smv li {
-    font-family: var(--ff-primario);
-    font-size: 1.1em;
-    line-height: 1.4;
-    letter-spacing: 1.2px;
-    color: var(--clr-claro);
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+  font-family: var(--ff-primario);
+  font-size: 1.1em;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  color: var(--clr-claro);
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 .box-smv img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
 /*-- Sección termino y condiciones de la página Terminos&Condiciones | Large Devices --*/
 .container-tc {
-    padding: 2em 8em;
-    background-color: rgba(86, 86, 86, 0.3);
+  padding: 2em 8em;
+  background-color: rgba(86, 86, 86, 0.3);
 }
 
 .container-tc h3 {
-    font-family: var(--ff-Secundary);
-    font-size: 2.2em;
-    color: var(--azul-primario);
-    margin-bottom: 15px;
+  font-family: var(--ff-Secundary);
+  font-size: 2.2em;
+  color: var(--azul-primario);
+  margin-bottom: 15px;
 }
 
 .container-tc h4 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--clr-claro);
-    margin-bottom: 10px;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--clr-claro);
+  margin-bottom: 10px;
 }
 
 .container-tc p {
-    font-family: var(--ff-primario);
-    font-size: 1.1em;
-    color: var(--clr-claro);
-    line-height: 1.3;
-    letter-spacing: 1.2px;
-    margin-bottom: 10px;
+  font-family: var(--ff-primario);
+  font-size: 1.1em;
+  color: var(--clr-claro);
+  line-height: 1.3;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
 }
 
 .container-tc div {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 /*-- Página de suscribir --*/
 .suscribir-bg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
 }
 
 .suscribir-box {
-    background-color: rgb(215, 215, 215, .3);
-    padding: 2em;
-    border-radius: 15px;
-    border: 2px solid var(--azul-brillante);
-    box-shadow: 0px 0px 8px var(--azul-brillante);
+  background-color: rgb(215, 215, 215, 0.3);
+  padding: 2em;
+  border-radius: 15px;
+  border: 2px solid var(--azul-brillante);
+  box-shadow: 0px 0px 8px var(--azul-brillante);
 }
 
 .suscribir-box h2 {
-    font-family: var(--ff-Secundary);
-    font-size: 2em;
-    color: var(--azul-primario);
-    padding: 20px;
-    text-align: center;
+  font-family: var(--ff-Secundary);
+  font-size: 2em;
+  color: var(--azul-primario);
+  padding: 20px;
+  text-align: center;
 }
 
 .suscribir-box p {
-    font-family: var(--ff-primario);
-    font-size: 1.5em;
-    color: var(--clr-claro);
-    text-align: center;
-    padding: 10px;
+  font-family: var(--ff-primario);
+  font-size: 1.5em;
+  color: var(--clr-claro);
+  text-align: center;
+  padding: 10px;
 }
 
 /*-- MEDIA QUERIES --*/
-  
-@media screen and (max-width: 992px) {  /*-- Medium devices --*/
-    /*-- Barra de Navegación para medium devices --*/
-    .menu {
-        display: none;
-    }
 
-    .icon {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu.active {  /*-- disposición del menu desplegable cuando se hace click en el icono toggle --*/
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: center;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: rgb(5, 79, 79, .3);
-        backdrop-filter: blur(10px);
-        z-index: 1;
-        padding: 20px;
-    }
-
-    /*-- Sección Intro Medium Devices | todas las páginas --*/
-    .container-intro {
-        height: 600px;
-    }
-
-    .intro-box {
-        top: 30%;
-        width: 100%;
-    }
-
-    .intro-box .topic {
-        font-size: 3em;
-        width: 600px;
-    }
-
-    /*-- Sección Actividades | página Index --*/
-    .cards-box h3 {
-        width: 80%;
-        line-height: 35px;
-    }
-
-   
-    /*-- Sección Beneficios | página Index--*/
-    .bene-textbox {
-        width: 60%;
-    }
-
-    .bene-textbox ul {
-        width: 100%;
-        padding-left: 0;
-    }
-     /*-- Sección Slider --*/
-     .slide-textbox {   
-        width: 70%;    
-    }
-
-    /*-- Sección Paquetes Medium Devices | página index --*/
-    .container-pkts {
-        justify-content: space-between;
-        padding: 45px 15px;
-    }
-        /*-- Texto central de la sección --*/
-    .pkts-textbox h2 {
-        font-size: 1.7em;
-    }
-
-    .pkts-textbox p {
-        font-size: 1.2em;
-    }
-
-    /*-- Contenedores laterales de la sección paquetes --*/
-    .pkts-cards {
-        height: 350px;
-    }
-    .pkts-cards h3 {
-        font-size: 1.8em;
-        height: 85px;
-        width: 80%;
-        line-height: 35px;
-    }
-
-    .pkts-cards p {
-        font-size: 1.1em;
-        height: 170px;
-    }
-
-    /*-- Footer Medium Devices --*/
-    .footer-box h4 { /*-- Titulos de los contenedores --*/
-        font-size: 1.6em;
-    }
-
-    .footer-box li,a {  /*-- Texto de los contenedores --*/
-        font-size: 1em;
-    }
-
-    .box-media img { /*-- Logo footer Medium devices --*/
-        width: 110px;
-    }
-
-    .datos-box {
-        flex-direction: column;
-    }
-
-    .datos-cards {
-        height: 400px;
-    }
-
-    /*-- Sección Formulario contacto large devices | página Contacto --*/
-    form {
-        padding: 0;
-    }
-
-    .form-map input, select {
-        width: 100%;
-    }
-
-    .form-name select, textarea {
-        width: 100%;
-        padding: 2em;
-    }
-
-    /*-- Sección intro de las páginas de actividades Large Devices --*/
-    .actividades-intro img {
-        width: 80%;
-        height: 180px;
-    }
-
-    .act-textbox {
-        width: 100%;
-    }
-
-    /*-- Sección Descripción de las páginas de Actividades | Medium Devices --*/
-    .boxes-bottom {
-        flex-direction: column;
-    }
-
-    /*-- Sección precios de las páginas de actividades | Large Devices --*/
-    .container-precios {
-        padding: 2em;
-    }
-
-    .precio-cards {
-        width: 31%;
-    }
-
-    .precio-cards h3 {
-        height: 70px;
-    }
-    .precio-cards p {
-        font-size: 1.2em;
-        height: 60px;
-    }
-
-    /*-- Textbox de la página Terminos&Condiciones | Medium Devices --*/
-    .textbox-sms {
-        width: 47%;
-    }
-
-    .textbox-sms p {
-        height: 200px;
-    }
-
-    .textbox-smv li {
-        width: 100%;
-    }
-
+@media screen and (max-width: 992px) {
+  /*-- Medium devices --*/
+  /*-- Barra de Navegación para medium devices --*/
+  .menu {
+    display: none;
   }
+
+  .icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu.active {
+    /*-- disposición del menu desplegable cuando se hace click en el icono toggle --*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(5, 79, 79, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    padding: 20px;
+  }
+
+  /*-- Sección Intro Medium Devices | todas las páginas --*/
+  .container-intro {
+    height: 600px;
+  }
+
+  .intro-box {
+    top: 30%;
+    width: 100%;
+  }
+
+  .intro-box .topic {
+    font-size: 3em;
+    width: 600px;
+  }
+
+  /*-- Sección Actividades | página Index --*/
+  .cards-box h3 {
+    width: 80%;
+    line-height: 35px;
+  }
+
+  /*-- Sección Beneficios | página Index--*/
+  .bene-textbox {
+    width: 60%;
+  }
+
+  .bene-textbox ul {
+    width: 100%;
+    padding-left: 0;
+  }
+  /*-- Sección Slider --*/
+  .slide-textbox {
+    width: 70%;
+  }
+
+  /*-- Sección Paquetes Medium Devices | página index --*/
+  .container-pkts {
+    justify-content: space-between;
+    padding: 45px 15px;
+  }
+  /*-- Texto central de la sección --*/
+  .pkts-textbox h2 {
+    font-size: 1.7em;
+  }
+
+  .pkts-textbox p {
+    font-size: 1.2em;
+  }
+
+  /*-- Contenedores laterales de la sección paquetes --*/
+  .pkts-cards {
+    height: 350px;
+  }
+  .pkts-cards h3 {
+    font-size: 1.8em;
+    height: 85px;
+    width: 80%;
+    line-height: 35px;
+  }
+
+  .pkts-cards p {
+    font-size: 1.1em;
+    height: 170px;
+  }
+
+  /*-- Footer Medium Devices --*/
+  .footer-box h4 {
+    /*-- Titulos de los contenedores --*/
+    font-size: 1.6em;
+  }
+
+  .footer-box li,
+  a {
+    /*-- Texto de los contenedores --*/
+    font-size: 1em;
+  }
+
+  .box-media img {
+    /*-- Logo footer Medium devices --*/
+    width: 110px;
+  }
+
+  .datos-box {
+    flex-direction: column;
+  }
+
+  .datos-cards {
+    height: 400px;
+  }
+
+  /*-- Sección Formulario contacto large devices | página Contacto --*/
+  form {
+    padding: 0;
+  }
+
+  .form-map input,
+  select {
+    width: 100%;
+  }
+
+  .form-name select,
+  textarea {
+    width: 100%;
+    padding: 2em;
+  }
+
+  /*-- Sección intro de las páginas de actividades Large Devices --*/
+  .actividades-intro img {
+    width: 80%;
+    height: 180px;
+  }
+
+  .act-textbox {
+    width: 100%;
+  }
+
+  /*-- Sección Descripción de las páginas de Actividades | Medium Devices --*/
+  .boxes-bottom {
+    flex-direction: column;
+  }
+
+  /*-- Sección precios de las páginas de actividades | Large Devices --*/
+  .container-precios {
+    padding: 2em;
+  }
+
+  .precio-cards {
+    width: 31%;
+  }
+
+  .precio-cards h3 {
+    height: 70px;
+  }
+  .precio-cards p {
+    font-size: 1.2em;
+    height: 60px;
+  }
+
+  /*-- Textbox de la página Terminos&Condiciones | Medium Devices --*/
+  .textbox-sms {
+    width: 47%;
+  }
+
+  .textbox-sms p {
+    height: 200px;
+  }
+
+  .textbox-smv li {
+    width: 100%;
+  }
+}
 
 /*-- Media Queries para dispositivos S/M --*/
 @media screen and (max-width: 768px) {
-    /*-- Disposición para la sección intro de la página index para S/M devices --*/ 
-    .container-intro {
-        flex-direction: column;
-        height: 500px;
-    }
+  /*-- Disposición para la sección intro de la página index para S/M devices --*/
+  .container-intro {
+    flex-direction: column;
+    height: 500px;
+  }
 
-    .intro-box h1 {
-        font-size: 4em;
-    }
-    .intro-box p {
-        font-size: 2.5em;
-    }
+  .intro-box h1 {
+    font-size: 4em;
+  }
+  .intro-box p {
+    font-size: 2.5em;
+  }
 
-    /*-- Sección Actividades S/M devices | página Index --*/
-    .cards-box {
-        flex-direction: column;
-    }
+  /*-- Sección Actividades S/M devices | página Index --*/
+  .cards-box {
+    flex-direction: column;
+  }
 
-    figcaption {
-        width: 100%;
-    }
+  figcaption {
+    width: 100%;
+  }
 
+  .cards-textbox a {
+    width: 40%;
+    font-size: 1em;
+  }
 
-    .cards-textbox a {
-        width: 40%;
-        font-size: 1em;
-    }
-    
-    /*-- Sección Beneficios | página Index --*/
+  /*-- Sección Beneficios | página Index --*/
 
-    .bene-textbox {
-        width: 90%;
-    }
+  .bene-textbox {
+    width: 90%;
+  }
 
-    .bene-textbox h2 {
-        font-size: 2em;
-    }
+  .bene-textbox h2 {
+    font-size: 2em;
+  }
 
-    /*-- SLIDER --*/
-    .slide-textbox {
-        top: 50%;
-        width: 80%;
-    }
+  /*-- SLIDER --*/
+  .slide-textbox {
+    top: 50%;
+    width: 80%;
+  }
 
-    /*-- Sección Paquetes S/M Devices | Página Index --*/
-    .container-pkts {
-        flex-direction: column;
-    }
+  /*-- Sección Paquetes S/M Devices | Página Index --*/
+  .container-pkts {
+    flex-direction: column;
+  }
 
-    .pkts-box {
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        gap: 2em;
-    }
+  .pkts-box {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 2em;
+  }
 
-    .pkts-text h3 {
-        margin: 40px 0px;
-    }
+  .pkts-text h3 {
+    margin: 40px 0px;
+  }
 
-    .pkts-textbox {
-        width: 80%;
-        padding: 30px 0px;
-        gap: 2em;
-    }
+  .pkts-textbox {
+    width: 80%;
+    padding: 30px 0px;
+    gap: 2em;
+  }
 
-    .pkts-cards {
-        width: 100%;
-    }
+  .pkts-cards {
+    width: 100%;
+  }
 
-    .pkts-cards h3 {
-        height: 40px;
-    }
+  .pkts-cards h3 {
+    height: 40px;
+  }
 
-    .pkts-cards p {
-        height: 130px;
-    }
+  .pkts-cards p {
+    height: 130px;
+  }
 
-    /*-- Footer S/M Devices --*/
-    .container-footer {
-        flex-direction: column;
-    }
-    .box-container-footer {
-        width: 100%;
-        justify-content: space-around;
-    }
+  /*-- Footer S/M Devices --*/
+  .container-footer {
+    flex-direction: column;
+  }
+  .box-container-footer {
+    width: 100%;
+    justify-content: space-around;
+  }
 
-    .footer-box li,a {
-        font-size: 1em;
-        text-align: center;
-        line-height: 35px;
-    }
-    .box-media {
-        width: 100%;
-    }
-    .box-media img {
-        width: 120px;
-    }
-    .footer-media {
-        width: 50%;
-        font-size: 2em;
-    }
+  .footer-box li,
+  a {
+    font-size: 1em;
+    text-align: center;
+    line-height: 35px;
+  }
+  .box-media {
+    width: 100%;
+  }
+  .box-media img {
+    width: 120px;
+  }
+  .footer-media {
+    width: 50%;
+    font-size: 2em;
+  }
 
-    /*-- Sección Formulario contacto S/M Devices | página Contacto --*/
-    .container-contacto {
-        flex-direction: column;
-    }
+  /*-- Sección Formulario contacto S/M Devices | página Contacto --*/
+  .container-contacto {
+    flex-direction: column;
+  }
 
-    .map-contact iframe {
-        height: 300px;
-    }
+  .map-contact iframe {
+    height: 300px;
+  }
 
-    /*-- Sección Descripción de las páginas Actividades | Small Devices --*/
-    .container-desc {
-        flex-direction: column;
-        padding: 1em;
-    }
+  /*-- Sección Descripción de las páginas Actividades | Small Devices --*/
+  .container-desc {
+    flex-direction: column;
+    padding: 1em;
+  }
 
-    /*-- Sección Recomendaciones de las páginas Actividades | XS/S Devices --*/
-    .container-reco {  /*-- Disposición del contenedor --*/
-        flex-direction: column;
-        padding: 1em;
-    }
+  /*-- Sección Recomendaciones de las páginas Actividades | XS/S Devices --*/
+  .container-reco {
+    /*-- Disposición del contenedor --*/
+    flex-direction: column;
+    padding: 1em;
+  }
 
-    .container-reco img {
-        width: 100%;
-        height: 200px;
-    }
+  .container-reco img {
+    width: 100%;
+    height: 200px;
+  }
 
-    /*-- Sección precios de las páginas de actividades | Small Devices --*/
-    .container-precios {
-        padding: 1em;
-    }
+  /*-- Sección precios de las páginas de actividades | Small Devices --*/
+  .container-precios {
+    padding: 1em;
+  }
 
-    .precio-cards h3 {
-        font-size: 1.2em;
-        height: 60px;
-    }
+  .precio-cards h3 {
+    font-size: 1.2em;
+    height: 60px;
+  }
 
-    .precio-cards p {
-        height: 60px;
-    }
+  .precio-cards p {
+    height: 60px;
+  }
 
-    /*-- Sección suscribirse de la página Club de Río | Cursos Small Devices --*/
-    .container-sus {
-        display: flex;
-        flex-direction: column;
-    }
+  /*-- Sección suscribirse de la página Club de Río | Cursos Small Devices --*/
+  .container-sus {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .suscribe {
-        width: 100%;
-    }
+  .suscribe {
+    width: 100%;
+  }
 
-    .container-sus form {
-        width: 100%;
-    }
+  .container-sus form {
+    width: 100%;
+  }
 
-    .cb-em {
-        width: 80%;
-        
-    }
+  .cb-em {
+    width: 80%;
+  }
 }
 
-@media screen and (max-width: 600px) {  /*-- Small devcies --*/
-    /*-- Barra de navegación para small devices --*/
-    nav img {
-        width: 60px;
-    }
-    nav a {
-        font-size: 2em;
-        color: rgb(185, 250, 255);
-    }
+@media screen and (max-width: 600px) {
+  /*-- Small devcies --*/
+  /*-- Barra de navegación para small devices --*/
+  nav img {
+    width: 60px;
+  }
+  nav a {
+    font-size: 2em;
+    color: rgb(185, 250, 255);
+  }
 
-    .menu a {
-        font-size: 1.8em;
-    }
+  .menu a {
+    font-size: 1.8em;
+  }
 
-    /*-- Sección intro para XS/S devices --*/
-    .container-intro {
-        height: 450px;
-    }
+  /*-- Sección intro para XS/S devices --*/
+  .container-intro {
+    height: 450px;
+  }
 
-    .intro-box {
-        width: 90%;
-    }
+  .intro-box {
+    width: 90%;
+  }
 
-    .intro-box h1 {
-        font-size: 3em;
-        width: 100%;
-    }
+  .intro-box h1 {
+    font-size: 3em;
+    width: 100%;
+  }
 
-    .intro-box .topic {
-        width: 300px;
-        font-size: 2em;
-    }
+  .intro-box .topic {
+    width: 300px;
+    font-size: 2em;
+  }
 
-    .intro-box a {
-        font-size: 1em;
-        padding: 10px 50px;
-    }
+  .intro-box a {
+    font-size: 1em;
+    padding: 10px 50px;
+  }
 
-    /*-- Sección Actividades S/M devices | página Index --*/
-    .container-cards {
-        padding: 15px;
-    }   
+  /*-- Sección Actividades S/M devices | página Index --*/
+  .container-cards {
+    padding: 15px;
+  }
 
-    .container-cards h2 {
-        font-size: 2em;
-    }
-    
-    .cards-sv {
-        flex-direction: column;
-    }
+  .container-cards h2 {
+    font-size: 2em;
+  }
 
-    .cards-textbox a {
-        width: 70%;
-    }
+  .cards-sv {
+    flex-direction: column;
+  }
 
-    /*-- Sección Beneficios | página Index --*/
+  .cards-textbox a {
+    width: 70%;
+  }
 
-    .container-bene {
-        flex-direction: column;
-    }
+  /*-- Sección Beneficios | página Index --*/
 
-    #slider {
-        width: 100%;
-        height: 400px;
-    }
-    .slide-textbox {
-        top: 45%;
-        padding: 15px;
-        width: 90%;
-    }
-    .slide-textbox span {
-        font-size: 2em;
-    }
+  .container-bene {
+    flex-direction: column;
+  }
 
-    .bene-textbox {
-        width: 100%;
-    }
+  #slider {
+    width: 100%;
+    height: 400px;
+  }
+  .slide-textbox {
+    top: 45%;
+    padding: 15px;
+    width: 90%;
+  }
+  .slide-textbox span {
+    font-size: 2em;
+  }
 
-    .bene-textbox h2 {
-        font-size: 1.8em;
-    }
+  .bene-textbox {
+    width: 100%;
+  }
 
-    /*-- Sección paquetes XS/S Devices | página Index --*/
-    .pkts-box {
-        flex-direction: column;
-    }
+  .bene-textbox h2 {
+    font-size: 1.8em;
+  }
 
-    /*-- Footer XS/S Devices --*/
-    .container-footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-    .box-container-footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-box {
-        width: 100%;
-    }
+  /*-- Sección paquetes XS/S Devices | página Index --*/
+  .pkts-box {
+    flex-direction: column;
+  }
 
-    .footer-box li,a {
-        font-size: 1em;
-        text-align: start;
-    }
+  /*-- Footer XS/S Devices --*/
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .box-container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-box {
+    width: 100%;
+  }
 
-    .box-media img {
-        width: 120px;
-    }
+  .footer-box li,
+  a {
+    font-size: 1em;
+    text-align: start;
+  }
 
-    .footer-media {
-        font-size: 2em;
-        gap: 1.5em;
-    }
+  .box-media img {
+    width: 120px;
+  }
 
-    /*-- Sección Datos XS/S Devices | Rafting Morelos page --*/
-    .container-datos {
-        padding: 1em;
-    }
-    .datos-cards {
-        height: 600px;        
-    }
+  .footer-media {
+    font-size: 2em;
+    gap: 1.5em;
+  }
 
-    .datos-cards p {
-        font-size: 1em;
-    }
+  /*-- Sección Datos XS/S Devices | Rafting Morelos page --*/
+  .container-datos {
+    padding: 1em;
+  }
+  .datos-cards {
+    height: 600px;
+  }
 
-    /*-- Sección Formulario Contacto XS/S Devices | página Contacto --*/
-    .container-contacto {
-        padding: 1em;
-    }
+  .datos-cards p {
+    font-size: 1em;
+  }
 
-    .map-contact h2 {
-        font-size: 1.8em;
-        text-align: center;
-    }
-    
-    .map-contact iframe {
-        height: 250px;
-    }
+  /*-- Sección Formulario Contacto XS/S Devices | página Contacto --*/
+  .container-contacto {
+    padding: 1em;
+  }
 
-    /*-- Sección intro de las páginas de actividades XS/S Devices --*/
-    .actividades-intro {
-        padding: 1em;
-    }
+  .map-contact h2 {
+    font-size: 1.8em;
+    text-align: center;
+  }
 
-    .actividades-intro img {
-        width: 100%;
-        height: 150px;
-    }
+  .map-contact iframe {
+    height: 250px;
+  }
 
-    .act-textbox h1 {
-        font-size: 1.8em;
-    }
+  /*-- Sección intro de las páginas de actividades XS/S Devices --*/
+  .actividades-intro {
+    padding: 1em;
+  }
 
-    .act-textbox p {
-        font-size: 1em;
-    }
+  .actividades-intro img {
+    width: 100%;
+    height: 150px;
+  }
 
-    /*-- Sección precios de las páginas Actividades | SX/S Devices --*/
-    .precio-box {
-        flex-direction: column;
-        align-items: center;
-        gap: 2em;
-    }
+  .act-textbox h1 {
+    font-size: 1.8em;
+  }
 
-    .precio-cards {
-        width: 80%;
-    }
+  .act-textbox p {
+    font-size: 1em;
+  }
 
-    .precio-cards h3 {
-        font-size: 1.8em;
-        height: auto;
-    }
+  /*-- Sección precios de las páginas Actividades | SX/S Devices --*/
+  .precio-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
 
-    .container-precios a {
-        padding: 10px 70px;
-    }
+  .precio-cards {
+    width: 80%;
+  }
 
-    /*-- Textbox de la página Terminos y Condiciones | S/XS Devices --*/
-    .container-tc {
-        padding: 1em;
-    }
+  .precio-cards h3 {
+    font-size: 1.8em;
+    height: auto;
+  }
 
-    /*-- Textbox del textbox de la página Quienes Somos | S/XS Devices --*/
-    .container-sms {
-        padding: 50px 10px;
-    }
+  .container-precios a {
+    padding: 10px 70px;
+  }
 
-    .box-sms {
-        flex-direction: column;
-        gap: 2em;
-    }
+  /*-- Textbox de la página Terminos y Condiciones | S/XS Devices --*/
+  .container-tc {
+    padding: 1em;
+  }
 
-    .textbox-sms {
-        width: 100%;
-    }
+  /*-- Textbox del textbox de la página Quienes Somos | S/XS Devices --*/
+  .container-sms {
+    padding: 50px 10px;
+  }
 
-    .textbox-sms p {
-        height: 280px;
-    }
+  .box-sms {
+    flex-direction: column;
+    gap: 2em;
+  }
 
-    /*-- Página suscribir --*/
-    .suscribir-bg {
-        padding: 20px;
-        height: 400px;
-    }
-    .suscribir-box {
-        padding: 10px;
-    }
+  .textbox-sms {
+    width: 100%;
+  }
 
-    .suscribir-box h2 {
-        font-size: 1.3em;
-    }
+  .textbox-sms p {
+    height: 280px;
+  }
 
-    .suscribir-box p {
-        font-size: 1em;
-    }
+  /*-- Página suscribir --*/
+  .suscribir-bg {
+    padding: 20px;
+    height: 400px;
+  }
+  .suscribir-box {
+    padding: 10px;
+  }
+
+  .suscribir-box h2 {
+    font-size: 1.3em;
+  }
+
+  .suscribir-box p {
+    font-size: 1em;
+  }
 }

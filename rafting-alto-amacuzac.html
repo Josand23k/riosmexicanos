@@ -33,9 +33,8 @@
         </a>
 
         <div class="menu" id="menu"> <!--Menu de Navegación -->
-            <a href="index.html" aria-label="Enlace a la página de inicio">Inicio</a>
-            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="rafting-morelos.html" aria-label="Enlace a la página de Rafting Morelos">Rafting</a>
+            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="contacto.html" aria-label="Enlace a la página de Contacto">Contacto</a>
         </div>
 
@@ -45,69 +44,83 @@
     </nav>
     
     <!-- Sección Intro de la página -->
-    <div class="actividades-intro">
+    <div class="actividades-intro-raft">
         <img src="imagenes/contacto-rafting-papagayo.webp" alt="Balsa con personas remando un rápido en el Alto Amacuzac">
-        <div class="act-textbox">
+        <div class="act-textbox-raa">
             <h1>Rafting Alto Amacuzac</h1>
-            <p>¡Embárcate en una emocionante travesía en el primer cañón del río Amacuzac, inmerso en el majestuoso entorno del Parque Nacional Grutas de Cacahuamilpa!</p><br>
-            <p>Sumérgete en una experiencia única para explorar las maravillas del Parque Nacional Grutas de Cacahuamilpa, desde la renombrada gruta hasta las fascinantes Dos Bocas de los ríos subterráneos, sin olvidar la belleza del propio río Amacuzac.</p><br>
-            <p>Descubre una sección del río perfecta para disfrutar en compañía de amigos, todo a tan solo un paso de tu ubicación.</p><br>
-            <p>¡Atrévete a vivir la aventura de recorrer el cañón del Alto Amacuzac! Ven y forma parte de esta experiencia inolvidable.</p>
+            <p>Rafting & Grutas de Cacahuamilpa</p>
         </div>
+        
     </div>
 
     <!-- Sección descripción de las páginas de Actividades -->
     <section class="container-desc">
-        <div class="desc-box">
-            <h2>Descripción</h2>
-            <p>La experiencia comienza en nuestro Punto de Encuentro, donde te recibirán con una cálida bienvenida y te proporcionarán información detallada sobre el itinerario. Después de equiparnos con la indumentaria adecuada, nos dirigiremos hacia el Parque Nacional Grutas de Cacahuamilpa.</p>
-            <br>
-            <p>Al llegar, exploraremos la célebre Gruta, con sus dos kilómetros de recorrido, maravillándonos con las formaciones creadas por la filtración del agua en la roca calcárea. Descenderemos luego al fondo del cañón para admirar las Dos Bocas, el punto de encuentro de los ríos subterráneos San Jerónimo y Chontacoatlán.</p>
-            <br>
-            <p>Nuestra travesía continuará a lo largo de 14 kilómetros de río, enfrentando rápidos de categoría II y III.</p>
-            <br>
-            <p>Finalmente, regresaremos al Punto de Encuentro para deleitarnos con un refrigerio, poniendo así punto final a esta emocionante aventura.</p> 
 
-            <img src="imagenes/ban-raftingfamiliar.webp" alt="Muchas gotas debido al splash de un turista que juega con el agua practicando rafting">
+        <input type="radio" name="indicator" id="descripcion1" checked>
+        <input type="radio" name="indicator" id="recomendaciones1">
+        <input type="radio" name="indicator" id="quetraer1">
+        <input type="radio" name="indicator" id="datos1">
+
+        <div class="tab"> <!-- Botones de las pestañas de la sección Descripción -->
+            <label for="descripcion1" class="descripcion1">
+                <span>Descripción</span>
+            </label>
+            <label for="recomendaciones1" >
+                <span>Recomendaciones</span>
+            </label>
+            <label for="quetraer1">
+                <span>Que traer</span>
+            </label>
+            <label for="datos1">
+                <span>Datos</span>
+            </label>
+            <div class="indicator"></div>
         </div>
+        
+        <div class="tab-textbox">
+            <div id="descripcion1" class="descripcion1 tabcontent">
+                <h2>Descripción</h2>
+                <p>La experiencia comienza en nuestro Punto de Encuentro, donde te recibirán con una cálida bienvenida y te proporcionarán información detallada sobre el itinerario. Después de equiparnos con la indumentaria adecuada, nos dirigiremos hacia el Parque Nacional Grutas de Cacahuamilpa.</p>
+                <br>
+                <p>Al llegar, exploraremos la célebre Gruta, con sus dos kilómetros de recorrido, maravillándonos con las formaciones creadas por la filtración del agua en la roca calcárea. Descenderemos luego al fondo del cañón para admirar las Dos Bocas, el punto de encuentro de los ríos subterráneos San Jerónimo y Chontacoatlán.</p>
+                <br>
+                <p>Nuestra travesía continuará a lo largo de 14 kilómetros de río, enfrentando rápidos de categoría II y III.</p>
+                <br>
+                <p>Finalmente, regresaremos al Punto de Encuentro para deleitarnos con un refrigerio, poniendo así punto final a esta emocionante aventura.</p> 
 
-        <div class="desc-boxes">
-            <div class="box-top">
-                <h3>Recomendaciones</h3>
+                <img src="imagenes/ban-raftingfamiliar.webp" alt="Muchas gotas debido al splash de un turista que juega con el agua practicando rafting">
+            </div>
+
+            <div id="recomendaciones1" class="recomendaciones1 tabcontent">
+                <h2>Recomendaciones</h2>
                 <img src="imagenes/flotando-altoamacuzac.webp" alt="Joven flotando en las aguas del río Amacuzac en la Sección Alto Amacuzac">
+                <h3>Incluye</h3>
+                <p>El recorrido de Rafting Amacuzac te incluye el traslado del Punto de Encuentro al río y del río al Punto de Encuentro.<br>
+                Así como el equipo necesario para la actividad como chaleco de flotación y casco.</p>
+                <br>
+                <p>Entrada al Parque Nacional Grutas de Cacahuamilpa</p><br>
+                <p>Un refrigerio en el río y comida completa al final del recorrido.</p><br>
+                <p>Ríos Mexicanos te incluye en tu recorrido un seguro en caso de accidentes en el río.</p>
             </div>
-            <div class="boxes-bottom">
-                <div class="desc-cards">
-                    <h4>Incluye</h4>
-                    <p>El recorrido de Rafting Amacuzac te incluye el traslado del Punto de Encuentro al río y del río al Punto de Encuentro.<br>
-                    Así como el equipo necesario para la actividad como chaleco de flotación y casco.</p>
-                    <br>
-                    <p>Entrada al Parque Nacional Grutas de Cacahuamilpa</p><br>
-                    <p>Un refrigerio en el río y comida completa al final del recorrido.</p><br>
-                    <p>Ríos Mexicanos te incluye en tu recorrido un seguro en caso de accidentes en el río.</p>
-                </div>
-                <div class="desc-cards">
-                    <h4>Que traer</h4>
-                    <p><b>Ropa</b> apta para nadar, traje de baño además de short ligeros y playera de manga larga como son las licras de tela sintéticas.
-                    Calzado para mojar con agujetas y suela gruesa. Además de una muda de ropa y calzado para después del río.</p>
-                    <br>
-                    <p>Es importante que si estas bajo algún medicamente, no olvides traerlo y mantenernos informados, del mismo modo, te recomendamos traer barras energéticas y bebidas para hidratarte.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="container-reco">
-        <div class="box-reco">
-            <h3>Datos</h3>
-            <p>La misión de Rafting Alto Amacuzac de Ríos Mexicanos es fomentar las actividades de aventura en la naturaleza, destacando la extraordinaria belleza del río Amacuzac. Nos dedicamos a resaltar la importancia de la protección y preservación de este ecosistema, ya que constituye el hogar y refugio de una amplia diversidad de vida silvestre, tanto endémica como migratoria. Estamos comprometidos con la promoción de la conciencia ambiental, buscando inspirar a todos a cuidar y valorar este tesoro natural.</p><br>
-            <p>El recorrido es de 14 kilómetros de descenso en el río.</p><br>
-            <p>La temporada de Rafting Alto Amacuzac va de Agosto a Octubre.</p><br>
-            <p>Dificultad media, debido a los rápidos clase II y III, y de dificil accesibilidad.</p><br>
-            <p>Observación de aves y fauna local.</p><br>
-            <p>De julio a octubre es temporada de agua alta, ideal para mayores de 10 años.</p>
+            <div id="quetraer1" class="quetraer1 tabcontent">
+                <h2>Que traer</h2>
+                <p><b>Ropa</b> apta para nadar, traje de baño además de short ligeros y playera de manga larga como son las licras de tela sintéticas.
+                Calzado para mojar con agujetas y suela gruesa. Además de una muda de ropa y calzado para después del río.</p>
+                <br>
+                <p>Es importante que si estas bajo algún medicamente, no olvides traerlo y mantenernos informados, del mismo modo, te recomendamos traer barras energéticas y bebidas para hidratarte.</p>
+            </div>
+
+            <div id="datos1" class="datos1 tabcontent">
+                <h2>Datos</h2>
+                <p>La misión de Rafting Alto Amacuzac de Ríos Mexicanos es fomentar las actividades de aventura en la naturaleza, destacando la extraordinaria belleza del río Amacuzac. Nos dedicamos a resaltar la importancia de la protección y preservación de este ecosistema, ya que constituye el hogar y refugio de una amplia diversidad de vida silvestre, tanto endémica como migratoria. Estamos comprometidos con la promoción de la conciencia ambiental, buscando inspirar a todos a cuidar y valorar este tesoro natural.</p><br>
+                <p>El recorrido es de 14 kilómetros de descenso en el río.</p><br>
+                <p>La temporada de Rafting Alto Amacuzac va de Agosto a Octubre.</p><br>
+                <p>Dificultad media, debido a los rápidos clase II y III, y de dificil accesibilidad.</p><br>
+                <p>Observación de aves y fauna local.</p><br>
+                <p>De julio a octubre es temporada de agua alta, ideal para mayores de 10 años.</p>
+            </div>
         </div>
-        <img src="imagenes/chicas-nadando.webp" alt="Dos chicas nadando en la sección tranquila del Alto Amacuzac">
     </section>
 
     <section class="container-precios">

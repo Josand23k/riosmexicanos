@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
     <!-- link to Awsome Font | Icons source -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+       
     <script src="https://kit.fontawesome.com/2ef942ef12.js" crossorigin="anonymous"> </script>
 
     <!-- Agrega el favicon -->
@@ -34,9 +33,8 @@
         </a>
 
         <div class="menu" id="menu"> <!--Menu de Navegación -->
-            <a href="index.html" aria-label="Enlace a la página de inicio">Inicio</a>
-            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="rafting-morelos.html" aria-label="Enlace a la página de Rafting Morelos">Rafting</a>
+            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="contacto.html" aria-label="Enlace a la página de Contacto">Contacto</a>
         </div>
 
@@ -46,41 +44,50 @@
     </nav>
 
     <!-- Sección Intro-Rafting -->
-    <section class="container-intro">
-        <div class="intro-box">
-            <h1>Rafting en Morelos</h1>
-            <p>¡Descubre una de las experiencias al aire libre más emocionantes en el Estado de Morelos!<br>En Ríos Mexicanos, te ofrecemos tres opciones emocionantes para practicar rafting en las aguas del río Amacuzac.</p>
-            <p>Sumérgete en la aventura y siente la emoción de enfrentar los rápidos en uno de los entornos naturales más cautivadores del Estado de Morelos.</p>
-            <a href="booking.html" aria-label="Enlace a la página de reserva de Ríos Mexicanos">Reserva</a>
-        </div>
+    <section class="container-activities">
         <img src="imagenes/rafting-morelos.webp" alt="Balsa en un rápido en Rafting Amacuzac con Ríos Mexicanos">
+        <div class="intro-box-act">
+            <div class="intro-box-act-textbox">
+                <h1>Rafting en Morelos</h1>
+                <span>¡La aventura cerca de ti!</span>
+            </div>
+            <div class="intro-box-act-cards">
+                <div class="ibac">
+                    <img src="imagenes/card-rafting-amacuzac.webp" alt="imagen">
+                </div>
+                <div class="ibac">
+                    <img src="imagenes/card-rafting-amacuzac.webp" alt="imagen">
+                </div>
+            </div>
+        </div>
+        
     </section>
 
     <!-- Sección Actividades -->
-    <section class="container-cards">
+    <section class="container-cards-activities">
         <h2>Recorridos de Rafting en Morelos</h2>
-        <div class="cards-box"> <!-- Contenedor de las cards -->
-            <div class="cards-sv"> <!-- Card -->
+        <div class="cards-box-act"> <!-- Contenedor de las cards -->
+            <div class="cards-act"> <!-- Card -->
                 <img src="imagenes/card-rafting-amacuzac.webp" alt="Un grupo de personas remando un rápido en Rafting Amacuzac">
-                <div class="cards-textbox">
+                <div class="cards-textbox-act">
                     <h3>Rafting Amacuzac</h3>
                     <p>La aventura de navegar los rápidos del río Amacuzac</p>
                     <a href="rafting-amacuzac.html" aria-label="Enlace a la página web de Rafting Amacuzac">Más información</a>
                 </div>
             </div>
 
-            <div class="cards-sv"> <!-- Card -->
+            <div class="cards-act"> <!-- Card -->
                 <img src="imagenes/card-rafting-altoamacuzac.webp" alt="Acción practicando Rafting en el Alto Amacuzac con Ríos Mexicanos">
-                <div class="cards-textbox">
+                <div class="cards-textbox-act">
                     <h3>Rafting Alto Amacuzac</h3>
                     <p>Este recorrido solo se opera en temporada de agua alta</p>
                     <a href="rafting-alto-amacuzac.html" aria-label="Enlace a la página web de Tubing Amacuzac">Más información</a>
                 </div>
             </div>
 
-            <div class="cards-sv"> <!-- Card -->
+            <div class="cards-act"> <!-- Card -->
                 <img src="imagenes/balsa-nadador.webp" alt="Una persona observando a una niña nadar en el río Amacuzac">
-                <div class="cards-textbox">
+                <div class="cards-textbox-act">
                     <h3>Rafting Familiar</h3>
                     <p>Una experiencia para toda la familia navegando el río Amacuzac</p>
                     <a href="rafting-familiar.html" aria-label="Enlace a la página web de Rafting Familiar">Más información</a>
@@ -91,63 +98,93 @@
 
     <!-- Sección Datos -->
     <section class="container-datos"> <!-- Imagen -->
-        <img src="imagenes/slide-raftingamacuzac-tumbaburros.webp" alt="Descenso de río en el río Amacuzac">
+        <h2>Datos importantes sobre Rafting en Morelos</h2>
 
-        <div class="datos-textbox"> <!-- Textbox -->
-            <h2>Datos importantes sobre Rafting en Morelos</h2>
-            <div class="datos-box"> <!-- Contenedor de textbox 1era parte -->
-                <div class="datos-cards"> <!-- Card de datos -->
-                    <h3>Temporada</h3>
-                    <p><b>Teporada Alta:</b>
-                        <br>Esta inicia en julio y termina en octubre, y se debe a que hay mayor volumen de agua en el río Amacuzac.<br>
-                        ¡El mejor momento para practicar Rafting en Morelos!</p><br>
-                    <p><b>Temporada Baja:</b> 
-                        <br>Esta temporada inicia cuando el nivel del río comienza a bajar, esto es de octubre a marzo.<br>
-                        ¡Baja el nivel del río pero el nivel de la aventura!</p>
+        <div class="datos-boxer">
+            <div class="menu-lateral-act">
+                <div class="icon-menu-lateral" onclick="mostrarContenido(0)">
+                    <img src="imagenes/info.svg" alt="Icono de información">
                 </div>
-
-                <div class="datos-cards">
-                    <h3>Clima</h3>
-                    <p><b>Temperatura:</b>
-                        <br>El recorrido se da al sur del Estado de Morelos, donde predomina el clima cálido.<br>
-                        Se tiene un temperatura promedio de 28° a 31° mayormente soleado, así que es buena idea tomar precauciones si se tiene piel sensible al sol.</p><br>
-                    <p><b>Medio Ambiente:</b> 
-                        <br>La actividad se realiza en la selva baja caducifolia, lo que ocasiona que en temporada de lluvia este exiberante en vegetación, y en temporada de estiaje, se ve una selva sin hojas y seca.</p>
+                <div class="icon-menu-lateral" onclick="mostrarContenido(1)">
+                    <i class="fa fa-water"></i>
+                </div>
+                <div class="icon-menu-lateral" onclick="mostrarContenido(2)">
+                    <i class="fa fa-route"></i>
+                </div>
+                <div class="icon-menu-lateral" onclick="mostrarContenido(3)">
+                    <img src="imagenes/location-dot.svg" alt="icono de locación">
                 </div>
             </div>
 
-            <div class="datos-box"> <!-- Contenedor de textbox 2da parte -->
-                <div class="datos-cards">
-                    <h3>Riesgos</h3>
-                    <p><b>Objetivos:</b>
+            <div class="datos-textbox"> <!-- Textbox -->
+                <div class="datos-cards" id="contenido0"> <!-- Card de datos -->
+                    <div class="datos-cards-tbox">
+                        <h3>Datos Rafting en Morelos</h3>
+                        <ul>
+                            <li>Ríos Mexicanos tiene dos opciones para tí. Rafting Amacuzac y Rafting Familiar. Aunque en temporada de agua baja (de diciembre a febrero) se combinan en Rafting Amacuzac.</li><br>
+                            <li>La escala de dificultad se divide en 6 clases (niveles), Y el Rafting en Morelos solo alcanza en algunos momentos el nivel IV, que es de dificultad media.</li><br>
+                            <li>El río Amacuzac es el único lugar donde prácticar Rafting en Morelos y en el centro/sur de México, a tan solo 2 horas de la Ciudad de México, 2 horas y media de Puebla, a tres de Toluca y a 45 minutos de Cuernavaca.</li><br>
+                            <li>Se ha practicado Rafting en Morelos desde los años 90´s.</li><br>
+                            <li>El río Amacuzac es una río vivo, esto quiere decir que en el cohabitan diferentes especies, tanto endemicas como migratorias. Que al practicar Rafting en Morelos se puede observar y apreciar la bella vida que en este río se desarrolla.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="datos-cards" id="contenido1">
+                    <div class="datos-cards-tbox">
+                        <h3>Clima</h3>
+                        <p><b>Temperatura:</b>
+                        <br>           
+                        ¡Bienvenido al emocionante mundo del rafting en el sur del Estado de Morelos! <br>Aquí, el clima cálido es nuestro aliado constante, así que no tendrás que preocuparte por el frío.<br>
+                        Con temperaturas promedio que oscilan entre los 28°C y los 31°C, y la mayor parte del tiempo bajo un sol radiante, la aventura está garantizada.</p>
+                        
+                        <p>Sin embargo, con la luz solar en su máximo esplendor, es importante tomar algunas precauciones, especialmente si tienes la piel sensible.<br> No olvides aplicar protector solar antes de sumergirte en esta emocionante experiencia.<br>
+                        ¡Prepárate para disfrutar de la adrenalina del rafting mientras te sumerges en la belleza natural de Morelos!</p><br>
+                        <p><b>Medio Ambiente:</b> 
+                        <br>La actividad se realiza rodeados de la selva baja caducifolia, lo que ocasiona que en temporada de lluvia este exiberante en vegetación, y en temporada de estiaje, se ve una selva sin hojas y seca.</p>
+                        <br>
+                        <p>Durante la temporada de rafting en el sur del Estado de Morelos, el paisaje y la fauna del río experimentan fascinantes cambios. En verano, la exuberante vegetación puede ocultar algunas de las vistas más claras, pero ofrece una experiencia inmersiva en la densa selva baja caducifolia.<br>
+                        A medida que avanzas por el río, puedes notar una disminución en la actividad de la vida silvestre visible, aunque aún puedes escuchar los sonidos de la naturaleza a tu alrededor.<br>                 
+                        Sin embargo, cuando llega el invierno, el panorama se transforma. La migración de aves desde el norte trae consigo una explosión de vida al río. A medida que desciendes por el agua, es posible que te encuentres con una variedad de aves acuáticas y otras especies que han llegado para aprovechar las condiciones más cálidas del sur.<br> Este cambio estacional añade una dimensión emocionante a tu experiencia de rafting, ya que te sumerge en la riqueza de la biodiversidad de la región.<br> ¡Prepárate para ser testigo de la magia de la naturaleza mientras navegas por las aguas de Morelos!</p>
+                    </div>
+                </div>
+
+                <div class="datos-cards" id="contenido2">
+                    <div class="datos-cards-tbox">
+                        <h3>Recomendaciones</h3>
+                        <p><b>Que traer:</b>
                         <br>Estos son ocasionados por circustancias ajenas a la actividad, como puede ser cambios en el clima, crecidas, desprendimientos de piedras, presencia de animales que puedan causar un riesgo a los particiapntes como son insectos, serpientes u otro que pueda sentirse amenazado por nuestra presencia.</p><br>
-                    <p><b>Subjetivos:</b> 
+                        <p><b>Que no traer:</b> 
                         <br>Estos son las circunstancias que puedan causar una lesión a los participantes, como pueder ser un resbalon por caminar en un terreno irregular, o que se voltee una balsa y que al nadar se golpee con una piedra, o los golpes con los remos, etc.</p>
+                    </div>
                 </div>
-
-                <div class="datos-cards">
-                    <h3>Dificultad</h3>
-                    <p><b>Rafting Amacuzac</b>
-                        <br>Este recorrido en la sección llamada Bajo Amacuzac, se puede dividir entre medio y alto, esto se debe a que exige una demanda fisica para lograr recorrer los 14 kilómetros del río Amacuzac.</p><br>
-                    <p><b>Rafting Alto Amacuzac:</b> 
-                        <br>Esta sección de río es de una dificultad considerada media, pero no alta, lo que lo hace idea para mayores de 12 años.</p><br>
-                    <p><b>Rafting Familiar:</b> 
-                        <br>Esta opción para prácticar Rafting en Morelos, es una dificultad baja. ideal para familias o grupos con niños mayores de 6 años.</p>
-                </div>
+                
+                <div class="datos-cards" id="contenido3">
+                    <div class="datos-cards-tbox">
+                        <h3>Punto de Encuentro</h3>
+                        <p><b>Rafting Amacuzac</b>
+                        <br>Nuestro Punto de Encuentro para la actividad de Rafting Amacuzac y Rafting Familiar es en la comunidad de Tehuixtla al sur del Estado de Morelos, a 10 minutos del Lago Tequesquitengo, y de la Autopista del Sol.</p>
+                        <p>Te enviaremos la dirección exacta al hacer tu reservación, donde te explicaremos donde podrás dejar tu vehiculo, y más información.</p>
+                    </div>
             </div>
+        </div>
     </section>
 
     <section class="container-pkts">
         <div class="pkts-box">
             <div class="pkts-cards">
-                <h3>Expedición Papagayo</h3>
                 <img src="imagenes/expedicion-rafting-papagayo.webp" alt="Balsa practicando rafting con Ríos Mexicanos">
-                <p>Dos días de aventura explorando los rápidos del río Papagayo.</p>
+                <div class="pkts-text">
+                    <h3>Expedición Papagayo</h3>
+                    <p>Dos días de aventura explorando los rápidos del río Papagayo.</p>
+                </div>
             </div>
             <div class="pkts-cards">
-                <h3>Fullday Amacuzac</h3>
-                <img src="imagenes/cards-tubing-amacuzac(1).webp" alt="Aventura practicando Rafting en el río Amacuzac">
-                <p>Un día completo de aventura en el río Amacuzac practicando Rafting y Tubing en Morelos.</p>
+                <img src="imagenes/expedición-rafting-amacuzac.webp" alt="Aventura practicando Rafting en el río Amacuzac">
+                <div class="pkts-text">
+                    <h3>Rafting & Tubing</h3>
+                    <p>Un día completo de aventura en el río Amacuzac practicando Rafting y Tubing en Morelos.</p>
+                </div>
             </div>
         </div>
 
@@ -161,14 +198,18 @@
 
         <div class="pkts-box">
             <div class="pkts-cards">
-                <h3>Tubing Alto Amacuzac</h3>
-                <img src="imagenes/tubing-altoamacuzac1200.webp" alt="Flotando en el río en tubing con Ríos Mexicanos">
-                <p>Un día visitando el Parque Nacional Grutas de Cacahuamilpa, practicando Tubing y con visita a las grutas.</p>
+                <img src="imagenes/cards-tubing-amacuzac(1).webp" alt="Flotando en el río en tubing con Ríos Mexicanos">
+                <div class="pkts-text">
+                    <h3>Tubing Alto Amacuzac</h3>
+                    <p>Un día visitando el Parque Nacional Grutas de Cacahuamilpa, practicando Tubing y con visita a las grutas.</p>
+                </div>
             </div>
             <div class="pkts-cards">
-                <h3>Expedición Amacuzac</h3>
-                <img src="imagenes/expedición-rafting-amacuzac.webp" alt="Niña sonriendo mientras disfruta flotar en el río con Ríos Mexicanos">
-                <p>3 días de expedición en el río Amacuzac explorando su paso por la Sierra de Huautla que es Reserva de la Biosfera.</p>
+                <img src="imagenes/sonriendo-balsaroja.webp" alt="Un grupo sonriendo a la cámara sobre una balsa roja en el río Amacuzac">
+                <div class="pkts-text">
+                    <h3>Rafting Familiar</h3>
+                    <p>Un día de aventura en familia, disfrutando del río Amacuzac en Rafting y balneario.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -176,25 +217,27 @@
     <!-- Footer -->
     <footer>
         <div class="container-footer">
-            <div class="footer-box">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>+52 777 497 55 31</li>
-                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
-                    <li>Cuernavaca, Morelos</li>
-                    <li>México</li>
-                </ul>
+            <div class="box-container-footer">
+                <div class="footer-box">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+52 777 497 55 31</li>
+                        <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                        <li>Cuernavaca, Morelos</li>
+                        <li>México</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Quienes Somos</a></li>
+                        <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
+                        <li><a href="club-de-rio.html">Club de Río</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-box">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
-                    <li><a href="club-de-rio.html">Club de Río</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box box-media">
+            <div class="box-media">
                 <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
                     <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
                 </a>
@@ -208,7 +251,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="https://www.teotlwebdesign.com/">Téotl Web Design</a></i></p>
         </div>
     </footer>
 
