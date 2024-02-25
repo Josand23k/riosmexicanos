@@ -105,7 +105,7 @@ nav a {
 }
 
 .icon:hover {
-  color: var(--azul-Secundario);
+  color: var(--azul-primario);
 }
 
 /*-- Sección Intro de la página index --*/
@@ -120,7 +120,7 @@ nav a {
 }
 
 /*-- Imagen en la sección intro de la página index --*/
-.container-intro img {
+.container-intro picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -143,11 +143,11 @@ nav a {
   font-size: 5em;
   font-weight: bold;
   line-height: 1.3em;
-  color: var(--azul-Secundario);
+  color: var(--azul-primario);
 }
 
 .intro-box p {
-  color: var(--clr-oscuro);
+  color: var(--azul-brillante);
   margin-bottom: 20px;
   font-family: var(--ff-titles);
   font-size: 3.5em;
@@ -156,14 +156,16 @@ nav a {
 }
 
 .boton-intro {
-  background-color: rgb(5, 79, 79, 0.15);
+  text-decoration: none;
+  background-color: rgb(5, 79, 79, 0.25);
   border: 2px solid var(--azul-brillante);
-  color: var(--clr-oscuro);
+  color: var(--clr-claro);
   letter-spacing: 3px;
   font-size: 1.3em;
   padding: 15px 40px;
   font-weight: 600;
   border-radius: 15px;
+  line-height: 2.5em;
   /*-- animation button --*/
   transition: all 0.6s ease-in-out;
 }
@@ -424,6 +426,7 @@ figcaption {
   color: var(--azul-brillante);
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 .pkts-textbox p {
@@ -538,19 +541,19 @@ footer {
   font-size: 1.8em;
   color: var(--azul-brillante);
   text-align: center;
+  letter-spacing: 3px;
 }
 
 .footer-box ul {
   list-style-type: none;
-  margin-top: 20px;
 }
 
 .footer-box li,
-a {
+.footer-box a {
   color: var(--clr-claro);
   font-family: var(--ff-primario);
   font-size: 1.1em;
-  line-height: 1.7;
+  line-height: 0.5;
   letter-spacing: 1.2px;
   text-decoration: none;
 }
@@ -790,19 +793,22 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--clr-dorado);
+  background-color: var(--azul-primario);
   width: 5%;
   height: 500px;
 }
 .icon-menu-lateral {
   width: 100%;
-  height: 50px;
+  height: 20%;
   font-size: 2.3em;
   text-align: center;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .icon-menu-lateral:hover {
-  background-color: var(--azul-primario);
+  background-color: var(--azul-brillante);
   cursor: pointer;
 }
 
@@ -890,8 +896,6 @@ li {
   color: var(--clr-claro);
   letter-spacing: 3px;
 }
-
-/*-- 3.1 sección 
 
 /*-- 4.0 Sección Form Contacto Large Devices | página contacto --*/
 /*-- Sección intro Página de Contacto | Large Devices --*/
@@ -1060,6 +1064,26 @@ textarea {
   color: var(--clr-claro);
 }
 
+.act-textbox-raa {
+  /*-- Titulo intro de Rafting/ Tubing Alto Amacuzac --*/
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  letter-spacing: 4px;
+  text-shadow: 0px 6px 4px rgb(20, 20, 20);
+  width: 70%;
+}
+.act-textbox-raa h1 {
+  font-family: var(--ff-titles);
+  font-size: 5em;
+  color: var(--azul-brillante);
+}
+.act-textbox-raa p {
+  font-family: var(--ff-titles);
+  font-size: 3.5em;
+  color: var(--clr-claro);
+}
+
 /*-- 5.1 Sección Descripción de las páginas de Rafting & Tubing Amacuzac | Large Devices --*/
 .container-desc {
   /*-- Diseño del conenedor d ela sección --*/
@@ -1072,6 +1096,7 @@ textarea {
 .tab {
   /*-- Diseño de los botones --*/
   /*background-color: var(--clr-oscuro);*/
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1092,7 +1117,7 @@ textarea {
 .container-desc .tab label span {
   color: var(--clr-claro);
   font-size: 1.5em;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 #descripcion:checked ~ .list label.descripcion,
@@ -1105,7 +1130,7 @@ textarea {
 .tab .indicator {
   position: absolute;
   height: 100%;
-  width: 320px;
+  width: 25%;
   left: 0;
   background-color: var(--azul-Secundario);
   transition: all 0.4s ease;
@@ -1171,12 +1196,18 @@ textarea {
   line-height: 23px;
   width: 95%;
 }
+.tabcontent img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 1em;
+}
 
 /*-- 5.2 Pagina Rafting Alto Amacuzac | sección pestañas --*/
-#descripcion:checked ~ .list label.descripcion1,
-#recomedaciones:checked ~ .list label.recomendaciones1,
-#quetraer:checked ~ .list label.quetraer1,
-#datos:checked ~ .list label.datos1 {
+#descripcion1:checked ~ .list label.descripcion1,
+#recomedaciones1:checked ~ .list label.recomendaciones1,
+#quetraer1:checked ~ .list label.quetraer1,
+#datos1:checked ~ .list label.datos1 {
   transform: scale(1);
 }
 #descripcion1:checked ~ .tab .indicator {
@@ -1206,109 +1237,109 @@ textarea {
   display: none;
 }
 
-
-/*-- Diseño y disposición de las cards de la sección descripción de la página Rafting Amacuzac --*/
-.desc-boxes {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-  width: 100%;
+/*-- 5.3 Pagina Rafting Familiar | Sección pestañas --*/
+#descripcion2:checked ~ .list label.descripcion2,
+#recomedaciones2:checked ~ .list label.recomendaciones2,
+#quetraer2:checked ~ .list label.quetraer2,
+#datos2:checked ~ .list label.datos2 {
+  transform: scale(1);
+}
+#descripcion2:checked ~ .tab .indicator {
+  left: 0;
+}
+#recomendaciones2:checked ~ .tab .indicator {
+  left: 25%;
+}
+#quetraer2:checked ~ .tab .indicator {
+  left: 50%;
+}
+#datos2:checked ~ .tab .indicator {
+  left: 75%;
+}
+.tab-textbox .descripcion2 {
+  display: block;
+}
+#descripcion2:checked ~ .tab-textbox .descripcion2,
+#recomendaciones2:checked ~ .tab-textbox .recomendaciones2,
+#quetraer2:checked ~ .tab-textbox .quetraer2,
+#datos2:checked ~ .tab-textbox .datos2 {
+  display: block;
+}
+#recomendaciones2:checked ~ .tab-textbox .descripcion2,
+#quetraer2:checked ~ .tab-textbox .descripcion2,
+#datos2:checked ~ .tab-textbox .descripcion2 {
+  display: none;
 }
 
-.box-top {
-  width: 100%;
+/*-- 5.4 Pagina Tubing Amacuzac | Sección pestañas --*/
+#descripcion3:checked ~ .list label.descripcion3,
+#recomedaciones3:checked ~ .list label.recomendaciones3,
+#quetraer3:checked ~ .list label.quetraer3,
+#datos3:checked ~ .list label.datos3 {
+  transform: scale(1);
+}
+#descripcion3:checked ~ .tab .indicator {
+  left: 0;
+}
+#recomendaciones3:checked ~ .tab .indicator {
+  left: 25%;
+}
+#quetraer3:checked ~ .tab .indicator {
+  left: 50%;
+}
+#datos3:checked ~ .tab .indicator {
+  left: 75%;
+}
+.tab-textbox .descripcion3 {
+  display: block;
+}
+#descripcion3:checked ~ .tab-textbox .descripcion3,
+#recomendaciones3:checked ~ .tab-textbox .recomendaciones3,
+#quetraer3:checked ~ .tab-textbox .quetraer3,
+#datos3:checked ~ .tab-textbox .datos3 {
+  display: block;
+}
+#recomendaciones3:checked ~ .tab-textbox .descripcion3,
+#quetraer3:checked ~ .tab-textbox .descripcion3,
+#datos3:checked ~ .tab-textbox .descripcion3 {
+  display: none;
 }
 
-.box-top h3 {
-  text-align: center;
-  font-family: var(--ff-Secundary);
-  font-size: 2em;
-  color: var(--azul-brillante);
-  margin-bottom: 30px;
+/*-- 5.5 Pagina Tubing Alto Amacuzac | Sección pestañas --*/
+#descripcion4:checked ~ .list label.descripcion4,
+#recomedaciones4:checked ~ .list label.recomendaciones4,
+#quetraer4:checked ~ .list label.quetraer4,
+#datos4:checked ~ .list label.datos4 {
+  transform: scale(1);
+}
+#descripcion4:checked ~ .tab .indicator {
+  left: 0;
+}
+#recomendaciones4:checked ~ .tab .indicator {
+  left: 25%;
+}
+#quetraer4:checked ~ .tab .indicator {
+  left: 50%;
+}
+#datos4:checked ~ .tab .indicator {
+  left: 75%;
+}
+.tab-textbox .descripcion4 {
+  display: block;
+}
+#descripcion4:checked ~ .tab-textbox .descripcion4,
+#recomendaciones4:checked ~ .tab-textbox .recomendaciones4,
+#quetraer4:checked ~ .tab-textbox .quetraer4,
+#datos4:checked ~ .tab-textbox .datos4 {
+  display: block;
+}
+#recomendaciones4:checked ~ .tab-textbox .descripcion4,
+#quetraer4:checked ~ .tab-textbox .descripcion4,
+#datos4:checked ~ .tab-textbox .descripcion4 {
+  display: none;
 }
 
-.box-top img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 2px solid var(--azul-brillante);
-  box-shadow: 0px 0px 8px var(--azul-brillante);
-}
-
-/*-- Cards sección descripción de las páginas actividades --*/
-.boxes-bottom {
-  display: flex;
-  justify-content: space-between;
-
-  gap: 1em;
-}
-
-.desc-cards {
-  width: 100%;
-  background-color: rgba(19, 27, 27, 0.589);
-  padding: 15px;
-  border-radius: 15px;
-  border: 2px solid var(--azul-brillante);
-  box-shadow: 0px 0px 8px var(--azul-brillante);
-  max-height: 800px;
-}
-
-.desc-cards h4 {
-  font-family: var(--ff-Secundary);
-  font-size: 1.8em;
-  color: var(--azul-primario);
-  margin-bottom: 15px;
-}
-
-.desc-cards p {
-  font-family: var(--ff-primario);
-  font-size: 1.1em;
-  letter-spacing: 1.1px;
-  line-height: 1.2;
-  color: var(--clr-claro);
-}
-
-/*-- Sección Recomendaciones Large Devices | Paginas de actividades --*/
-.container-reco {
-  /*-- Contenedro del textbox de la sección --*/
-  display: flex;
-  justify-content: space-around;
-  gap: 2em;
-  padding: 3em;
-}
-
-.box-reco {
-  color: var(--clr-claro);
-  width: 100%;
-}
-
-.box-reco h3 {
-  font-family: var(--ff-Secundary);
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.box-reco p {
-  font-family: var(--ff-primario);
-  font-size: 1.2em;
-  line-height: 1.3;
-  letter-spacing: 1.1px;
-}
-
-.container-reco img {
-  width: 75%;
-
-  object-fit: cover;
-  object-position: center bottom;
-  border-radius: 15px;
-  border: 2px solid var(--azul-brillante);
-  box-shadow: 0px 0px 8px var(--azul-brillante);
-}
-
-/*-- Sección Precios de las páginas de actividades | Large Devices --*/
+/*-- 5.6 Sección Precios de las páginas de actividades | Large Devices --*/
 .container-precios {
   /*-- Contenedor de la sección --*/
   display: flex;
@@ -1370,6 +1401,8 @@ textarea {
   background-color: var(--azul-Secundario);
   padding: 15px 70px;
   border-radius: 15px;
+  text-decoration: none;
+  color: var(--clr-claro);
 }
 
 .container-precios a:hover {
@@ -1377,7 +1410,7 @@ textarea {
   color: var(--clr-oscuro);
 }
 
-/*-- Sección Suscribir de la página Club de Río | Cursos --*/
+/*-- 6.0 Sección Suscribir de la página Club de Río | Cursos --*/
 .container-sus {
   /*-- Disposición y diseño de la sección --*/
   background-color: rgb(175, 251, 255, 0.4);
@@ -1400,6 +1433,7 @@ textarea {
   font-size: 2em;
   color: var(--azul-brillante);
   margin-bottom: 12px;
+  letter-spacing: 4px;
 }
 
 .suscribe hr {
@@ -1440,14 +1474,40 @@ textarea {
   box-shadow: 0px 0px 8px var(--azul-brillante);
   font-family: var(--ff-titles);
   font-size: 1.3em;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 .bt-cb:hover {
   background-color: var(--azul-brillante);
 }
 
-/*-- Sección Valores de la página Nosotros | Large Devices --*/
+/*-- 7.1 Sección Quienes Somos --*/
+.container-qs {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-qs img {
+  /*-- Imagen --*/
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.box-reco {
+  /*-- Textbox --*/
+  background-color: var(--clr-claro);
+  padding: 2em;
+  font-family: var(--ff-primario);
+  line-height: 24px;
+  letter-spacing: 1.2px;
+}
+.box-reco h3 {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+/*-- 7.2 Sección Valores de la página Nosotros | Large Devices --*/
 .container-sms {
   padding: 3em;
   background-color: rgb(175, 251, 255, 0.4);
@@ -1530,7 +1590,7 @@ textarea {
   object-fit: cover;
 }
 
-/*-- Sección termino y condiciones de la página Terminos&Condiciones | Large Devices --*/
+/*-- 8.0 Sección termino y condiciones de la página Terminos&Condiciones | Large Devices --*/
 .container-tc {
   padding: 2em 8em;
   background-color: rgba(86, 86, 86, 0.3);
@@ -1563,7 +1623,7 @@ textarea {
   margin-bottom: 2em;
 }
 
-/*-- Página de suscribir --*/
+/*-- 9.0 Página de suscribir --*/
 .suscribir-bg {
   display: flex;
   align-items: center;
@@ -1598,8 +1658,8 @@ textarea {
 /*-- MEDIA QUERIES --*/
 
 @media screen and (max-width: 992px) {
-  /*-- Medium devices --*/
-  /*-- Barra de Navegación para medium devices --*/
+  /*-- 10.0 Medium devices --*/
+  /*-- 10.1Barra de Navegación para medium devices --*/
   .menu {
     display: none;
   }
@@ -1610,7 +1670,7 @@ textarea {
   }
 
   .menu.active {
-    /*-- disposición del menu desplegable cuando se hace click en el icono toggle --*/
+    /*-- 10.2 Disposición del menu desplegable cuando se hace click en el icono toggle --*/
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -1624,14 +1684,14 @@ textarea {
     padding: 20px;
   }
 
-  /*-- Sección Intro Medium Devices | todas las páginas --*/
+  /*-- 10.3 Sección Intro Medium Devices | todas las páginas --*/
   .container-intro {
     height: 600px;
   }
 
   .intro-box {
     top: 30%;
-    width: 100%;
+    width: 90%;
   }
 
   .intro-box .topic {
@@ -1639,13 +1699,23 @@ textarea {
     width: 600px;
   }
 
-  /*-- Sección Actividades | página Index --*/
+  /*-- 10.4 Sección Actividades | página Index --*/
+  .cards-box {
+    flex-direction: column;
+  }
+  figcaption {
+    width: 100%;
+    height: 300px;
+  }
+  .cards-textbox {
+    padding: 20px;
+  }
   .cards-box h3 {
     width: 80%;
     line-height: 35px;
   }
 
-  /*-- Sección Beneficios | página Index--*/
+  /*-- 10.5 Sección Beneficios | página Index--*/
   .bene-textbox {
     width: 60%;
   }
@@ -1659,7 +1729,7 @@ textarea {
     width: 70%;
   }
 
-  /*-- Sección Paquetes Medium Devices | página index --*/
+  /*-- 10.6 Sección Paquetes Medium Devices | página index --*/
   .container-pkts {
     justify-content: space-between;
     padding: 45px 15px;
@@ -1689,7 +1759,7 @@ textarea {
     height: 170px;
   }
 
-  /*-- Footer Medium Devices --*/
+  /*-- 10.7 Footer Medium Devices --*/
   .footer-box h4 {
     /*-- Titulos de los contenedores --*/
     font-size: 1.6em;
@@ -1714,7 +1784,7 @@ textarea {
     height: 400px;
   }
 
-  /*-- Sección Formulario contacto large devices | página Contacto --*/
+  /*-- 10.8 Sección Formulario contacto  | página Contacto --*/
   form {
     padding: 0;
   }
@@ -1730,19 +1800,42 @@ textarea {
     padding: 2em;
   }
 
-  /*-- Sección intro de las páginas de actividades Large Devices --*/
-  .actividades-intro img {
-    width: 80%;
-    height: 180px;
+  /*-- 10.9 Sección intro de las páginas de actividades  --*/
+  .container-activities {
+    height: 600px;
   }
 
+  .intro-box-act-textbox {
+    top: 30%;
+    width: 70%;
+  }
+
+  /*-- Intro Tubing Morelos --*/
+  .intro-box-tub h1,
+  .intro-box-tub p {
+    width: 700px;
+  }
   .act-textbox {
+    width: 70%;
+  }
+
+  /*-- Sección cards de actividades de la pagina Rafting Morelos --*/
+  .cards-box-act {
+    flex-direction: column;
+  }
+  .cards-box-act .cards-act {
     width: 100%;
+  }
+  .cards-textbox-act {
+    padding: 20px;
   }
 
   /*-- Sección Descripción de las páginas de Actividades | Medium Devices --*/
-  .boxes-bottom {
-    flex-direction: column;
+  .container-datos h2 {
+    font-size: 2em;
+  }
+  .menu-lateral-act {
+    width: 10%;
   }
 
   /*-- Sección precios de las páginas de actividades | Large Devices --*/
@@ -1755,11 +1848,16 @@ textarea {
   }
 
   .precio-cards h3 {
-    height: 70px;
+    height: 80px;
+    line-height: 35px;
   }
   .precio-cards p {
     font-size: 1.2em;
     height: 60px;
+    line-height: 35px;
+  }
+  .precio {
+    line-height: 45px;
   }
 
   /*-- Textbox de la página Terminos&Condiciones | Medium Devices --*/
@@ -1889,23 +1987,61 @@ textarea {
   .map-contact iframe {
     height: 300px;
   }
-
+/*-- Página Rafting Alto Amacuzac & Tubing Alto Amacuzac --*/
+.act-textbox-raa h1 {
+  font-size: 4em;
+}
+.act-textbox-raa p {
+  font-size: 2.5em;
+}
   /*-- Sección Descripción de las páginas Actividades | Small Devices --*/
   .container-desc {
     flex-direction: column;
     padding: 1em;
   }
 
-  /*-- Sección Recomendaciones de las páginas Actividades | XS/S Devices --*/
-  .container-reco {
-    /*-- Disposición del contenedor --*/
-    flex-direction: column;
-    padding: 1em;
+  /*-- Intro paginas de Actividades Morelos --*/
+  .intro-box-act-textbox h1{ /*-- Morelos Rafting --*/
+    font-size: 4em;
+  }
+  .intro-box-act-textbox span {
+    font-size: 3em;
   }
 
-  .container-reco img {
-    width: 100%;
-    height: 200px;
+  .intro-box-tub h1 { /*-- Morelos Tubing --*/
+    font-size: 4em;     
+  }
+  .intro-box-tub p {
+    font-size: 3em;
+    width: 400px;
+  }
+
+  /*-- Intro Contacto page --*/
+  .intro-box-contacto h1 {
+    font-size: 4em;
+  }
+  .intro-box-contacto p {
+    font-size: 3em;
+    width: 80%;
+  }
+
+  /*-- Intro Rafting Amacuzac --*/
+  .act-textbox h1 {
+    font-size: 4em;
+  }
+  .act-textbox p {
+    font-size: 3em;
+    width: 500px;
+  }
+
+  /*-- Sección pestañas --*/
+  .container-desc .tab label span {
+    font-size: 1.2em;
+  }
+
+  /*-- descripcion titles --*/
+  .tab-textbox h2 {
+    font-size: 1.5em;
   }
 
   /*-- Sección precios de las páginas de actividades | Small Devices --*/
@@ -1914,8 +2050,7 @@ textarea {
   }
 
   .precio-cards h3 {
-    font-size: 1.2em;
-    height: 60px;
+    font-size: 1.9em;
   }
 
   .precio-cards p {
@@ -1983,16 +2118,22 @@ textarea {
   /*-- Sección Actividades S/M devices | página Index --*/
   .container-cards {
     padding: 15px;
+    
   }
 
   .container-cards h2 {
     font-size: 2em;
+    
   }
 
   .cards-sv {
     flex-direction: column;
+    height: 400px;
   }
 
+  .cards-textbox {
+    
+  }
   .cards-textbox a {
     width: 70%;
   }

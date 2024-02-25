@@ -45,7 +45,13 @@
     
     <!-- Sección Intro de la página -->
     <div class="actividades-intro-raft">
-        <img src="imagenes/contacto-rafting-papagayo.webp" alt="Balsa con personas remando un rápido en el Alto Amacuzac">
+        <picture>
+            <source srcset="" media="(max-width: 600px)">
+            <source srcset="" media="(max-width: 768px)">
+            <source srcset="" media="(max-width: 992px)">
+            <img src="imagenes/intro-alto-amacuzac.webp" alt="Balsa con personas remando un rápido en el Alto Amacuzac">
+          </picture> 
+        
         <div class="act-textbox-raa">
             <h1>Rafting Alto Amacuzac</h1>
             <p>Rafting & Grutas de Cacahuamilpa</p>
@@ -150,26 +156,30 @@
     <!-- Footer -->
     <footer>
         <div class="container-footer">
-            <div class="footer-box">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>+52 777 497 55 31</li>
-                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
-                    <li>Cuernavaca, Morelos</li>
-                    <li>México</li>
-                </ul>
+            <div class="box-container-footer">
+                <div class="footer-box">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+52 777 497 55 31</li>
+                        <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                        <li>Cuernavaca, Morelos</li>
+                        <li>México</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Quienes Somos</a></li>
+                        <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
+                        <li><a href="club-de-rio.html">Club de Río</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-box">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
-                    <li><a href="club-de-rio.html">Club de Río</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box box-media">
-                <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
+            <div class="box-media">
+                <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
+                    <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
+                </a>
 
                 <div class="footer-media">
                     <a href="http://www.facebook.com/riosmexicanos" aria-label="Link a la pagina de Ríos Mexicanos en Facebook"><i class="fa fa-facebook"></i></a>
@@ -180,7 +190,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="https://www.teotlwebdesign.com/">Téotl Web Design</a></i></p>
         </div>
     </footer>
 

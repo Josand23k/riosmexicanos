@@ -56,11 +56,18 @@
 
     <!-- Sección Intro-Contacto -->
     <section class="container-intro-contact">
+        <picture>
+            <source srcset="" media="(max-width: 600px)">
+            <source srcset="" media="(max-width: 768px)">
+            <source srcset="" media="(max-width: 992px)">
+            <img src="imagenes/intro-contacto-riosmexicanos.webp" alt="Una Garza de botitas doradas a orillas del río Amacuzac">
+          </picture> 
+
         <div class="intro-box-contacto">
             <h1>Contactanos</h1> <!-- Titulo de la página -->
             <p>¡Aquí comienza la aventura!</p>
         </div>
-        <img src="imagenes/foto-contacto.webp" alt="Recorriendo un rápido en Rafting con Ríos Mexicanos">
+        
     </section>
 
     <!-- Sección Form Contacto Large Devices | página Contacto -->
@@ -79,11 +86,9 @@
                 <label for="actividad">Actividad</label> <br>
                     <select id="actividad" name="actividad" required> 
                         <option value="rafting-amacuzac">Rafting Amacuzac</option> 
-                        <option value="amacuzac-fullday">Rafting Amacuzac Fullday</option> 
-                        <option value="amacuzac-findesemana">Rafting Amacuzac Fin de Semana</option> 
-                        <option value="alto-amacuzac">Rafting Alto Amacuzac</option> 
+                        <option value="rafting-alto-amacuzac">Rafting Alto Amacuzac</option>
                         <option value="rafting-familiar">Rafting Familiar</option> 
-                        <option value="familiar-fullday">Rafting Familiar Fullday</option> <option value="familiar-findesemana">Rafting Familiar Fin de Semana</option> 
+                        <option value="rafting-tubing">Rafting & Tubing</option>
                         <option value="tubing-amacuzac">Tubing Amacuzac</option> 
                         <option value="tubing-alto">Tubing Alto Amacuzac</option>
                         <option value="otro">Otro</option> 
@@ -103,25 +108,27 @@
     <!-- Footer -->
     <footer>
         <div class="container-footer">
-            <div class="footer-box">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>+52 777 497 55 31</li>
-                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
-                    <li>Cuernavaca, Morelos</li>
-                    <li>México</li>
-                </ul>
+            <div class="box-container-footer">
+                <div class="footer-box">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+52 777 497 55 31</li>
+                        <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                        <li>Cuernavaca, Morelos</li>
+                        <li>México</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Quienes Somos</a></li>
+                        <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
+                        <li><a href="club-de-rio.html">Club de Río</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-box">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
-                    <li><a href="club-de-rio.html">Club de Río</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box box-media">
+            <div class="box-media">
                 <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
                     <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
                 </a>
@@ -135,7 +142,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="https://www.teotlwebdesign.com/">Téotl Web Design</a></i></p>
         </div>
     </footer>
 

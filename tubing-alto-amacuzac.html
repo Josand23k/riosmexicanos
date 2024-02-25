@@ -28,9 +28,8 @@
         </a>
 
         <div class="menu" id="menu"> <!--Menu de Navegación -->
-            <a href="index.html" aria-label="Enlace a la página de inicio">Inicio</a>
-            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="rafting-morelos.html" aria-label="Enlace a la página de Rafting Morelos">Rafting</a>
+            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="contacto.html" aria-label="Enlace a la página de Contacto">Contacto</a>
         </div>
 
@@ -40,68 +39,88 @@
     </nav>
     
     <!-- Sección Intro de la página -->
-    <div class="actividades-intro">
-        <img src="imagenes/tubing-altoamacuzac1200.webp" alt="Rafting Amacuzac remando entre olas del río Amacuzac">
-        <div class="act-textbox">
+    <div class="actividades-intro-raft">
+        <picture>
+            <source srcset="" media="(max-width: 600px)">
+            <source srcset="" media="(max-width: 768px)">
+            <source srcset="" media="(max-width: 992px)">
+            <img src="imagenes/intro-tubing-altoamacuzac.webp" alt="Amigos disfrutando del Tubing en el Alto Amacuzac">
+          </picture> 
+        
+        <div class="act-textbox-raa">
             <h1>Tubing Alto Amacuzac</h1>
-            <p>¡Una aventura única en su tipo, adrenalina y belleza natural!</p><br>
-            <p>Un recorrido para quienes buscan una experiencia que los hagan exigirse en un sitio donde no se vale rendirse.</p><br>
-            <p>Un experiencia ue te llevara todo el día disfrutando del Cañon del Alto Amacuzac, navegando sus rápidos en Tubing.</p><br>
-            <p>¡Atrávete a vivir una aventura que te llenará de memorias de vida!</p>
+            <p>¡Una aventura única!</p>
         </div>
     </div>
 
     <!-- Sección descripción de las páginas de Actividades -->
     <section class="container-desc">
-        <div class="desc-box">
-            <h2>Descripción</h2>
-            <p>Todo inicia en nuestro Punto de Encuentro donde te daremos la bienvenida, y te explicaremos como está organizado el recorrido, después de prepararnos con la ropa adecuada nos dirigiremos al Parque Nacional Grutas de Cacahuamilpa.</p>
-            <br>
-            <p>Nos tomaremos nuestro tiempo hasta dominar la técnica adecuada para navegar con el tubing, así como la comunicación que usaremos en el río.</p>
-            <br>
-            <p>Recorreremos 14 kilómetros de río con rápidos categoría II y III, esto dependiendo del nivel del río. Ya a la mitad del recorrido nos detendremos a disfrutar de un refrigerio y del agua cálida del río Amacuzac</p>
-            <br>
-            <p>Regresamos al Punto de Encuentro para disfrutar de un refrigerio y así cerrar la aventura.</p> 
 
-            <img src="imagenes/tubing-playa.webp" alt="Descendiendo los rápidos del río Amacuzac con Ríos Mexicanos">
+        <input type="radio" name="indicator" id="descripcion4" checked>
+        <input type="radio" name="indicator" id="recomendaciones4">
+        <input type="radio" name="indicator" id="quetraer4">
+        <input type="radio" name="indicator" id="datos4">
+
+        <div class="tab"> <!-- Botones de las pestañas de la sección Descripción -->
+            <label for="descripcion4" class="descripcion4">
+                <span>Descripción</span>
+            </label>
+            <label for="recomendaciones4" >
+                <span>Recomendaciones</span>
+            </label>
+            <label for="quetraer4">
+                <span>Que traer</span>
+            </label>
+            <label for="datos4">
+                <span>Datos</span>
+            </label>
+            <div class="indicator"></div>
         </div>
 
-        <div class="desc-boxes">
-            <div class="box-top">
-                <h3>Recomendaciones</h3>
+        <div class="tab-textbox">        
+            <div id="descripcion4" class="descripcion4 tabcontent">
+                <h2>Descripción</h2>
+                <p>Todo inicia en nuestro Punto de Encuentro donde te daremos la bienvenida, y te explicaremos como está organizado el recorrido, después de prepararnos con la ropa adecuada nos dirigiremos al Parque Nacional Grutas de Cacahuamilpa.</p>
+                <br>
+                <p>Nos tomaremos nuestro tiempo hasta dominar la técnica adecuada para navegar con el tubing, así como la comunicación que usaremos en el río.</p>
+                <br>
+                <p>Recorreremos 14 kilómetros de río con rápidos categoría II y III, esto dependiendo del nivel del río. Ya a la mitad del recorrido nos detendremos a disfrutar de un refrigerio y del agua cálida del río Amacuzac</p>
+                <br>
+                <p>Regresamos al Punto de Encuentro para disfrutar de un refrigerio y así cerrar la aventura.</p> 
+
+                <img src="imagenes/tubing-playa.webp" alt="Descendiendo los rápidos del río Amacuzac con Ríos Mexicanos">
+            </div>
+
+            <div id="recomendaciones4" class="recomendaciones4 tabcontent">
+                <h2>Recomendaciones</h2>
                 <img src="imagenes/cards-tubing-amacuzac(1).webp" alt="Descendiendo en Rafting Amacuzac el rápido Quitacrudas">
+                <h3>Incluye</h3>
+                <p>El recorrido de Tubing Alto Amacuzac te incluye el traslado del Punto de Encuentro al río y del río al Punto de Encuentro.<br>
+                Así como el equipo necesario para la actividad como chaleco de flotación y casco.</p>
+                <br>
+                <p>Entrada al Parque Nacional Grutas de Cacahuamilpa</p>
+                <p>Un refrigerio en el río y al final del recorrido.</p><br>
+                <p>Ríos Mexicanos te incluye en tu recorrido un seguro en caso de accidentes en el río.</p>
             </div>
-            <div class="boxes-bottom">
-                <div class="desc-cards">
-                    <h4>Incluye</h4>
-                    <p>El recorrido de Tubing Alto Amacuzac te incluye el traslado del Punto de Encuentro al río y del río al Punto de Encuentro.<br>
-                    Así como el equipo necesario para la actividad como chaleco de flotación y casco.</p>
-                    <br>
-                    <p>Entrada al Parque Nacional Grutas de Cacahuamilpa</p>
-                    <p>Un refrigerio en el río y al final del recorrido.</p><br>
-                    <p>Ríos Mexicanos te incluye en tu recorrido un seguro en caso de accidentes en el río.</p>
-                </div>
-                <div class="desc-cards">
-                    <h4>Que traer</h4>
-                    <p><b>Ropa</b>, el recorrido se realiza en una zona cálida, por ello es bueno traer ropa adecuada para protegerse del sol, pero también apta para nadar, por ejemplo: licras de tela sintéticas, calzado para mojar con agujetas y suela gruesa. Además de una muda de ropa seca para después del río.</p>
-                    <br>
-                    <p>Es importante que si estas bajo algún medicamente, no olvides traerlo y mantenernos informados, del mismo modo, te recomendamos traer barras energéticas y bebidas para hidratarte.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="container-reco">
-        <div class="box-reco">
-            <h3>Datos</h3>
-            <p>Tubing Alto Amacuzac de Ríos Mexicanos tiene la finalidad de promover las actividades de aventura en la naturaleza, mostrando la belleza del río Amacuzac, así como la importancia de su protección y preservación, ya que es hogar y refugio de una gran diversidad de vida silvestre, tanto endemica como migratoria.</p><br>
-            <p>El recorrido es de 14 kilómetros de recorrido en el río.</p><br>
-            <p>La temporada de Tubing Alto Amacuzac va de Julio a Octubre.</p><br>
-            <p>Dificultad media, debido a los rápidos clase II y III, de dificil accesibilidad.</p><br>
-            <p>Observación de aves y fauna local.</p><br>
-            <p>De julio a octubre es temporada de agua alta, ideal para mayores de 16 años.</p><br>
+            <div id="quetraer4" class="quetraer4 tabcontent">
+                <h2>Que traer</h2>
+                <p><b>Ropa</b>, el recorrido se realiza en una zona cálida, por ello es bueno traer ropa adecuada para protegerse del sol, pero también apta para nadar, por ejemplo: licras de tela sintéticas, calzado para mojar con agujetas y suela gruesa. Además de una muda de ropa seca para después del río.</p>
+                <br>
+                <p>Es importante que si estas bajo algún medicamente, no olvides traerlo y mantenernos informados, del mismo modo, te recomendamos traer barras energéticas y bebidas para hidratarte.</p>
+            </div>
+
+            <div id="datos4" class="datos4 tabcontent">
+                <h2>Datos</h2>
+                <p>Tubing Alto Amacuzac de Ríos Mexicanos tiene la finalidad de promover las actividades de aventura en la naturaleza, mostrando la belleza del río Amacuzac, así como la importancia de su protección y preservación, ya que es hogar y refugio de una gran diversidad de vida silvestre, tanto endemica como migratoria.</p><br>
+                <p>El recorrido es de 14 kilómetros de recorrido en el río.</p><br>
+                <p>La temporada de Tubing Alto Amacuzac va de Julio a Octubre.</p><br>
+                <p>Dificultad media, debido a los rápidos clase II y III, de dificil accesibilidad.</p><br>
+                <p>Observación de aves y fauna local.</p><br>
+                <p>De julio a octubre es temporada de agua alta, ideal para mayores de 16 años.</p><br>
+                <img src="imagenes/paisaje-rio-tubing.webp" alt="Grupo de personas sobre una balsa practicando Rafting Amacuzac con Ríos Mexicanos">  
+            </div>
         </div>
-        <img src="imagenes/paisaje-rio-tubing.webp" alt="Grupo de personas sobre una balsa practicando Rafting Amacuzac con Ríos Mexicanos">
     </section>
 
     <section class="container-precios">
@@ -131,25 +150,27 @@
     <!-- Footer -->
     <footer>
         <div class="container-footer">
-            <div class="footer-box">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>+52 777 497 55 31</li>
-                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
-                    <li>Cuernavaca, Morelos</li>
-                    <li>México</li>
-                </ul>
+            <div class="box-container-footer">
+                <div class="footer-box">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+52 777 497 55 31</li>
+                        <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                        <li>Cuernavaca, Morelos</li>
+                        <li>México</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Quienes Somos</a></li>
+                        <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
+                        <li><a href="club-de-rio.html">Club de Río</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-box">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
-                    <li><a href="club-de-rio.html">Club de Río</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box box-media">
+            <div class="box-media">
                 <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
                     <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
                 </a>
@@ -163,7 +184,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="https://www.teotlwebdesign.com/">Téotl Web Design</a></i></p>
         </div>
     </footer>
 

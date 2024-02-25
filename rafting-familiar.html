@@ -33,9 +33,8 @@
         </a>
 
         <div class="menu" id="menu"> <!--Menu de Navegación -->
-            <a href="index.html" aria-label="Enlace a la página de inicio">Inicio</a>
-            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="rafting-morelos.html" aria-label="Enlace a la página de Rafting Morelos">Rafting</a>
+            <a href="tubing-morelos.html" aria-label="Enlace a la página de Tubing Morelos">Tubing</a>
             <a href="contacto.html" aria-label="Enlace a la página de Contacto">Contacto</a>
         </div>
 
@@ -45,69 +44,89 @@
     </nav>
     
     <!-- Sección Intro de la página -->
-    <div class="actividades-intro">
-        <img src="imagenes/flotando-rio-amacuzac-familia.webp" alt="Rafting Amacuzac remando entre olas del río Amacuzac">
+    <div class="actividades-intro-raft">
+        <picture>
+            <source srcset="" media="(max-width: 600px)">
+            <source srcset="" media="(max-width: 768px)">
+            <source srcset="" media="(max-width: 992px)">
+            <img src="imagenes/intro-rafting-familiar.webp" alt="Una familia nadando en las aguas del río Amacuzac">
+          </picture> 
+        
         <div class="act-textbox">
             <h1>Rafting Familiar</h1>
-            <p>¡Explora la exuberante flora y fauna de las orillas del río Amacuzac en un día familiar inolvidable!</p><br>
-            <p>Te extendemos la invitación a pasar un día en el río Amacuzac con toda tu familia, sumergiéndote en la fascinante observación de aves y en las aguas templadas de este hermoso cauce.</p><br>
-            <p>Esta es la mejor aventura para compartir con los más pequeños, brindándoles la oportunidad de descubrir y disfrutar la abundante flora y fauna del sur del Estado de Morelos.</p><br>
-            <p>¡Únete a esta experiencia única para toda la familia en el Estado de Morelos!</p>
+            <p>¡Aventura para toda la familia!</p>
         </div>
     </div>
 
     <!-- Sección descripción de las páginas de Actividades -->
     <section class="container-desc">
-        <div class="desc-box">
-            <h2>Descripción</h2>
-            <p>Todo comienza en nuestro Punto de Encuentro, donde te recibimos con entusiasmo y te proporcionamos información detallada sobre el recorrido. Después de equiparnos con la indumentaria adecuada, nos dirigimos al río para una breve charla de seguridad, asegurándonos de que todos estén listos para disfrutar al máximo del Rafting Familiar en los siguientes 10 minutos.</p>
-            <br>
-            <p>La travesía comienza con una fase inicial en aguas tranquilas, brindándonos la oportunidad de practicar y refrescarnos en el río para prepararnos para el emocionante descenso.</p>
-            <br>
-            <p>El recorrido tiene una duración aproximada de una hora y media, durante la cual se presentan momentos ideales para nadar y lanzarse al agua.</p>
-            <br>
-            <p>A mitad del trayecto, hacemos una parada para disfrutar de un refrigerio y aprovechar al máximo la experiencia junto al río. Posteriormente, regresamos al Punto de Encuentro, donde compartimos otro refrigerio para cerrar con broche de oro esta emocionante aventura.</p> 
 
-            <img src="imagenes/Rafting-familiar-amacuzac.webp" alt="Descendiendo los rápidos del río Amacuzac con Ríos Mexicanos">
+        <input type="radio" name="indicator" id="descripcion2" checked>
+        <input type="radio" name="indicator" id="recomendaciones2">
+        <input type="radio" name="indicator" id="quetraer2">
+        <input type="radio" name="indicator" id="datos2">
+
+        <div class="tab"> <!-- Botones de las pestañas de la sección Descripción -->
+            <label for="descripcion2" class="descripcion2">
+                <span>Descripción</span>
+            </label>
+            <label for="recomendaciones2" >
+                <span>Recomendaciones</span>
+            </label>
+            <label for="quetraer2">
+                <span>Que traer</span>
+            </label>
+            <label for="datos2">
+                <span>Datos</span>
+            </label>
+            <div class="indicator"></div>
         </div>
 
-        <div class="desc-boxes">
-            <div class="box-top">
-                <h3>Recomendaciones</h3>
-                <img src="imagenes/flotando-rio-amacuzac.webp" alt="Descendiendo en Rafting Amacuzac el rápido Quitacrudas">
+        <div class="tab-textbox">        
+            <div id="descripcion2" class="descripcion2 tabcontent">
+                <h2>Descripción</h2>
+                <p>Todo comienza en nuestro Punto de Encuentro, donde te recibimos con entusiasmo y te proporcionamos información detallada sobre el recorrido. Después de equiparnos con la indumentaria adecuada, nos dirigimos al río para una breve charla de seguridad, asegurándonos de que todos estén listos para disfrutar al máximo del Rafting Familiar en los siguientes 10 minutos.</p>
+                <br>
+                <p>La travesía comienza con una fase inicial en aguas tranquilas, brindándonos la oportunidad de practicar y refrescarnos en el río para prepararnos para el emocionante descenso.</p>
+                <br>
+                <p>El recorrido tiene una duración aproximada de una hora y media, durante la cual se presentan momentos ideales para nadar y lanzarse al agua.</p>
+                <br>
+                <p>A mitad del trayecto, hacemos una parada para disfrutar de un refrigerio y aprovechar al máximo la experiencia junto al río. Posteriormente, regresamos al Punto de Encuentro, donde compartimos otro refrigerio para cerrar con broche de oro esta emocionante aventura.</p> 
+
+                <img src="imagenes/Rafting-familiar-amacuzac.webp" alt="Descendiendo los rápidos del río Amacuzac con Ríos Mexicanos">
             </div>
-            <div class="boxes-bottom">
-                <div class="desc-cards">
-                    <h4>Incluye</h4>
-                    <p>El recorrido de Rafting Amacuzac te incluye el traslado del Punto de Encuentro al río y del río al Punto de Encuentro.</p>
-                    <br>
-                    <p>Así como el equipo necesario para la actividad como chaleco de flotación y casco.</p><br>
-                    <p>Un refrigerio en el río y comida completa al final del recorrido.</p>
-                    <p>Ríos Mexicanos te incluye en tu recorrido un seguro en caso de accidentes en el río.</p>
-                </div>
-                <div class="desc-cards">
-                    <h4>Que traer</h4>
-                    <p><b>Ropa</b> apta para nadar, traje de baño además de short ligeros y playera de manga larga como son las licras de tela sintéticas.<br>
-                    Calzado para mojar con agujetas y suela gruesa. Además de una muda de ropa y calzado para después del río.</p>
-                    <br>
-                    <p>Es importante que si estas bajo algún medicamente, no olvides traerlo y mantenernos informados, del mismo modo, te recomendamos traer barras energéticas y bebidas para hidratarte.</p>
-                </div>
+
+            <div id="recomendaciones2" class="recomendaciones2 tabcontent">
+                <h2>Recomendaciones</h2>
+                <h4>Incluye</h4>
+                <p>El recorrido de Rafting Amacuzac te incluye el traslado del Punto de Encuentro al río y del río al Punto de Encuentro.</p>
+                <br>
+                <p>Así como el equipo necesario para la actividad como chaleco de flotación y casco.</p><br>
+                <p>Un refrigerio en el río y comida completa al final del recorrido.</p>
+                <p>Ríos Mexicanos te incluye en tu recorrido un seguro en caso de accidentes en el río.</p>
+            </div>
+
+            <div id="quetraer2" class="quetraer2 tabcontent">
+                <h2>Que traer</h2>
+                <p><b>Ropa</b> apta para nadar, traje de baño además de short ligeros y playera de manga larga como son las licras de tela sintéticas.<br>
+                Calzado para mojar con agujetas y suela gruesa. Además de una muda de ropa y calzado para después del río.</p>
+                <br>
+                <p>Es importante que si estas bajo algún medicamente, no olvides traerlo y mantenernos informados, del mismo modo, te recomendamos traer barras energéticas y bebidas para hidratarte.</p>
+            </div>
+
+            <div id="datos2" class="datos2 tabcontent">
+                <h3>Datos</h3>
+                <p>La misión de Rafting Familiar de Ríos Mexicanos es fomentar las actividades de aventura en la naturaleza, destacando la hermosura del río Amacuzac y subrayando la vital importancia de su conservación y protección. Este río no solo es hogar, sino también refugio de una diversidad extraordinaria de vida silvestre, que incluye especies endémicas y migratorias.</p><br>
+                <p>El recorrido es de 4 o 6 kilómetros de recorrido en el río dependiendo de la temporada.</p><br>
+                <p>La temporada de Rafting va de Julio a Marzo.</p><br>
+                <p>Dificultad baja, debido a los rápidos clase I y II, y el fácil acceso.</p><br>
+                <p>Observación de aves y fauna local.</p><br>
+                <p>De julio a octubre es temporada de agua alta, se recorren 6 kilómetros.</p><br>
+                <p>De octubre a marzo es temporada de agua baja. se recorren 4 kilómetros.</p>
+            
+                <img src="imagenes/nadando-raftingfamiliar.webp" alt="Grupo de personas sobre una balsa practicando Rafting Amacuzac con Ríos Mexicanos">
             </div>
         </div>
-    </section>
-
-    <section class="container-reco">
-        <div class="box-reco">
-            <h3>Datos</h3>
-            <p>La misión de Rafting Familiar de Ríos Mexicanos es fomentar las actividades de aventura en la naturaleza, destacando la hermosura del río Amacuzac y subrayando la vital importancia de su conservación y protección. Este río no solo es hogar, sino también refugio de una diversidad extraordinaria de vida silvestre, que incluye especies endémicas y migratorias.</p><br>
-            <p>El recorrido es de 4 o 6 kilómetros de recorrido en el río dependiendo de la temporada.</p><br>
-            <p>La temporada de Rafting va de Julio a Marzo.</p><br>
-            <p>Dificultad baja, debido a los rápidos clase I y II, y el fácil acceso.</p><br>
-            <p>Observación de aves y fauna local.</p><br>
-            <p>De julio a octubre es temporada de agua alta, se recorren 6 kilómetros.</p><br>
-            <p>De octubre a marzo es temporada de agua baja. se recorren 4 kilómetros.</p>
-        </div>
-        <img src="imagenes/nadando-raftingfamiliar.webp" alt="Grupo de personas sobre una balsa practicando Rafting Amacuzac con Ríos Mexicanos">
     </section>
 
     <section class="container-precios">
@@ -137,25 +156,27 @@
     <!-- Footer -->
     <footer>
         <div class="container-footer">
-            <div class="footer-box">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>+52 777 497 55 31</li>
-                    <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
-                    <li>Cuernavaca, Morelos</li>
-                    <li>México</li>
-                </ul>
+            <div class="box-container-footer">
+                <div class="footer-box">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+52 777 497 55 31</li>
+                        <li><a href="mailto:infoq@riosmexicanos.com">info@riosmexicanos.com</a></li>
+                        <li>Cuernavaca, Morelos</li>
+                        <li>México</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Quienes Somos</a></li>
+                        <li><a href="terminos-condiciones.html">Terminos y Condiciones</a></li>
+                        <li><a href="club-de-rio.html">Club de Río</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-box">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="#">Terminos y Condiciones</a></li>
-                    <li><a href="club-de-rio.html">Club de Río</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box box-media">
+            <div class="box-media">
                 <a href="index.html" aria-label="Enlace a la página de Inicio de Ríos Mexicanos">
                     <img src="imagenes/logo-footer.png" alt="Logo de Ríos Mexicanos">
                 </a>
@@ -169,7 +190,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="#">Téotl Web Design</a></i></p>
+            <p>&copy;Ríos Mexicanos 2023 | <i>Diseño web por <a href="https://www.teotlwebdesign.com/">Téotl Web Design</a></i></p>
         </div>
     </footer>
 
